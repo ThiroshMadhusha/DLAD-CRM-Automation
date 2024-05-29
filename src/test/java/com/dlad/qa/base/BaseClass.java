@@ -20,6 +20,7 @@ public class BaseClass {
 	
 	WebDriver driver;
 	public Properties prop;
+	public Properties loginProp;
 	
 //	Create Load Properties File for Config Main before Browser Initialize
 	public void loadPropertiesFile(){
@@ -38,6 +39,18 @@ public class BaseClass {
 			e.printStackTrace();
 		}
 		
+		// Login Properties
+		loginProp = new Properties();
+		File loginPropFile = new File(System.getProperty("user.dir") + "\\src\\main\\java\\com\\dlad\\qa\\testdataconfig\\login_config.properties");
+		FileInputStream loginFils;
+		try {
+			loginFils = new FileInputStream(loginPropFile);
+			loginProp.load(loginFils);
+
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 	}
 	
@@ -67,7 +80,7 @@ public class BaseClass {
 		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(Utils.PAGE_LOAD_TIME));
 		
 		driver.get(prop.getProperty("url"));
-		
+	
 		return driver;
 	}
 
