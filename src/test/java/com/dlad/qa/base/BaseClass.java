@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.time.Duration;
 import java.util.Properties;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -56,7 +57,7 @@ public class BaseClass {
 	
 //	Initializing the Browser
 	
-	public WebDriver initializeBrowser(String browserName) {			
+	public WebDriver initializeBrowser(String browserName) throws InterruptedException {			
 		
 		if(browserName.equalsIgnoreCase("chrome")) {
 			driver = new ChromeDriver();
@@ -80,6 +81,25 @@ public class BaseClass {
 		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(Utils.PAGE_LOAD_TIME));
 		
 		driver.get(prop.getProperty("url"));
+		
+		driver.findElement(By.xpath("//input[@id='username']")).sendKeys(loginProp.getProperty("validCRMEmailAddress"));
+		
+		driver.findElement(By.xpath("//input[@id='password']")).sendKeys(loginProp.getProperty("validCRMPassword"));
+		
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//button[@type='submit']")).click();
+		
+		String expectedURL = driver.getCurrentUrl();
+		String actualURL = "https://honeycomb.dlad.io/app";
+		
+		if(expectedURL.equals(actualURL)) {
+			System.out.println("Account Not Created Successfully!");
+		}else {
+			System.out.println("Account Created!");
+		}
+		
+		System.out.println("End : Test Case 09 Pass!");
+		System.out.println();
 	
 		return driver;
 	}
