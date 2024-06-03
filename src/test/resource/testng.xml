@@ -3,7 +3,7 @@
 <suite name="Suite">
   <test thread-count="5" name="TestSuit">
     <classes>
-      <class name="com.dlad.qa.testcases.Login"/>
+      <class name="com.dlad.qa.testcases.LeadList"/>
       <class name="com.dlad.qa.testcases.CreateNewLeadList"/>
     </classes>
   </test> <!-- Test -->
