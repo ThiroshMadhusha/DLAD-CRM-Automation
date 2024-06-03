@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-05-31T09:02:15 IST" name="Default suite" finished-at="2024-05-31T09:02:34 IST" duration-ms="18720">
+  <suite started-at="2024-06-03T09:43:11 IST" name="Default suite" finished-at="2024-06-03T09:43:32 IST" duration-ms="20934">
     <groups>
     </groups>
-    <test started-at="2024-05-31T09:02:15 IST" name="Default test" finished-at="2024-05-31T09:02:34 IST" duration-ms="18720">
-      <class name="com.dlad.qa.testcases.CreateNewLeadList">
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.dlad.qa.testcases.CreateNewLeadList@336f1079]" started-at="2024-05-31T09:02:16 IST" name="beforeMethod" finished-at="2024-05-31T09:02:26 IST" duration-ms="10197" status="PASS">
+    <test started-at="2024-06-03T09:43:11 IST" name="Default test" finished-at="2024-06-03T09:43:32 IST" duration-ms="20934">
+      <class name="com.dlad.qa.testcases.LeadList">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.dlad.qa.testcases.LeadList@52c3cb31]" started-at="2024-06-03T09:43:11 IST" name="beforeMethod" finished-at="2024-06-03T09:43:25 IST" duration-ms="13305" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="createNewLeads()[pri:0, instance:com.dlad.qa.testcases.CreateNewLeadList@336f1079]" started-at="2024-05-31T09:02:26 IST" name="createNewLeads" finished-at="2024-05-31T09:02:34 IST" duration-ms="8216" status="PASS">
+        <test-method signature="verifyTheClickOnCreateButtonWithWithoutFillingData()[pri:4, instance:com.dlad.qa.testcases.LeadList@52c3cb31]" started-at="2024-06-03T09:43:25 IST" name="verifyTheClickOnCreateButtonWithWithoutFillingData" finished-at="2024-06-03T09:43:25 IST" duration-ms="327" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- createNewLeads -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.dlad.qa.testcases.CreateNewLeadList@336f1079]" started-at="2024-05-31T09:02:34 IST" name="afterMethod" finished-at="2024-05-31T09:02:34 IST" duration-ms="256" status="PASS">
+        </test-method> <!-- verifyTheClickOnCreateButtonWithWithoutFillingData -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.dlad.qa.testcases.LeadList@52c3cb31]" started-at="2024-06-03T09:43:25 IST" name="afterMethod" finished-at="2024-06-03T09:43:32 IST" duration-ms="7230" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-      </class> <!-- com.dlad.qa.testcases.CreateNewLeadList -->
+      </class> <!-- com.dlad.qa.testcases.LeadList -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

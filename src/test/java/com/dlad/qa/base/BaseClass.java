@@ -89,18 +89,7 @@ public class BaseClass {
 		Thread.sleep(2000);
 		driver.findElement(By.xpath("//button[@type='submit']")).click();
 		
-		String expectedURL = driver.getCurrentUrl();
-		String actualURL = "https://honeycomb.dlad.io/app";
 		
-		if(expectedURL.equals(actualURL)) {
-			System.out.println("Account Not Created Successfully!");
-		}else {
-			System.out.println("Account Created!");
-		}
-		
-		System.out.println("End : Test Case 09 Pass!");
-		System.out.println();
-	
 		return driver;
 	}
 
