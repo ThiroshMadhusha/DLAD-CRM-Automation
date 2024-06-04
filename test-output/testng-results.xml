@@ -1,21 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-06-03T09:43:11 IST" name="Default suite" finished-at="2024-06-03T09:43:32 IST" duration-ms="20934">
+  <suite started-at="2024-06-03T13:26:25 IST" name="Default suite" finished-at="2024-06-03T13:26:40 IST" duration-ms="14812">
     <groups>
     </groups>
-    <test started-at="2024-06-03T09:43:11 IST" name="Default test" finished-at="2024-06-03T09:43:32 IST" duration-ms="20934">
+    <test started-at="2024-06-03T13:26:25 IST" name="Default test" finished-at="2024-06-03T13:26:40 IST" duration-ms="14812">
       <class name="com.dlad.qa.testcases.LeadList">
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.dlad.qa.testcases.LeadList@52c3cb31]" started-at="2024-06-03T09:43:11 IST" name="beforeMethod" finished-at="2024-06-03T09:43:25 IST" duration-ms="13305" status="PASS">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.dlad.qa.testcases.LeadList@4b79ac84]" started-at="2024-06-03T13:26:25 IST" name="beforeMethod" finished-at="2024-06-03T13:26:39 IST" duration-ms="14041" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="verifyTheClickOnCreateButtonWithWithoutFillingData()[pri:4, instance:com.dlad.qa.testcases.LeadList@52c3cb31]" started-at="2024-06-03T09:43:25 IST" name="verifyTheClickOnCreateButtonWithWithoutFillingData" finished-at="2024-06-03T09:43:25 IST" duration-ms="327" status="PASS">
+        <test-method signature="verifyTheUserRedirectsToTheLeadListPage()[pri:1, instance:com.dlad.qa.testcases.LeadList@4b79ac84]" started-at="2024-06-03T13:26:39 IST" name="verifyTheUserRedirectsToTheLeadListPage" finished-at="2024-06-03T13:26:39 IST" duration-ms="199" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [Leads] but found [Create New Lead]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [Leads] but found [Create New Lead]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:656)
+at org.testng.Assert.assertEquals(Assert.java:666)
+at com.dlad.qa.testcases.LeadList.verifyTheUserRedirectsToTheLeadListPage(LeadList.java:49)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:819)
+at org.testng.TestRunner.run(TestRunner.java:619)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+at org.testng.TestNG.runSuites(TestNG.java:1134)
+at org.testng.TestNG.run(TestNG.java:1101)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyTheClickOnCreateButtonWithWithoutFillingData -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.dlad.qa.testcases.LeadList@52c3cb31]" started-at="2024-06-03T09:43:25 IST" name="afterMethod" finished-at="2024-06-03T09:43:32 IST" duration-ms="7230" status="PASS">
+        </test-method> <!-- verifyTheUserRedirectsToTheLeadListPage -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.dlad.qa.testcases.LeadList@4b79ac84]" started-at="2024-06-03T13:26:39 IST" name="afterMethod" finished-at="2024-06-03T13:26:40 IST" duration-ms="522" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
