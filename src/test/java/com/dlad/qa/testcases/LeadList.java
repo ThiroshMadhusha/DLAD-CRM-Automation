@@ -42,6 +42,13 @@ public class LeadList extends BaseClass {
 	 */
 
 	@Test(priority = 1)
+	public void verifyTheUserRedirectsToTheLeadListPage() {
+		
+		String actualeadListPage = driver.findElement(By.xpath("")).getText();
+		Assert.assertEquals(actualeadListPage, "Leads");
+	}
+	
+	@Test(priority = 2)
 	public void verifyTheCreateNewLeadFormOpen() {
 		
 		driver.findElement(By.xpath("//div[@class='flex gap-3 flex-row-reverse']/button")).click();
@@ -49,7 +56,7 @@ public class LeadList extends BaseClass {
 		Assert.assertEquals(actualForm, "Create New Lead", "Error Message...!");
 	}
 	
-	@Test(priority = 2)
+	@Test(priority = 3)
 	public void verifyTheCreateNewLeadFormCloseIcon() throws InterruptedException {
 		
 		driver.findElement(By.xpath("//div[@class='flex gap-3 flex-row-reverse']/button")).click();
@@ -59,7 +66,7 @@ public class LeadList extends BaseClass {
 	}
 		
 	
-	@Test(priority = 3)
+	@Test(priority = 4)
 	public void verifyTheCreateNewLeadWithValidData() throws InterruptedException {
 		
 		driver.findElement(By.xpath("//div[@class='flex gap-3 flex-row-reverse']/button")).click();
@@ -78,14 +85,14 @@ public class LeadList extends BaseClass {
 		
 	}
 	
-	@Test(priority = 4)
+	@Test(priority = 5)
 	public void verifyTheClickOnCreateButtonWithWithoutFillingData() throws InterruptedException {
 		
 		driver.findElement(By.xpath("//div[@class='flex gap-3 flex-row-reverse']/button")).click();
 		driver.findElement(By.xpath("//button[contains(text(),'Save changes')]")).click();
 	}
 	
-	@Test(priority = 5)
+	@Test(priority = 6)
 	public void cancellButtonNewLeadForm() throws InterruptedException {
 		
 		driver.findElement(By.xpath("//div[@class='flex gap-3 flex-row-reverse']/button")).click();
