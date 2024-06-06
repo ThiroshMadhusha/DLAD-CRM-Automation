@@ -44,7 +44,7 @@ public class LeadList extends BaseClass {
 	@Test(priority = 1)
 	public void verifyTheUserRedirectsToTheLeadListPage() {
 		
-		String actualeadListPage = driver.findElement(By.xpath("")).getText();
+		String actualeadListPage = driver.findElement(By.xpath("//div[@class='flex gap-3 items-center']/h1")).getText();
 		Assert.assertEquals(actualeadListPage, "Leads");
 	}
 	
@@ -53,15 +53,15 @@ public class LeadList extends BaseClass {
 		
 		driver.findElement(By.xpath("//div[@class='flex gap-3 flex-row-reverse']/button")).click();
 		String actualForm = driver.findElement(By.xpath("//h2[contains(text(),'Create New Lead')]")).getText();
-		Assert.assertEquals(actualForm, "Create New Lead", "Error Message...!");
+		Assert.assertEquals(actualForm, "Create New Lead", "Error Lead List Form Opening...!");
 	}
-	
+	//div[@class='flex gap-3 items-center']/h1
 	@Test(priority = 3)
 	public void verifyTheCreateNewLeadFormCloseIcon() throws InterruptedException {
 		
 		driver.findElement(By.xpath("//div[@class='flex gap-3 flex-row-reverse']/button")).click();
-		boolean closeBTN = driver.findElement(By.xpath("//button[@type='button']/*[@class='h-4 w-4']")).isDisplayed();
-		Assert.assertTrue(closeBTN);
+		boolean leadCloseIcon = driver.findElement(By.xpath("//button[@type='button']/*[@class='h-4 w-4']")).isDisplayed();
+		Assert.assertTrue(leadCloseIcon);
 		driver.findElement(By.xpath("//button[@type='button']/*[@class='h-4 w-4']")).click();
 	}
 		
