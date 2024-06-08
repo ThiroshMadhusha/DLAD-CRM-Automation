@@ -8,6 +8,7 @@
           <include name="afterMethod"/>
           <include name="verifyTheNewActivityLeadWithValidData"/>
           <include name="beforeMethod"/>
+          <include name="verifyCreateNewActivityLeadsCloseButton"/>
         </methods>
       </class> <!-- com.dlad.qa.testcases.LeadActivityList -->
     </classes>
