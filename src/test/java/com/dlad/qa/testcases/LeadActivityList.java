@@ -13,7 +13,7 @@ import com.dlad.qa.base.BaseClass;
 public class LeadActivityList extends BaseClass {
 	
 	
-WebDriver driver;
+	WebDriver driver;
 	
 	@BeforeMethod
 	public void beforeMethod(){
@@ -61,7 +61,7 @@ WebDriver driver;
 	public void verifyCreateNewActivityLeadsCloseButton() {
 		
 		driver.findElement(By.xpath("//div[@class='flex gap-3 flex-row-reverse']/button")).click();
-		boolean leadActivityCloseIcon = driver.findElement(By.xpath("")).isDisplayed();
+		boolean leadActivityCloseIcon = driver.findElement(By.xpath("//button[@type='button']/*[@class='h-4 w-4']")).isDisplayed();
 		Assert.assertTrue(leadActivityCloseIcon);
 		driver.findElement(By.xpath("//button[@type='button']/*[@class='h-4 w-4']")).click();
 	}
