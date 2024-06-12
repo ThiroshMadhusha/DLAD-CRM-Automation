@@ -27,7 +27,7 @@ public class LeadList extends BaseClass {
 		}
 		
 		// Sidebar
-		driver.findElement(By.xpath("//nav[@class='grid gap-1 px-2']/div[1]")).click();
+		driver.findElement(By.xpath("//nav[@class='grid gap-1 px-2']/div[2]")).click();
 		driver.findElement(By.xpath("//a[@href='/app/lead/list']")).click();
 	}
 

@@ -2,10 +2,13 @@ package com.dlad.qa.testcases;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
 
 import com.dlad.qa.base.BaseClass;
+
 
 public class Home extends BaseClass {
 
@@ -25,8 +28,7 @@ public class Home extends BaseClass {
 		}
 		
 		// Sidebar
-		driver.findElement(By.xpath("//nav[@class='grid gap-1 px-2']/div[2]")).click();
-		driver.findElement(By.xpath("//a[@href='/app/activity/lead/list']")).click();
+		driver.findElement(By.xpath("//a[@href='/app']")).click();
 	}
 
 	@AfterMethod
@@ -40,4 +42,11 @@ public class Home extends BaseClass {
 	 */
 	
 	
+	@Test(priority = 1)
+	public void verifyTheUserRedirectsToTheHomePage() {
+		
+		String homePage = driver.findElement(By.xpath("//h3[@class='tracking-tight text-sm font-medium text-white']")).getText();
+		Assert.assertEquals(homePage, "Own Leads");
+		
+	}
 }
