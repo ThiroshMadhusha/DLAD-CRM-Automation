@@ -16,16 +16,13 @@ public class LeadActivityList extends BaseClass {
 	WebDriver driver;
 	
 	@BeforeMethod
-	public void beforeMethod(){
+	public void beforeMethod() throws InterruptedException{
 
 		//	load Property
 		loadPropertiesFile();
-		try {
-			driver = initializeBrowser(prop.getProperty("browserName"));
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		driver = initializeBrowser(prop.getProperty("browserName"));
+		// Validate Login
+		driver = validLogin(loginProp.getProperty("validCRMEmailAddress", "validCRMPassword"));
 		
 		// Sidebar
 		driver.findElement(By.xpath("//nav[@class='grid gap-1 px-2']/div[1]")).click();

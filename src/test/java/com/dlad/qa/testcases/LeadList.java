@@ -1,8 +1,8 @@
 package com.dlad.qa.testcases;
 
-import org.testng.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -15,16 +15,13 @@ public class LeadList extends BaseClass {
 	WebDriver driver;
 	
 	@BeforeMethod
-	public void beforeMethod(){
+	public void beforeMethod() {
 
 		//	load Property
 		loadPropertiesFile();
-		try {
-			driver = initializeBrowser(prop.getProperty("browserName"));
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		driver = initializeBrowser(prop.getProperty("browserName"));
+		// Validate Login
+		driver = validLogin(loginProp.getProperty("validCRMEmailAddress", "validCRMPassword"));
 		
 		// Sidebar
 		driver.findElement(By.xpath("//nav[@class='grid gap-1 px-2']/div[2]")).click();
@@ -42,10 +39,11 @@ public class LeadList extends BaseClass {
 	 */
 
 	@Test(priority = 1)
-	public void verifyTheUserRedirectsToTheLeadListPage() {
+	public void verifyTheUserRedirectsToTheLeadListPage() throws InterruptedException {
 		
 		String actualeadListPage = driver.findElement(By.xpath("//div[@class='flex gap-3 items-center']/h1")).getText();
 		Assert.assertEquals(actualeadListPage, "Leads");
+		Thread.sleep(3000);
 	}
 	
 	@Test(priority = 2)
