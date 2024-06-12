@@ -8,12 +8,14 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import com.dlad.qa.base.BaseClass;
+import com.dlad.qa.pages.SidebarCRM;
 import com.dlad.qa.utils.Utils;
 
 public class LeadList extends BaseClass {
 	
 	WebDriver driver;
-	
+	SidebarCRM sidebarCRM;
+
 	@BeforeMethod
 	public void beforeMethod() {
 
@@ -24,8 +26,10 @@ public class LeadList extends BaseClass {
 		driver = validLogin(loginProp.getProperty("validCRMEmailAddress", "validCRMPassword"));
 		
 		// Sidebar
-		driver.findElement(By.xpath("//nav[@class='grid gap-1 px-2']/div[2]")).click();
-		driver.findElement(By.xpath("//a[@href='/app/lead/list']")).click();
+		sidebarCRM = new SidebarCRM(driver);
+		sidebarCRM.LeadListGroup();
+		sidebarCRM.LeadList();
+
 	}
 
 	@AfterMethod
@@ -43,7 +47,6 @@ public class LeadList extends BaseClass {
 		
 		String actualeadListPage = driver.findElement(By.xpath("//div[@class='flex gap-3 items-center']/h1")).getText();
 		Assert.assertEquals(actualeadListPage, "Leads");
-		Thread.sleep(3000);
 	}
 	
 	@Test(priority = 2)

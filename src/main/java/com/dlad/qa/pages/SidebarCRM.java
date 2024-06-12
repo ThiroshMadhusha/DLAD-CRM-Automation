@@ -14,22 +14,28 @@ public class SidebarCRM {
 		PageFactory.initElements(driver, this);
 	}
 	
-	@FindBy(xpath = "")
+	@FindBy(xpath = "//a[@href='/app']")
 	private WebElement HomeTab;
 	
-	@FindBy(xpath = "")
+	@FindBy(xpath = "//nav[@class='grid gap-1 px-2']/div[1]")
+	private WebElement ActivityGroup;
+	
+	@FindBy(xpath = "//a[@href='/app/activity/overview']")
 	private WebElement ActivityOverview;
 	
-	@FindBy(xpath = "")
+	@FindBy(xpath = "//a[@href='/app/activity/lead/list']")
 	private WebElement LeadActivityList;
 	
 	@FindBy(xpath = "")
 	private WebElement BPActivityList;
 	
-	@FindBy(xpath = "")
+	@FindBy(xpath = "//a[@href='/app/lead/overview']")
 	private WebElement LeadOverview;
 
-	@FindBy(xpath = "")
+	@FindBy(xpath = "//nav[@class='grid gap-1 px-2']/div[2]")
+	private WebElement LeadListGroup;
+
+	@FindBy(xpath = "//a[@href='/app/lead/list']")
 	private WebElement LeadList;
 	
 	@FindBy(xpath = "")
@@ -56,6 +62,10 @@ public class SidebarCRM {
 		HomeTab.click();
 	}
 	
+	public void ActivityGroup() {
+		ActivityGroup.click();
+	}
+	
 	public void ActivityOverview() {
 		ActivityOverview.click();
 	}
@@ -70,6 +80,10 @@ public class SidebarCRM {
 	
 	public void LeadOverview() {
 		LeadOverview.click();
+	}
+	
+	public void LeadListGroup() {
+		LeadListGroup.click();
 	}
 	
 	public void LeadList() {

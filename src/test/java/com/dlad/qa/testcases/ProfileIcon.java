@@ -1,19 +1,17 @@
 package com.dlad.qa.testcases;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
 
 import com.dlad.qa.base.BaseClass;
+import com.dlad.qa.pages.SidebarCRM;
 
-
-public class ActivitiesOverview extends BaseClass {
+public class ProfileIcon extends BaseClass {
 
 	
 	WebDriver driver;
+	SidebarCRM sidebarCRM;
 	
 	@BeforeMethod
 	public void beforeMethod() throws InterruptedException{
@@ -25,8 +23,7 @@ public class ActivitiesOverview extends BaseClass {
 		driver = validLogin(loginProp.getProperty("validCRMEmailAddress", "validCRMPassword"));
 		
 		// Sidebar
-		driver.findElement(By.xpath("//nav[@class='grid gap-1 px-2']/div[1]")).click();
-		driver.findElement(By.xpath("//a[@href='/app/activity/lead/overview']")).click();
+		
 	}
 
 	@AfterMethod
@@ -38,13 +35,6 @@ public class ActivitiesOverview extends BaseClass {
 	/*
 	 * Test Cases
 	 */
-	
-	@Test(priority = 1)
-	public void verifyTheUserRedirectsToTheActivityOverviewPage() {
-		
-		String activityOverview = driver.findElement(By.xpath("//div[@class='flex gap-3 items-center']/h1")).getText();
-		Assert.assertEquals(activityOverview, "Leads");
-	}
 	
 	
 }

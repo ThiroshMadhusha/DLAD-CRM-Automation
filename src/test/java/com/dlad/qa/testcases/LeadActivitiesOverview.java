@@ -11,7 +11,7 @@ import com.dlad.qa.base.BaseClass;
 import com.dlad.qa.pages.SidebarCRM;
 
 
-public class LeadOverview extends BaseClass {
+public class LeadActivitiesOverview extends BaseClass {
 
 	
 	WebDriver driver;
@@ -28,9 +28,8 @@ public class LeadOverview extends BaseClass {
 		
 		// Sidebar
 		sidebarCRM = new SidebarCRM(driver);
-		sidebarCRM.LeadListGroup();
-		sidebarCRM.LeadOverview();
-
+		sidebarCRM.ActivityGroup();
+		sidebarCRM.ActivityOverview();
 	}
 
 	@AfterMethod
@@ -44,11 +43,11 @@ public class LeadOverview extends BaseClass {
 	 */
 	
 	@Test(priority = 1)
-	public void verifyTheUserRedirectsToTheLeadOverviewPage() {
+	public void verifyTheUserRedirectsToTheActivityOverviewPage() {
 		
-		String leadOverview = driver.findElement(By.xpath("//div[@class='flex gap-3 items-center']/h1")).getText();
-		Assert.assertEquals(leadOverview, "Leads");
-
+		String activityOverview = driver.findElement(By.xpath("//div[@class='flex gap-3 items-center']/h1")).getText();
+		Assert.assertEquals(activityOverview, "Leads");
 	}
+	
 	
 }
