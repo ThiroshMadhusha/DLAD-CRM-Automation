@@ -13,16 +13,11 @@ public class Login extends BaseClass {
 	WebDriver driver;
 
 	@BeforeMethod
-	public void beforeMethod() {
+	public void beforeMethod() throws InterruptedException {
 
 	//	load Property
 		loadPropertiesFile();
-		try {
-			driver = initializeBrowser(prop.getProperty("browserName"));
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		driver = initializeBrowser(prop.getProperty("browserName"));
 	
 	}
 

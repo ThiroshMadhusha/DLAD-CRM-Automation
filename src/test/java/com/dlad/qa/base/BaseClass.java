@@ -55,9 +55,9 @@ public class BaseClass {
 		
 	}
 	
-//	Initializing the Browser
+	//	Initializing the Browser
 	
-	public WebDriver initializeBrowser(String browserName) throws InterruptedException {			
+	public WebDriver initializeBrowser(String browserName) {			
 		
 		if(browserName.equalsIgnoreCase("chrome")) {
 			driver = new ChromeDriver();
@@ -82,15 +82,19 @@ public class BaseClass {
 		
 		driver.get(prop.getProperty("url"));
 		
+		return driver;
+	}
+	
+	// Verify Login
+	
+	public WebDriver validLogin(String string) {
+		
 		driver.findElement(By.xpath("//input[@id='username']")).sendKeys(loginProp.getProperty("validCRMEmailAddress"));
-		
 		driver.findElement(By.xpath("//input[@id='password']")).sendKeys(loginProp.getProperty("validCRMPassword"));
-		
-		Thread.sleep(2000);
 		driver.findElement(By.xpath("//button[@type='submit']")).click();
 		
-		
 		return driver;
+	
 	}
 
 }
