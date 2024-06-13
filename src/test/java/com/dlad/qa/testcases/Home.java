@@ -8,12 +8,14 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import com.dlad.qa.base.BaseClass;
+import com.dlad.qa.pages.SidebarCRM;
 
 
 public class Home extends BaseClass {
 
 	
 	WebDriver driver;
+	SidebarCRM sidebarCRM;
 	
 	@BeforeMethod
 	public void beforeMethod() throws InterruptedException{
@@ -25,7 +27,9 @@ public class Home extends BaseClass {
 		driver = validLogin(loginProp.getProperty("validCRMEmailAddress", "validCRMPassword"));
 		
 		// Sidebar
-		driver.findElement(By.xpath("//a[@href='/app']")).click();
+		sidebarCRM = new SidebarCRM(driver);
+		sidebarCRM.HomeTab();
+		
 	}
 
 	@AfterMethod
@@ -40,10 +44,9 @@ public class Home extends BaseClass {
 	
 	
 	@Test(priority = 1)
-	public void verifyTheUserRedirectsToTheHomePage() {
+	public void verifyTheUserRedirectsToTheHomePage() throws InterruptedException {
 		
 		String homePage = driver.findElement(By.xpath("//h3[@class='tracking-tight text-sm font-medium text-white']")).getText();
 		Assert.assertEquals(homePage, "Own Leads");
-		
 	}
 }

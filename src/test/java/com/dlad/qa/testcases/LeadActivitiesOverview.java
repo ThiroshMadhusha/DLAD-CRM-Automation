@@ -8,12 +8,14 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import com.dlad.qa.base.BaseClass;
+import com.dlad.qa.pages.SidebarCRM;
 
 
-public class ActivitiesOverview extends BaseClass {
+public class LeadActivitiesOverview extends BaseClass {
 
 	
 	WebDriver driver;
+	SidebarCRM sidebarCRM;
 	
 	@BeforeMethod
 	public void beforeMethod() throws InterruptedException{
@@ -25,8 +27,9 @@ public class ActivitiesOverview extends BaseClass {
 		driver = validLogin(loginProp.getProperty("validCRMEmailAddress", "validCRMPassword"));
 		
 		// Sidebar
-		driver.findElement(By.xpath("//nav[@class='grid gap-1 px-2']/div[1]")).click();
-		driver.findElement(By.xpath("//a[@href='/app/activity/lead/overview']")).click();
+		sidebarCRM = new SidebarCRM(driver);
+		sidebarCRM.LeadActivityGroup();
+		sidebarCRM.LeadActivityOverview();
 	}
 
 	@AfterMethod

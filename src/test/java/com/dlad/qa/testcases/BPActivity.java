@@ -1,24 +1,20 @@
 package com.dlad.qa.testcases;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
 
 import com.dlad.qa.base.BaseClass;
 import com.dlad.qa.pages.SidebarCRM;
 
-
-public class LeadOverview extends BaseClass {
+public class BPActivity extends BaseClass {
 
 	
 	WebDriver driver;
 	SidebarCRM sidebarCRM;
-	
+
 	@BeforeMethod
-	public void beforeMethod() throws InterruptedException{
+	public void beforeMethod() {
 
 		//	load Property
 		loadPropertiesFile();
@@ -28,8 +24,7 @@ public class LeadOverview extends BaseClass {
 		
 		// Sidebar
 		sidebarCRM = new SidebarCRM(driver);
-		sidebarCRM.LeadListGroup();
-		sidebarCRM.LeadOverview();
+
 
 	}
 
@@ -42,13 +37,5 @@ public class LeadOverview extends BaseClass {
 	/*
 	 * Test Cases
 	 */
-	
-	@Test(priority = 1)
-	public void verifyTheUserRedirectsToTheLeadOverviewPage() {
-		
-		String leadOverview = driver.findElement(By.xpath("//div[@class='flex gap-3 items-center']/h1")).getText();
-		Assert.assertEquals(leadOverview, "Leads");
-
-	}
 	
 }

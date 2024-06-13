@@ -1,85 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-06-12T15:45:22 IST" name="Default suite" finished-at="2024-06-12T15:46:33 IST" duration-ms="70438">
+  <suite started-at="2024-06-13T00:34:47 IST" name="Default suite" finished-at="2024-06-13T00:35:02 IST" duration-ms="15532">
     <groups>
     </groups>
-    <test started-at="2024-06-12T15:45:22 IST" name="Default test" finished-at="2024-06-12T15:46:33 IST" duration-ms="70438">
-      <class name="com.dlad.qa.testcases.LeadList">
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.dlad.qa.testcases.LeadList@34158c08]" started-at="2024-06-12T15:45:22 IST" name="beforeMethod" finished-at="2024-06-12T15:45:33 IST" duration-ms="10738" status="PASS">
+    <test started-at="2024-06-13T00:34:47 IST" name="Default test" finished-at="2024-06-13T00:35:02 IST" duration-ms="15532">
+      <class name="com.dlad.qa.testcases.LeadActivitiesOverview">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.dlad.qa.testcases.LeadActivitiesOverview@2f16c6b3]" started-at="2024-06-13T00:34:47 IST" name="beforeMethod" finished-at="2024-06-13T00:35:01 IST" duration-ms="14200" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="verifyTheUserRedirectsToTheLeadListPage()[pri:1, instance:com.dlad.qa.testcases.LeadList@34158c08]" started-at="2024-06-12T15:45:33 IST" name="verifyTheUserRedirectsToTheLeadListPage" finished-at="2024-06-12T15:45:36 IST" duration-ms="3126" status="PASS">
+        <test-method signature="verifyTheUserRedirectsToTheActivityOverviewPage()[pri:1, instance:com.dlad.qa.testcases.LeadActivitiesOverview@2f16c6b3]" started-at="2024-06-13T00:35:01 IST" name="verifyTheUserRedirectsToTheActivityOverviewPage" finished-at="2024-06-13T00:35:01 IST" duration-ms="92" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyTheUserRedirectsToTheLeadListPage -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.dlad.qa.testcases.LeadList@34158c08]" started-at="2024-06-12T15:45:36 IST" name="afterMethod" finished-at="2024-06-12T15:45:37 IST" duration-ms="582" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.dlad.qa.testcases.LeadList@34158c08]" started-at="2024-06-12T15:45:37 IST" name="beforeMethod" finished-at="2024-06-12T15:45:47 IST" duration-ms="9994" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method signature="verifyTheCreateNewLeadFormOpen()[pri:2, instance:com.dlad.qa.testcases.LeadList@34158c08]" started-at="2024-06-12T15:45:47 IST" name="verifyTheCreateNewLeadFormOpen" finished-at="2024-06-12T15:45:47 IST" duration-ms="276" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyTheCreateNewLeadFormOpen -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.dlad.qa.testcases.LeadList@34158c08]" started-at="2024-06-12T15:45:47 IST" name="afterMethod" finished-at="2024-06-12T15:45:47 IST" duration-ms="434" status="PASS">
+        </test-method> <!-- verifyTheUserRedirectsToTheActivityOverviewPage -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.dlad.qa.testcases.LeadActivitiesOverview@2f16c6b3]" started-at="2024-06-13T00:35:01 IST" name="afterMethod" finished-at="2024-06-13T00:35:02 IST" duration-ms="1020" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.dlad.qa.testcases.LeadList@34158c08]" started-at="2024-06-12T15:45:47 IST" name="beforeMethod" finished-at="2024-06-12T15:45:57 IST" duration-ms="9889" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method signature="verifyTheCreateNewLeadFormCloseIcon()[pri:3, instance:com.dlad.qa.testcases.LeadList@34158c08]" started-at="2024-06-12T15:45:57 IST" name="verifyTheCreateNewLeadFormCloseIcon" finished-at="2024-06-12T15:45:58 IST" duration-ms="454" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyTheCreateNewLeadFormCloseIcon -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.dlad.qa.testcases.LeadList@34158c08]" started-at="2024-06-12T15:45:58 IST" name="afterMethod" finished-at="2024-06-12T15:45:58 IST" duration-ms="419" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.dlad.qa.testcases.LeadList@34158c08]" started-at="2024-06-12T15:45:58 IST" name="beforeMethod" finished-at="2024-06-12T15:46:08 IST" duration-ms="10068" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method signature="verifyTheCreateNewLeadWithValidData()[pri:4, instance:com.dlad.qa.testcases.LeadList@34158c08]" started-at="2024-06-12T15:46:08 IST" name="verifyTheCreateNewLeadWithValidData" finished-at="2024-06-12T15:46:11 IST" duration-ms="3251" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyTheCreateNewLeadWithValidData -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.dlad.qa.testcases.LeadList@34158c08]" started-at="2024-06-12T15:46:11 IST" name="afterMethod" finished-at="2024-06-12T15:46:12 IST" duration-ms="653" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.dlad.qa.testcases.LeadList@34158c08]" started-at="2024-06-12T15:46:12 IST" name="beforeMethod" finished-at="2024-06-12T15:46:21 IST" duration-ms="8569" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method signature="verifyTheClickOnCreateButtonWithWithoutFillingData()[pri:5, instance:com.dlad.qa.testcases.LeadList@34158c08]" started-at="2024-06-12T15:46:21 IST" name="verifyTheClickOnCreateButtonWithWithoutFillingData" finished-at="2024-06-12T15:46:21 IST" duration-ms="433" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyTheClickOnCreateButtonWithWithoutFillingData -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.dlad.qa.testcases.LeadList@34158c08]" started-at="2024-06-12T15:46:21 IST" name="afterMethod" finished-at="2024-06-12T15:46:22 IST" duration-ms="464" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.dlad.qa.testcases.LeadList@34158c08]" started-at="2024-06-12T15:46:22 IST" name="beforeMethod" finished-at="2024-06-12T15:46:32 IST" duration-ms="10254" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method signature="cancellButtonNewLeadForm()[pri:6, instance:com.dlad.qa.testcases.LeadList@34158c08]" started-at="2024-06-12T15:46:32 IST" name="cancellButtonNewLeadForm" finished-at="2024-06-12T15:46:32 IST" duration-ms="205" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- cancellButtonNewLeadForm -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.dlad.qa.testcases.LeadList@34158c08]" started-at="2024-06-12T15:46:32 IST" name="afterMethod" finished-at="2024-06-12T15:46:33 IST" duration-ms="435" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-      </class> <!-- com.dlad.qa.testcases.LeadList -->
+      </class> <!-- com.dlad.qa.testcases.LeadActivitiesOverview -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
