@@ -17,43 +17,56 @@ public class SidebarCRM {
 	@FindBy(xpath = "//a[@href='/app']")
 	private WebElement HomeTab;
 	
+	/*
+	 *  Lead Activity List
+	 */
 	@FindBy(xpath = "//nav[@class='grid gap-1 px-2']/div[1]")
-	private WebElement ActivityGroup;
+	private WebElement LeadActivityGroup;
 	
 	@FindBy(xpath = "//a[@href='/app/activity/overview']")
-	private WebElement ActivityOverview;
+	private WebElement LeadActivityOverview;
 	
 	@FindBy(xpath = "//a[@href='/app/activity/lead/list']")
 	private WebElement LeadActivityList;
 	
-	@FindBy(xpath = "")
+	@FindBy(xpath = "//a[@href='/app/activity/bp/list']")
 	private WebElement BPActivityList;
 	
-	@FindBy(xpath = "//a[@href='/app/lead/overview']")
-	private WebElement LeadOverview;
-
+	/*
+	 *  Lead List
+	 */
 	@FindBy(xpath = "//nav[@class='grid gap-1 px-2']/div[2]")
 	private WebElement LeadListGroup;
+
+	@FindBy(xpath = "//a[@href='/app/lead/overview']")
+	private WebElement LeadOverview;
 
 	@FindBy(xpath = "//a[@href='/app/lead/list']")
 	private WebElement LeadList;
 	
-	@FindBy(xpath = "")
+	/*
+	 *  Business Partners List
+	 */
+
+	@FindBy(xpath = "//nav[@class='grid gap-1 px-2']/div[3]")
+	private WebElement BusinessPartnersGroup;
+	
+	@FindBy(xpath = "//a[@href='/business-partners/overview']")
 	private WebElement BusinessPartnersOverview;
 	
-	@FindBy(xpath = "")
+	@FindBy(xpath = "//a[@href='/app/business-partners/list']")
 	private WebElement BusinessPartnerList;
 	
-	@FindBy(xpath = "")
+	@FindBy(xpath = "//a[@href='/app/sales-quotations/list']")
 	private WebElement Quotations;
 	
-	@FindBy(xpath = "")
+	@FindBy(xpath = "//a[@href='/app/sales-orders/list']")
 	private WebElement SalesOrders;
 	
-	@FindBy(xpath = "")
+	@FindBy(xpath = "//a[@href='/app/calendar']")
 	private WebElement Calander;
 	
-	@FindBy(xpath = "")
+	@FindBy(xpath = "//div[@class='border-b h-[64px] bg-white border-b-gray-300 flex items-center justify-between px-3']/button")
 	private WebElement ProfileIcon;
 	
 	// Actions
@@ -62,12 +75,15 @@ public class SidebarCRM {
 		HomeTab.click();
 	}
 	
-	public void ActivityGroup() {
-		ActivityGroup.click();
+	/*
+	 *  Lead Activity List
+	 */
+	public void LeadActivityGroup() {
+		LeadActivityGroup.click();
 	}
 	
-	public void ActivityOverview() {
-		ActivityOverview.click();
+	public void LeadActivityOverview() {
+		LeadActivityOverview.click();
 	}
 	
 	public void LeadActivityList() {
@@ -78,16 +94,26 @@ public class SidebarCRM {
 		BPActivityList.click();
 	}
 	
-	public void LeadOverview() {
-		LeadOverview.click();
-	}
-	
+	/*
+	 *  Lead List
+	 */
 	public void LeadListGroup() {
 		LeadListGroup.click();
 	}
 	
+	public void LeadOverview() {
+		LeadOverview.click();
+	}
+	
 	public void LeadList() {
 		LeadList.click();
+	}
+	
+	/*
+	 *  Business Partners List
+	 */
+	public void BusinessPartnersGroup() {
+		LeadListGroup.click();
 	}
 	
 	public void BusinessPartnersOverview() {
