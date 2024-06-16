@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-06-13T00:34:47 IST" name="Default suite" finished-at="2024-06-13T00:35:02 IST" duration-ms="15532">
+  <suite started-at="2024-06-16T21:54:34 IST" name="Default suite" finished-at="2024-06-16T21:54:53 IST" duration-ms="19551">
     <groups>
     </groups>
-    <test started-at="2024-06-13T00:34:47 IST" name="Default test" finished-at="2024-06-13T00:35:02 IST" duration-ms="15532">
-      <class name="com.dlad.qa.testcases.LeadActivitiesOverview">
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.dlad.qa.testcases.LeadActivitiesOverview@2f16c6b3]" started-at="2024-06-13T00:34:47 IST" name="beforeMethod" finished-at="2024-06-13T00:35:01 IST" duration-ms="14200" status="PASS">
+    <test started-at="2024-06-16T21:54:34 IST" name="Default test" finished-at="2024-06-16T21:54:53 IST" duration-ms="19551">
+      <class name="com.dlad.qa.testcases.Home">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.dlad.qa.testcases.Home@52c3cb31]" started-at="2024-06-16T21:54:34 IST" name="beforeMethod" finished-at="2024-06-16T21:54:47 IST" duration-ms="13680" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="verifyTheUserRedirectsToTheActivityOverviewPage()[pri:1, instance:com.dlad.qa.testcases.LeadActivitiesOverview@2f16c6b3]" started-at="2024-06-13T00:35:01 IST" name="verifyTheUserRedirectsToTheActivityOverviewPage" finished-at="2024-06-13T00:35:01 IST" duration-ms="92" status="PASS">
+        <test-method signature="verifyTheUserCanViewHomePageCardCounts()[pri:3, instance:com.dlad.qa.testcases.Home@52c3cb31]" started-at="2024-06-16T21:54:47 IST" name="verifyTheUserCanViewHomePageCardCounts" finished-at="2024-06-16T21:54:51 IST" duration-ms="3695" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyTheUserRedirectsToTheActivityOverviewPage -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.dlad.qa.testcases.LeadActivitiesOverview@2f16c6b3]" started-at="2024-06-13T00:35:01 IST" name="afterMethod" finished-at="2024-06-13T00:35:02 IST" duration-ms="1020" status="PASS">
+        </test-method> <!-- verifyTheUserCanViewHomePageCardCounts -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.dlad.qa.testcases.Home@52c3cb31]" started-at="2024-06-16T21:54:51 IST" name="afterMethod" finished-at="2024-06-16T21:54:53 IST" duration-ms="2010" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-      </class> <!-- com.dlad.qa.testcases.LeadActivitiesOverview -->
+      </class> <!-- com.dlad.qa.testcases.Home -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
