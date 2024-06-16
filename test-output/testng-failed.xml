@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.dlad.qa.testcases.LeadActivityList">
+      <class name="com.dlad.qa.testcases.Home">
         <methods>
-          <include name="afterMethod"/>
-          <include name="verifyTheUserRedirectsToTheLeadActivityListPage"/>
           <include name="beforeMethod"/>
+          <include name="afterMethod"/>
+          <include name="verifyTheUserCanViewHomePagesCardCounts"/>
         </methods>
-      </class> <!-- com.dlad.qa.testcases.LeadActivityList -->
+      </class> <!-- com.dlad.qa.testcases.Home -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
