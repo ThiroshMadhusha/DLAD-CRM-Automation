@@ -43,9 +43,9 @@ public class LeadList extends BaseClass {
 	 */
 
 	@Test(priority = 1)
-	public void verifyTheUserRedirectsToTheLeadListPage() throws InterruptedException {
+	public void verifyTheUserRedirectsToTheLeadListPage() {
 		
-		String actualeadListPage = driver.findElement(By.xpath("//div[@class='flex gap-3 items-center']/h1")).getText();
+		String actualeadListPage = driver.findElement(By.xpath("//div[@class='flex gap-3 items-center']/h1[contains(text(),'Leads')]")).getText();
 		Assert.assertEquals(actualeadListPage, "Leads");
 	}
 	
