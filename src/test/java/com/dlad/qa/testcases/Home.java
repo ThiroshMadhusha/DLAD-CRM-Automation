@@ -19,7 +19,7 @@ public class Home extends BaseClass {
 	SidebarCRM sidebarCRM;
 	
 	@BeforeMethod
-	public void beforeMethod() throws InterruptedException{
+	public void beforeMethod() {
 
 		//	load Property
 		loadPropertiesFile();
@@ -53,7 +53,7 @@ public class Home extends BaseClass {
 	
 	
 	@Test(priority = 2)
-	public void verifyTheUserCanViewHomePageCardNames() {
+	public void verifyDisplayTheHomePageCardNames() {
 		
 		String ownLead = driver.findElement(By.xpath("//h3[contains(text(), 'Own Leads')]")).getText();
 		Assert.assertEquals(ownLead, "Own Leads");
@@ -74,7 +74,7 @@ public class Home extends BaseClass {
 	}
 	
 	@Test(priority = 3)
-	public void verifyTheUserCanViewHomePageCardCounts() throws InterruptedException {
+	public void verifyDisplayTheHomePageCardCounts() {
 		
 		String ownLead = driver.findElement(By.xpath("//h3[contains(text(), 'Own Leads')]")).getText();
 		Assert.assertEquals(ownLead, "Own Leads");
@@ -87,43 +87,29 @@ public class Home extends BaseClass {
         // Get the count text
         String ownLeadValue = ownLeadCounts.getText();
         System.out.println(ownLead + ":" + ownLeadValue);
-        
-        Thread.sleep(3000);
-	
+        	
 		String ownBps = driver.findElement(By.xpath("//h3[contains(text(), 'Own BPs')]")).getText();
 		Assert.assertEquals(ownBps, "Own BPs");
-		// Find the element with the label "Own Leads"
         WebElement ownBpsLabel = driver.findElement(By.xpath("//h3[contains(text(), 'Own BPs')]"));
-        // Find the parent div of the label
         WebElement ownBpsParentDiv = ownBpsLabel.findElement(By.xpath("./ancestor::div[@class='rounded-xl border bg-card text-card-foreground shadow']"));
-        // Find the element containing the count
         WebElement ownBpsCounts = ownBpsParentDiv.findElement(By.xpath(".//div[@class='text-2xl font-bold']"));
-        // Get the count text
         String ownBpsValue = ownBpsCounts.getText();
         System.out.println(ownBps + ":" + ownBpsValue);
         
 		String todayActivities = driver.findElement(By.xpath("//h3[contains(text(), 'Today Activities')]")).getText();
 		Assert.assertEquals(todayActivities, "Today Activities");
-		// Find the element with the label "Own Leads"
         WebElement todayActivitiesLabel = driver.findElement(By.xpath("//h3[contains(text(), 'Today Activities')]"));
-        // Find the parent div of the label
         WebElement todayActivitiesParentDiv = todayActivitiesLabel.findElement(By.xpath("./ancestor::div[@class='rounded-xl border bg-card text-card-foreground shadow']"));
-        // Find the element containing the count
         WebElement todayActivitiesCounts = todayActivitiesParentDiv.findElement(By.xpath(".//div[@class='text-2xl font-bold']"));
-        // Get the count text
         String todayActivitiesValue = todayActivitiesCounts.getText();
         System.out.println(todayActivities + ":" + todayActivitiesValue);
         
 
 		String dueActivities = driver.findElement(By.xpath("//h3[contains(text(), 'Due Activities')]")).getText();
 		Assert.assertEquals(dueActivities, "Due Activities");
-		// Find the element with the label "Own Leads"
         WebElement dueActivitiesLabel = driver.findElement(By.xpath("//h3[contains(text(), 'Due Activities')]"));
-        // Find the parent div of the label
         WebElement dueActivitiesParentDiv = dueActivitiesLabel.findElement(By.xpath("./ancestor::div[@class='rounded-xl border bg-card text-card-foreground shadow']"));
-        // Find the element containing the count
         WebElement dueActivitiesCounts = dueActivitiesParentDiv.findElement(By.xpath(".//div[@class='text-2xl font-bold']"));
-        // Get the count text
         String dueActivitiesValue = dueActivitiesCounts.getText();
         System.out.println(dueActivities + ":" + dueActivitiesValue);
 

@@ -18,7 +18,7 @@ public class LeadActivityList extends BaseClass {
 	SidebarCRM sidebarCRM;
 
 	@BeforeMethod
-	public void beforeMethod() throws InterruptedException{
+	public void beforeMethod() {
 
 		//	load Property
 		loadPropertiesFile();
@@ -45,7 +45,7 @@ public class LeadActivityList extends BaseClass {
 	@Test(priority = 1)
 	public void verifyTheUserRedirectsToTheLeadActivityListPage() {
 		
-		String actualeadActivityListPage = driver.findElement(By.xpath("//div[@class='flex gap-3 items-center']/h1")).getText();
+		String actualeadActivityListPage = driver.findElement(By.xpath("//div[@class='flex gap-3 items-center']/h1[contains(text(),'Lead Activities')]//div[@class='flex gap-3 items-center']/h1")).getText();
 		Assert.assertEquals(actualeadActivityListPage, "Lead Activities");
 	}
 	
