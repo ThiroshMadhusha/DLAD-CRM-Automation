@@ -58,7 +58,7 @@ public class LeadList extends BaseClass {
 	}
 	//div[@class='flex gap-3 items-center']/h1
 	@Test(priority = 3)
-	public void verifyTheCreateNewLeadFormCloseIcon() throws InterruptedException {
+	public void verifyTheCreateNewLeadFormCloseIcon() {
 		
 		driver.findElement(By.xpath("//div[@class='flex gap-3 flex-row-reverse']/button")).click();
 		boolean leadCloseIcon = driver.findElement(By.xpath("//button[@type='button']/*[@class='h-4 w-4']")).isDisplayed();
@@ -87,16 +87,75 @@ public class LeadList extends BaseClass {
 	}
 	
 	@Test(priority = 5)
-	public void verifyTheClickOnCreateButtonWithWithoutFillingData() throws InterruptedException {
+	public void verifyTheClickOnCreateButtonWithWithoutFillingData() {
 		
 		driver.findElement(By.xpath("//div[@class='flex gap-3 flex-row-reverse']/button")).click();
 		driver.findElement(By.xpath("//button[contains(text(),'Save changes')]")).click();
 	}
 	
+	
 	@Test(priority = 6)
-	public void cancellButtonNewLeadForm() throws InterruptedException {
+	public void verifyTheCreateNewLeadWithoutProvidingAnyFields() {
 		
 		driver.findElement(By.xpath("//div[@class='flex gap-3 flex-row-reverse']/button")).click();
+		driver.findElement(By.xpath("//button[contains(text(),'Save changes')]")).click();
+		
+		String actualLeadNameErroMsg = driver.findElement(By.xpath("//p[contains(text(),'Lead name is required')]")).getText();
+		Assert.assertEquals(actualLeadNameErroMsg, "Lead name is required");
+		
+		String actualLeadGroupErroMsg = driver.findElement(By.xpath("//p[contains(text(),'Lead group is required')]")).getText();
+		Assert.assertEquals(actualLeadGroupErroMsg, "Lead group is required");
+		
+		String actualLeadRatingErroMsg = driver.findElement(By.xpath("//p[contains(text(),'Rating is required')]")).getText();
+		Assert.assertEquals(actualLeadRatingErroMsg, "Rating is required");
+	}
+	
+	@Test(priority = 7)
+	public void cancellButtonNewLeadForm() {
+		
+		driver.findElement(By.xpath("//div[@class='flex gap-3 flex-row-reverse']/button")).click();
+		driver.findElement(By.xpath("//button[contains(text(),'Cancel')]")).click();
+	}
+	
+	@Test(priority = 8)
+	public void verifyTheCreatedLeadMemberDisplayOnLeadsTable() throws InterruptedException {
+		
+	    driver.findElement(By.xpath("//div[@class='flex gap-3 flex-row-reverse']/button")).click();
+	    
+	    String generatedLeadName = Utils.nameGenerate();
+	    String generatedCompanyName = Utils.companyNameGenerate();
+	    
+	    driver.findElement(By.xpath("//input[@id='lead_name']")).sendKeys(generatedLeadName);
+	    driver.findElement(By.xpath("//input[@id='about_company']")).sendKeys(generatedCompanyName);
+	    
+	    System.out.println("Generated Lead Name: " + generatedLeadName);
+	    System.out.println("Generated Company Name: " + generatedCompanyName);
+	    
+	    // Continue with the rest of the test steps
+	    driver.findElement(By.xpath("//button[@id='lead_group']")).click();
+	    driver.findElement(By.xpath("//div[@class='flex items-center border-b px-3']/input[@placeholder='Search']")).sendKeys("Cafe");
+	    Thread.sleep(1000);
+	    driver.findElement(By.xpath("//div[@class='relative overflow-hidden']/div/div/div/div/div[1]")).click();
+	    driver.findElement(By.xpath("//button[@id='rating']")).click();
+	    driver.findElement(By.xpath("//div[@class='flex items-center border-b px-3']/input[@placeholder='Search']")).sendKeys("Warm");
+	    driver.findElement(By.xpath("//div[@class='relative overflow-hidden']/div/div/div/div/div[1]")).click();
+	    driver.findElement(By.xpath("//button[contains(text(),'Save changes')]")).click();
+	    
+	    // Verify the page header
+	    String pageHeader = driver.findElement(By.xpath("//div[@class='flex items-center gap-2']/h2[contains(text(),'Lead')]")).getText();
+	    Assert.assertEquals(pageHeader, "Lead");
+		
+	}
+	
+	@Test(priority = 9)
+	public void verifyTheLeadMemberetailsView() {
+		
+		
+	}
+	
+	@Test(priority = 10)
+	public void verifyTheAddingEmailAddressForLeadsTable() {
+		
 		
 	}
 }

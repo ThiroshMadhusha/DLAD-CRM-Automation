@@ -3,8 +3,11 @@
 <suite name="Suite">
   <test thread-count="5" name="TestSuit">
     <classes>
+      <class name="com.dlad.qa.testcases.Home"/>
+      <class name="com.dlad.qa.testcases.LeadActivitiesOverview"/>
+      <class name="com.dlad.qa.testcases.LeadActivityList"/>
+      <class name="com.dlad.qa.testcases.LeadOverview"/>
       <class name="com.dlad.qa.testcases.LeadList"/>
-      <class name="com.dlad.qa.testcases.CreateNewLeadList"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
