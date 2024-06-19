@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-06-17T10:12:20 IST" name="Default suite" finished-at="2024-06-17T10:12:34 IST" duration-ms="13093">
+  <suite started-at="2024-06-19T00:36:20 IST" name="Default suite" finished-at="2024-06-19T00:36:47 IST" duration-ms="26224">
     <groups>
     </groups>
-    <test started-at="2024-06-17T10:12:20 IST" name="Default test" finished-at="2024-06-17T10:12:34 IST" duration-ms="13093">
-      <class name="com.dlad.qa.testcases.LeadActivityList">
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.dlad.qa.testcases.LeadActivityList@34158c08]" started-at="2024-06-17T10:12:21 IST" name="beforeMethod" finished-at="2024-06-17T10:12:33 IST" duration-ms="12458" status="PASS">
+    <test started-at="2024-06-19T00:36:20 IST" name="Default test" finished-at="2024-06-19T00:36:47 IST" duration-ms="26224">
+      <class name="com.dlad.qa.testcases.LeadList">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.dlad.qa.testcases.LeadList@2e6a5539]" started-at="2024-06-19T00:36:21 IST" name="beforeMethod" finished-at="2024-06-19T00:36:41 IST" duration-ms="20272" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="verifyTheUserRedirectsToTheLeadActivityListPage()[pri:1, instance:com.dlad.qa.testcases.LeadActivityList@34158c08]" started-at="2024-06-17T10:12:33 IST" name="verifyTheUserRedirectsToTheLeadActivityListPage" finished-at="2024-06-17T10:12:33 IST" duration-ms="120" status="PASS">
+        <test-method signature="verifyTheCreatedLeadMemberDisplayOnLeadsTable()[pri:8, instance:com.dlad.qa.testcases.LeadList@2e6a5539]" started-at="2024-06-19T00:36:41 IST" name="verifyTheCreatedLeadMemberDisplayOnLeadsTable" finished-at="2024-06-19T00:36:45 IST" duration-ms="4448" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyTheUserRedirectsToTheLeadActivityListPage -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.dlad.qa.testcases.LeadActivityList@34158c08]" started-at="2024-06-17T10:12:33 IST" name="afterMethod" finished-at="2024-06-17T10:12:34 IST" duration-ms="414" status="PASS">
+        </test-method> <!-- verifyTheCreatedLeadMemberDisplayOnLeadsTable -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.dlad.qa.testcases.LeadList@2e6a5539]" started-at="2024-06-19T00:36:45 IST" name="afterMethod" finished-at="2024-06-19T00:36:47 IST" duration-ms="1367" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-      </class> <!-- com.dlad.qa.testcases.LeadActivityList -->
+      </class> <!-- com.dlad.qa.testcases.LeadList -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
