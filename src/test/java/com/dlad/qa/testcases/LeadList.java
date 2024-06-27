@@ -131,7 +131,6 @@ public class LeadList extends BaseClass {
 	    System.out.println("Generated Lead Name: " + generatedLeadName);
 	    System.out.println("Generated Company Name: " + generatedCompanyName);
 	    
-	    // Continue with the rest of the test steps
 	    driver.findElement(By.xpath("//button[@id='lead_group']")).click();
 	    driver.findElement(By.xpath("//div[@class='flex items-center border-b px-3']/input[@placeholder='Search']")).sendKeys("Cafe");
 	    Thread.sleep(1000);
@@ -140,8 +139,7 @@ public class LeadList extends BaseClass {
 	    driver.findElement(By.xpath("//div[@class='flex items-center border-b px-3']/input[@placeholder='Search']")).sendKeys("Warm");
 	    driver.findElement(By.xpath("//div[@class='relative overflow-hidden']/div/div/div/div/div[1]")).click();
 	    driver.findElement(By.xpath("//button[contains(text(),'Save changes')]")).click();
-	    
-	    // Verify the page header
+	   
 	    String pageHeader = driver.findElement(By.xpath("//div[@class='flex items-center gap-2']/h2[contains(text(),'Lead')]")).getText();
 	    Assert.assertEquals(pageHeader, "Lead");
 		

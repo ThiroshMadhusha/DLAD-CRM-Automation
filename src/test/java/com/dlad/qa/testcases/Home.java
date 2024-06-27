@@ -9,6 +9,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import com.dlad.qa.base.BaseClass;
+import com.dlad.qa.pages.HomePage;
 import com.dlad.qa.pages.SidebarCRM;
 
 
@@ -17,6 +18,7 @@ public class Home extends BaseClass {
 	
 	WebDriver driver;
 	SidebarCRM sidebarCRM;
+	HomePage homePage;
 	
 	@BeforeMethod
 	public void beforeMethod() {
@@ -46,9 +48,9 @@ public class Home extends BaseClass {
 	
 	@Test(priority = 1)
 	public void verifyUserRedirectsToTheHomePage() {
-		
-		String homePage = driver.findElement(By.xpath("//h3[@class='tracking-tight text-sm font-medium text-white']")).getText();
-		Assert.assertEquals(homePage, "Own Leads");
+		homePage = new HomePage(driver);
+		String homePageTitle = homePage.homePageHeaderTitle();
+		Assert.assertEquals(homePageTitle, "Own Leads");
 	}
 	
 	

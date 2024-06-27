@@ -3,13 +3,22 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.dlad.qa.testcases.LeadActivityList">
+      <class name="com.dlad.qa.testcases.LeadList">
         <methods>
-          <include name="afterMethod"/>
-          <include name="verifyTheUserRedirectsToTheLeadActivityListPage"/>
+          <include name="verifyTheLeadMemberetailsView"/>
+          <include name="verifyTheUserRedirectsToTheLeadListPage"/>
           <include name="beforeMethod"/>
+          <include name="cancellButtonNewLeadForm"/>
+          <include name="verifyTheCreateNewLeadWithoutProvidingAnyFields"/>
+          <include name="verifyTheCreateNewLeadFormOpen"/>
+          <include name="verifyTheClickOnCreateButtonWithWithoutFillingData"/>
+          <include name="verifyTheCreatedLeadMemberDisplayOnLeadsTable"/>
+          <include name="verifyTheCreateNewLeadWithValidData"/>
+          <include name="verifyTheCreateNewLeadFormCloseIcon"/>
+          <include name="afterMethod"/>
+          <include name="verifyTheAddingEmailAddressForLeadsTable"/>
         </methods>
-      </class> <!-- com.dlad.qa.testcases.LeadActivityList -->
+      </class> <!-- com.dlad.qa.testcases.LeadList -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
