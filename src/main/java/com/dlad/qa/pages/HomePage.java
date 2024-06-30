@@ -14,10 +14,10 @@ public class HomePage {
 		PageFactory.initElements(driver, this);
 }
 	
-	@FindBy(xpath = "//h3[@class='tracking-tight text-sm font-medium text-white']")
+	@FindBy(xpath = "//h3[@class='tracking-tight text-sm font-medium']")
 	private WebElement homePageHeaderTitle;
 	
-	@FindBy(xpath = "//h3[contains(text(), 'Own Leads')]")
+	@FindBy(xpath = "//h3[contains(text(), 'Leads')]")
 	private WebElement ownLeadsCard;
 	
 	@FindBy(xpath = "//h3[contains(text(), 'Own BPs')]")

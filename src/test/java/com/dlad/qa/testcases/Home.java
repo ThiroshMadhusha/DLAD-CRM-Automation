@@ -49,8 +49,8 @@ public class Home extends BaseClass {
 	@Test(priority = 1)
 	public void verifyUserRedirectsToTheHomePage() {
 		homePage = new HomePage(driver);
-		String homePageTitle = homePage.homePageHeaderTitle();
-		Assert.assertEquals(homePageTitle, "Own Leads");
+		String verifyHomePage = homePage.homePageHeaderTitle();
+		Assert.assertEquals(verifyHomePage, "Leads");
 	}
 	
 	
