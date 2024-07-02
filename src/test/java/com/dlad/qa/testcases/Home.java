@@ -1,8 +1,6 @@
 package com.dlad.qa.testcases;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -21,7 +19,7 @@ public class Home extends BaseClass {
 	HomePage homePage;
 	
 	@BeforeMethod
-	public void beforeMethod() {
+	public void beforeMethod() throws InterruptedException {
 
 		//	load Property
 		loadPropertiesFile();
@@ -33,6 +31,9 @@ public class Home extends BaseClass {
 		sidebarCRM = new SidebarCRM(driver);
 		sidebarCRM.HomeTab();
 		
+		homePage = new HomePage(driver);
+
+		Thread.sleep(2000);
 	}
 
 	@AfterMethod
@@ -48,29 +49,28 @@ public class Home extends BaseClass {
 	
 	@Test(priority = 1)
 	public void verifyUserRedirectsToTheHomePage() {
-		homePage = new HomePage(driver);
 		String verifyHomePage = homePage.homePageHeaderTitle();
-		Assert.assertEquals(verifyHomePage, "Leads");
+		Assert.assertEquals(verifyHomePage, homeProp.getProperty("leadLabel"));
 	}
-	
-	
+
+
 	@Test(priority = 2)
 	public void verifyDisplayTheHomePageCardNames() {
 		
-		String ownLead = driver.findElement(By.xpath("//h3[contains(text(), 'Own Leads')]")).getText();
-		Assert.assertEquals(ownLead, "Own Leads");
+		String ownLead = homePage.leadLabel();
+		Assert.assertEquals(ownLead, homeProp.getProperty("leadLabel"));
 		System.out.println(ownLead);
 		
-		String ownBps = driver.findElement(By.xpath("//h3[contains(text(), 'Own BPs')]")).getText();
-		Assert.assertEquals(ownBps, "Own BPs");
+		String ownBps = homePage.ownBpsLabel();
+		Assert.assertEquals(ownBps, homeProp.getProperty("ownBpsLabel"));
 		System.out.println(ownBps);
 
-		String todayActivities = driver.findElement(By.xpath("//h3[contains(text(), 'Today Activities')]")).getText();
-		Assert.assertEquals(todayActivities, "Today Activities");
+		String todayActivities = homePage.leadActivitiesLabel();
+		Assert.assertEquals(todayActivities, homeProp.getProperty("leadActivitiesLabel"));
 		System.out.println(todayActivities);
 
-		String dueActivities = driver.findElement(By.xpath("//h3[contains(text(), 'Due Activities')]")).getText();
-		Assert.assertEquals(dueActivities, "Due Activities");
+		String dueActivities = homePage.bpActivitiesLabel();
+		Assert.assertEquals(dueActivities, homeProp.getProperty("bpActivitiesLabel"));
 		System.out.println(dueActivities);
 
 	}
@@ -78,42 +78,29 @@ public class Home extends BaseClass {
 	@Test(priority = 3)
 	public void verifyDisplayTheHomePageCardCounts() {
 		
-		String ownLead = driver.findElement(By.xpath("//h3[contains(text(), 'Own Leads')]")).getText();
-		Assert.assertEquals(ownLead, "Own Leads");
-		// Find the element with the label "Own Leads"
-        WebElement ownLeadsLabel = driver.findElement(By.xpath("//h3[contains(text(), 'Own Leads')]"));
-        // Find the parent div of the label
-        WebElement ownLeadParentDiv = ownLeadsLabel.findElement(By.xpath("./ancestor::div[@class='rounded-xl border text-card-foreground shadow bg-cyan-900']"));
-        // Find the element containing the count
-        WebElement ownLeadCounts = ownLeadParentDiv.findElement(By.xpath(".//div[@class='text-2xl font-bold text-white']"));
-        // Get the count text
-        String ownLeadValue = ownLeadCounts.getText();
-        System.out.println(ownLead + ":" + ownLeadValue);
-        	
-		String ownBps = driver.findElement(By.xpath("//h3[contains(text(), 'Own BPs')]")).getText();
-		Assert.assertEquals(ownBps, "Own BPs");
-        WebElement ownBpsLabel = driver.findElement(By.xpath("//h3[contains(text(), 'Own BPs')]"));
-        WebElement ownBpsParentDiv = ownBpsLabel.findElement(By.xpath("./ancestor::div[@class='rounded-xl border bg-card text-card-foreground shadow']"));
-        WebElement ownBpsCounts = ownBpsParentDiv.findElement(By.xpath(".//div[@class='text-2xl font-bold']"));
-        String ownBpsValue = ownBpsCounts.getText();
-        System.out.println(ownBps + ":" + ownBpsValue);
-        
-		String todayActivities = driver.findElement(By.xpath("//h3[contains(text(), 'Today Activities')]")).getText();
-		Assert.assertEquals(todayActivities, "Today Activities");
-        WebElement todayActivitiesLabel = driver.findElement(By.xpath("//h3[contains(text(), 'Today Activities')]"));
-        WebElement todayActivitiesParentDiv = todayActivitiesLabel.findElement(By.xpath("./ancestor::div[@class='rounded-xl border bg-card text-card-foreground shadow']"));
-        WebElement todayActivitiesCounts = todayActivitiesParentDiv.findElement(By.xpath(".//div[@class='text-2xl font-bold']"));
-        String todayActivitiesValue = todayActivitiesCounts.getText();
-        System.out.println(todayActivities + ":" + todayActivitiesValue);
-        
+		// Verify "Leads" label and count
+        String ownLeadsText = homePage.leadLabel();
+        Assert.assertEquals(ownLeadsText, homeProp.getProperty("leadLabel"));
+        String ownLeadsCount = homePage.getOwnLeadsCount();
+        System.out.println(ownLeadsText + ": " + ownLeadsCount);
 
-		String dueActivities = driver.findElement(By.xpath("//h3[contains(text(), 'Due Activities')]")).getText();
-		Assert.assertEquals(dueActivities, "Due Activities");
-        WebElement dueActivitiesLabel = driver.findElement(By.xpath("//h3[contains(text(), 'Due Activities')]"));
-        WebElement dueActivitiesParentDiv = dueActivitiesLabel.findElement(By.xpath("./ancestor::div[@class='rounded-xl border bg-card text-card-foreground shadow']"));
-        WebElement dueActivitiesCounts = dueActivitiesParentDiv.findElement(By.xpath(".//div[@class='text-2xl font-bold']"));
-        String dueActivitiesValue = dueActivitiesCounts.getText();
-        System.out.println(dueActivities + ":" + dueActivitiesValue);
+        // Verify "Own BPs" label and count
+        String ownBpsText = homePage.ownBpsLabel();
+        Assert.assertEquals(ownBpsText, homeProp.getProperty("ownBpsLabel"));
+        String ownBpsCount = homePage.getOwnBpsCount();
+        System.out.println(ownBpsText + ": " + ownBpsCount);
+
+        // Verify "Lead Activities" label and count
+        String leadActivitiesText = homePage.leadActivitiesLabel();
+        Assert.assertEquals(leadActivitiesText, homeProp.getProperty("leadActivitiesLabel"));
+        String leadActivitiesCount = homePage.getLeadActivitiesCount();
+        System.out.println(leadActivitiesText + ": " + leadActivitiesCount);
+
+        // Verify "BP Activities" label and count
+        String bpActivitiesText = homePage.bpActivitiesLabel();
+        Assert.assertEquals(bpActivitiesText, homeProp.getProperty("bpActivitiesLabel"));
+        String bpActivitiesCount = homePage.getBpActivitiesCount();
+        System.out.println(bpActivitiesText + ": " + bpActivitiesCount);
 
 	}
 

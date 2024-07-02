@@ -1,85 +1,97 @@
 package com.dlad.qa.pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class HomePage {
-	
-	WebDriver driver;
-	
-	public HomePage(WebDriver driver) {
-		this.driver = driver;
-		PageFactory.initElements(driver, this);
-}
+
+    WebDriver driver;
+
+    public HomePage(WebDriver driver) {
+        this.driver = driver;
+        PageFactory.initElements(driver, this);
+    }
+
+    /**
+     * Locators
+     */
 	
 	@FindBy(xpath = "//h3[@class='tracking-tight text-sm font-medium']")
 	private WebElement homePageHeaderTitle;
 	
-	@FindBy(xpath = "//h3[contains(text(), 'Leads')]")
-	private WebElement ownLeadsCard;
-	
-	@FindBy(xpath = "//h3[contains(text(), 'Own BPs')]")
-	private WebElement ownBpsCard;
-	
-	@FindBy(xpath = "//h3[contains(text(), 'Today Activities')]")
-	private WebElement todayActivitiesCard;
-	
-	@FindBy(xpath = "//h3[contains(text(), 'Due Activities')]")
-	private WebElement dueActivitiesCard;
-	
-	@FindBy(xpath = "//h3[contains(text(), 'Own Leads')]")
-	private WebElement ownLeadsLabel;
-	
-	@FindBy(xpath = "//h3[contains(text(), 'Own BPs')]")
-	private WebElement ownBpsLabel;
-	
-	@FindBy(xpath = "//h3[contains(text(), 'Today Activities')]")
-	private WebElement TodayActivityLabel;
-	
-	@FindBy(xpath = "//h3[contains(text(), 'Due Activities')]")
-	private WebElement dueActivityLabel;
-	
-	@FindBy(xpath = "./ancestor::div[@class='rounded-xl border text-card-foreground shadow bg-cyan-900']")
-	private WebElement ownLeadsParentDiv;
-	
-	@FindBy(xpath = ".//div[@class='text-2xl font-bold text-white']")
-	private WebElement ownLeadsCounts;
-	
-	@FindBy(xpath = "/ancestor::div[@class='rounded-xl border bg-card text-card-foreground shadow']")
-	private WebElement ParentDiv;
-	
-	@FindBy(xpath = ".//div[@class='text-2xl font-bold']")
-	private WebElement Counts;
-	
-	/*
-	 * Actions
-	 */
+    @FindBy(xpath = "//h3[contains(text(), 'Leads')]")
+    private WebElement leadsLabel;
+
+    @FindBy(xpath = "//h3[contains(text(), 'Own BPs')]")
+    private WebElement ownBpsLabel;
+
+    @FindBy(xpath = "//h3[contains(text(), 'Lead Activities')]")
+    private WebElement leadActivitiesLabel;
+
+    @FindBy(xpath = "//h3[contains(text(), 'BP Activities')]")
+    private WebElement bpActivitiesLabel;
+
+    @FindBy(xpath = ".//div[@class='text-2xl font-bold']")
+    private WebElement countElement;
+
+    /**
+     * Actions
+     * @param labelElement
+     * @return
+     */
+    
+    public String getLabelText(WebElement labelElement) {
+        return labelElement.getText();
+    }
+
+    public String getCount(WebElement labelElement) {
+        WebElement parentDiv = labelElement.findElement(By.xpath("./ancestor::div[@class='rounded-xl border bg-card text-card-foreground shadow']"));
+        WebElement countElement = parentDiv.findElement(By.xpath(".//div[@class='text-2xl font-bold']"));
+        return countElement.getText();
+    }
 	
 	public String homePageHeaderTitle() {
 		String HomePageHeaderName = homePageHeaderTitle.getText();
 		return HomePageHeaderName;
 	}
 	
-	public String ownLeadsCard() {
-		String ownLeadsCardText = ownLeadsCard.getText();
-		return ownLeadsCardText;
+	public String leadLabel() {
+		String leadLabelName = leadsLabel.getText();
+		return leadLabelName;
+	}
+
+	public String ownBpsLabel() {
+		String leadLabelName = ownBpsLabel.getText();
+		return leadLabelName;
 	}
 	
-	public String ownBpsCard() {
-		String ownBpsCardText = ownBpsCard.getText();
-		return ownBpsCardText;
+	public String leadActivitiesLabel() {
+		String leadLabelName = leadActivitiesLabel.getText();
+		return leadLabelName;
 	}
 	
-	public String todayActivitiesCard() {
-		String todayActivitiesCardText = todayActivitiesCard.getText();
-		return todayActivitiesCardText;
+	public String bpActivitiesLabel() {
+		String leadLabelName = bpActivitiesLabel.getText();
+		return leadLabelName;
 	}
-	
-	public String dueActivitiesCard() {
-		String dueActivitiesCardText = dueActivitiesCard.getText();
-		return dueActivitiesCardText;
-	}
-	
+
+    public String getOwnLeadsCount() {
+        return getCount(leadsLabel);
+    }
+
+    public String getOwnBpsCount() {
+        return getCount(ownBpsLabel);
+    }
+
+    public String getLeadActivitiesCount() {
+        return getCount(leadActivitiesLabel);
+    }
+
+    public String getBpActivitiesCount() {
+        return getCount(bpActivitiesLabel);
+    }
 }
+
