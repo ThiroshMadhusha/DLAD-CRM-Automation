@@ -1,9 +1,6 @@
 package com.dlad.qa.testcases;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -22,7 +19,7 @@ public class Home extends BaseClass {
 	HomePage homePage;
 	
 	@BeforeMethod
-	public void beforeMethod() {
+	public void beforeMethod() throws InterruptedException {
 
 		//	load Property
 		loadPropertiesFile();
@@ -36,6 +33,7 @@ public class Home extends BaseClass {
 		
 		homePage = new HomePage(driver);
 
+		Thread.sleep(2000);
 	}
 
 	@AfterMethod
@@ -52,7 +50,7 @@ public class Home extends BaseClass {
 	@Test(priority = 1)
 	public void verifyUserRedirectsToTheHomePage() {
 		String verifyHomePage = homePage.homePageHeaderTitle();
-		Assert.assertEquals(verifyHomePage, "Leads");
+		Assert.assertEquals(verifyHomePage, homeProp.getProperty("leadLabel"));
 	}
 
 
@@ -60,19 +58,19 @@ public class Home extends BaseClass {
 	public void verifyDisplayTheHomePageCardNames() {
 		
 		String ownLead = homePage.leadLabel();
-		Assert.assertEquals(ownLead, "Leads");
+		Assert.assertEquals(ownLead, homeProp.getProperty("leadLabel"));
 		System.out.println(ownLead);
 		
 		String ownBps = homePage.ownBpsLabel();
-		Assert.assertEquals(ownBps, "Own BPs");
+		Assert.assertEquals(ownBps, homeProp.getProperty("ownBpsLabel"));
 		System.out.println(ownBps);
 
 		String todayActivities = homePage.leadActivitiesLabel();
-		Assert.assertEquals(todayActivities, "Lead Activities");
+		Assert.assertEquals(todayActivities, homeProp.getProperty("leadActivitiesLabel"));
 		System.out.println(todayActivities);
 
 		String dueActivities = homePage.bpActivitiesLabel();
-		Assert.assertEquals(dueActivities, "BP Activities");
+		Assert.assertEquals(dueActivities, homeProp.getProperty("bpActivitiesLabel"));
 		System.out.println(dueActivities);
 
 	}
@@ -82,25 +80,25 @@ public class Home extends BaseClass {
 		
 		// Verify "Leads" label and count
         String ownLeadsText = homePage.leadLabel();
-        Assert.assertEquals(ownLeadsText, "Leads");
+        Assert.assertEquals(ownLeadsText, homeProp.getProperty("leadLabel"));
         String ownLeadsCount = homePage.getOwnLeadsCount();
         System.out.println(ownLeadsText + ": " + ownLeadsCount);
 
         // Verify "Own BPs" label and count
         String ownBpsText = homePage.ownBpsLabel();
-        Assert.assertEquals(ownBpsText, "Own BPs");
+        Assert.assertEquals(ownBpsText, homeProp.getProperty("ownBpsLabel"));
         String ownBpsCount = homePage.getOwnBpsCount();
         System.out.println(ownBpsText + ": " + ownBpsCount);
 
         // Verify "Lead Activities" label and count
         String leadActivitiesText = homePage.leadActivitiesLabel();
-        Assert.assertEquals(leadActivitiesText, "Lead Activities");
+        Assert.assertEquals(leadActivitiesText, homeProp.getProperty("leadActivitiesLabel"));
         String leadActivitiesCount = homePage.getLeadActivitiesCount();
         System.out.println(leadActivitiesText + ": " + leadActivitiesCount);
 
         // Verify "BP Activities" label and count
         String bpActivitiesText = homePage.bpActivitiesLabel();
-        Assert.assertEquals(bpActivitiesText, "BP Activities");
+        Assert.assertEquals(bpActivitiesText, homeProp.getProperty("bpActivitiesLabel"));
         String bpActivitiesCount = homePage.getBpActivitiesCount();
         System.out.println(bpActivitiesText + ": " + bpActivitiesCount);
 

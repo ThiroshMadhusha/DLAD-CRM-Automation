@@ -6,7 +6,7 @@
       <class name="com.dlad.qa.testcases.Home">
         <methods>
           <include name="beforeMethod"/>
-          <include name="verifyDisplayTheHomePageCardCounts"/>
+          <include name="verifyUserRedirectsToTheHomePage"/>
           <include name="afterMethod"/>
         </methods>
       </class> <!-- com.dlad.qa.testcases.Home -->
