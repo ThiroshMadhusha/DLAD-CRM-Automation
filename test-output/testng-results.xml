@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-07-02T13:13:29 IST" name="Default suite" finished-at="2024-07-02T13:13:44 IST" duration-ms="15460">
+  <suite started-at="2024-07-04T14:54:53 IST" name="Default suite" finished-at="2024-07-04T14:55:12 IST" duration-ms="19222">
     <groups>
     </groups>
-    <test started-at="2024-07-02T13:13:29 IST" name="Default test" finished-at="2024-07-02T13:13:44 IST" duration-ms="15460">
-      <class name="com.dlad.qa.testcases.Home">
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.dlad.qa.testcases.Home@19e4fcac]" started-at="2024-07-02T13:13:29 IST" name="beforeMethod" finished-at="2024-07-02T13:13:43 IST" duration-ms="14310" status="PASS">
+    <test started-at="2024-07-04T14:54:53 IST" name="Default test" finished-at="2024-07-04T14:55:12 IST" duration-ms="19222">
+      <class name="com.dlad.qa.testcases.LeadList">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.dlad.qa.testcases.LeadList@5a1de7fb]" started-at="2024-07-04T14:54:53 IST" name="beforeMethod" finished-at="2024-07-04T14:55:08 IST" duration-ms="15260" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="verifyDisplayTheHomePageCardCounts()[pri:3, instance:com.dlad.qa.testcases.Home@19e4fcac]" started-at="2024-07-02T13:13:43 IST" name="verifyDisplayTheHomePageCardCounts" finished-at="2024-07-02T13:13:44 IST" duration-ms="562" status="PASS">
+        <test-method signature="verifyTheCreateNewLeadFormCloseIcon()[pri:3, instance:com.dlad.qa.testcases.LeadList@5a1de7fb]" started-at="2024-07-04T14:55:08 IST" name="verifyTheCreateNewLeadFormCloseIcon" finished-at="2024-07-04T14:55:09 IST" duration-ms="563" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyDisplayTheHomePageCardCounts -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.dlad.qa.testcases.Home@19e4fcac]" started-at="2024-07-02T13:13:44 IST" name="afterMethod" finished-at="2024-07-02T13:13:44 IST" duration-ms="473" status="PASS">
+        </test-method> <!-- verifyTheCreateNewLeadFormCloseIcon -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.dlad.qa.testcases.LeadList@5a1de7fb]" started-at="2024-07-04T14:55:09 IST" name="afterMethod" finished-at="2024-07-04T14:55:12 IST" duration-ms="3253" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-      </class> <!-- com.dlad.qa.testcases.Home -->
+      </class> <!-- com.dlad.qa.testcases.LeadList -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
