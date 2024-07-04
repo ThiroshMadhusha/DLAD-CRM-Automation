@@ -164,7 +164,7 @@ public class BaseClass {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(Utils.IMPLICIT_WAIT_TIME));
 		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(Utils.PAGE_LOAD_TIME));
 		
-		driver.get(prop.getProperty("url"));
+		driver.navigate().to(prop.getProperty("url"));
 		
 		return driver;
 	}

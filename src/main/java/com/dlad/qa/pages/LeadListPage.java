@@ -101,12 +101,8 @@ public class LeadListPage {
 		selectDropdownOption.click();
 	}
 	
-	public void searchOnLeadGroupSearchField(String searchLeadGroup) {
-		clickSearchField.sendKeys(searchLeadGroup);
-	}
-
-	public void searchOnRatingSearchField(String searchRating) {
-		clickSearchField.sendKeys(searchRating);
+	public void clickSearchField(String searchFields) {
+		clickSearchField.sendKeys(searchFields);
 	}
 
 	public void clickSaveChangesBtn() {
