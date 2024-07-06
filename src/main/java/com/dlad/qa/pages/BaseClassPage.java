@@ -14,8 +14,36 @@ public class BaseClassPage {
 		PageFactory.initElements(driver, this);
 }
 	
-	@FindBy(xpath = "")
-	private WebElement WebPageLogin;
+	@FindBy(xpath = "//input[@id='username']")
+	private WebElement EnterTheUserName;
 	
+	@FindBy(xpath = "//input[@id='password']")
+	private WebElement EnterThePassword;
+	
+	@FindBy(xpath = "//button[@type='submit']")
+	private WebElement ClickOnSubmit;
+	
+	/**
+	 * Actions
+	 */
+	
+    public String getLabelText(WebElement labelElement) {
+        return labelElement.getText();
+    }
+    
+	public String EnterTheUserName() {
+		String userName = EnterTheUserName.getText();
+		return userName;
+	}
+	
+	public String EnterThePassword() {
+		String password = EnterThePassword.getText();
+		return password;
+	}
+	
+	public String ClickOnSubmit() {
+		String clickSubmit = ClickOnSubmit.getText();
+		return clickSubmit;
+	}
 
 }
