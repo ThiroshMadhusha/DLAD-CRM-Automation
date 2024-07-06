@@ -50,6 +50,15 @@ public class LeadListPage {
 	@FindBy(xpath = "//div[@class='flex items-center gap-2']/h2[contains(text(),'Lead')]")
 	private WebElement leadPageViewHeaderTitle;
 	
+	@FindBy(xpath = "//button[contains(text(),'Save changes')]")
+	private WebElement leadNameRequiredWarningMessage;
+	
+	@FindBy(xpath = "//button[contains(text(),'Save changes')]")
+	private WebElement leadGroupRequiredWaringMessage;
+	
+	@FindBy(xpath = "//button[contains(text(),'Save changes')]")
+	private WebElement ratingRequiredWarningMessage;
+	
 	/**
 	 * Actions
 	 */

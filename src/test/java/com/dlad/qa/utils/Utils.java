@@ -41,8 +41,9 @@ public class Utils {
 		return nameGenerate.substring(11) + " CompanyName";
 	}
 
-	public static final int IMPLICIT_WAIT_TIME = 10;
-	public static final int PAGE_LOAD_TIME = 5;
+	public static final int IMPLICIT_WAIT_TIME = 30;
+	public static final int PAGE_LOAD_TIME = 60;
+	public static final int SCRIPT_TIME_OUT = 30;
 
 	// Data Driven Testing for Login Page by Using Excell Sheet
 	@SuppressWarnings("incomplete-switch")

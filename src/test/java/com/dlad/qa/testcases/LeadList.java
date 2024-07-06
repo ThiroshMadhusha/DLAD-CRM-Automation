@@ -87,20 +87,12 @@ public class LeadList extends BaseClass {
 		Assert.assertEquals(pageHeader, leadListProp.getProperty("verifyLeadViewPageHeader"));
 		
 	}
-	
+
 	@Test(priority = 5)
-	public void verifyTheClickOnCreateButtonWithWithoutFillingData() {
-		
-		driver.findElement(By.xpath("//div[@class='flex gap-3 flex-row-reverse']/button")).click();
-		driver.findElement(By.xpath("//button[contains(text(),'Save changes')]")).click();
-	}
-	
-	
-	@Test(priority = 6)
 	public void verifyTheCreateNewLeadWithoutProvidingAnyFields() {
 		
-		driver.findElement(By.xpath("//div[@class='flex gap-3 flex-row-reverse']/button")).click();
-		driver.findElement(By.xpath("//button[contains(text(),'Save changes')]")).click();
+		leadListPage.clickNewLeadFormBtn();
+		leadListPage.clickSaveChangesBtn();
 		
 		String actualLeadNameErroMsg = driver.findElement(By.xpath("//p[contains(text(),'Lead name is required')]")).getText();
 		Assert.assertEquals(actualLeadNameErroMsg, "Lead name is required");
@@ -112,14 +104,14 @@ public class LeadList extends BaseClass {
 		Assert.assertEquals(actualLeadRatingErroMsg, "Rating is required");
 	}
 	
-	@Test(priority = 7)
+	@Test(priority = 6)
 	public void cancellButtonNewLeadForm() {
 		
 		driver.findElement(By.xpath("//div[@class='flex gap-3 flex-row-reverse']/button")).click();
 		driver.findElement(By.xpath("//button[contains(text(),'Cancel')]")).click();
 	}
 	
-	@Test(priority = 8)
+	@Test(priority = 7)
 	public void verifyTheCreatedLeadMemberDisplayOnLeadsTable() throws InterruptedException {
 		
 	    driver.findElement(By.xpath("//div[@class='flex gap-3 flex-row-reverse']/button")).click();
@@ -147,13 +139,13 @@ public class LeadList extends BaseClass {
 		
 	}
 	
-	@Test(priority = 9)
+	@Test(priority = 8)
 	public void verifyTheLeadMemberetailsView() {
 		
 		
 	}
 	
-	@Test(priority = 10)
+	@Test(priority = 9)
 	public void verifyTheAddingEmailAddressForLeadsTable() {
 		
 		

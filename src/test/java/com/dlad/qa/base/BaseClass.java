@@ -141,6 +141,7 @@ public class BaseClass {
 	
 	//	Initializing the Browser
 	
+	@SuppressWarnings("deprecation")
 	public WebDriver initializeBrowser(String browserName) {			
 		
 		if(browserName.equalsIgnoreCase("chrome")) {
@@ -163,6 +164,7 @@ public class BaseClass {
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(Utils.IMPLICIT_WAIT_TIME));
 		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(Utils.PAGE_LOAD_TIME));
+		driver.manage().timeouts().setScriptTimeout(Duration.ofSeconds(Utils.SCRIPT_TIME_OUT));
 		
 		driver.navigate().to(prop.getProperty("url"));
 		
