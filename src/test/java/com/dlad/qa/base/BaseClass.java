@@ -13,6 +13,7 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
 
+import com.dlad.qa.pages.BaseClassPage;
 import com.dlad.qa.utils.Utils;
 
 public class BaseClass {
@@ -175,9 +176,10 @@ public class BaseClass {
 	
 	public WebDriver validLogin(String string) {
 		
-		driver.findElement(By.xpath("//input[@id='username']")).sendKeys(loginProp.getProperty("validCRMEmailAddress"));
-		driver.findElement(By.xpath("//input[@id='password']")).sendKeys(loginProp.getProperty("validCRMPassword"));
-		driver.findElement(By.xpath("//button[@type='submit']")).click();
+		BaseClassPage baseClassPage = new BaseClassPage(driver);
+		baseClassPage.EnterTheUserName(loginProp.getProperty("validCRMEmailAddress"));
+		baseClassPage.EnterThePassword(loginProp.getProperty("validCRMPassword"));
+		baseClassPage.ClickOnSubmit();
 		
 		return driver;
 	
