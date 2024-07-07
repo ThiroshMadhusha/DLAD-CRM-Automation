@@ -31,19 +31,16 @@ public class BaseClassPage {
         return labelElement.getText();
     }
     
-	public String EnterTheUserName() {
-		String userName = EnterTheUserName.getText();
-		return userName;
+	public void EnterTheUserName(String username) {
+		EnterTheUserName.sendKeys(username);
 	}
 	
-	public String EnterThePassword() {
-		String password = EnterThePassword.getText();
-		return password;
+	public void EnterThePassword(String password) {
+		EnterThePassword.sendKeys(password);
 	}
 	
-	public String ClickOnSubmit() {
-		String clickSubmit = ClickOnSubmit.getText();
-		return clickSubmit;
+	public void ClickOnSubmit() {
+		ClickOnSubmit.click();
 	}
 
 }

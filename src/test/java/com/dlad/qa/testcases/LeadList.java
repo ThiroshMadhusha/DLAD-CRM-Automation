@@ -94,49 +94,51 @@ public class LeadList extends BaseClass {
 		leadListPage.clickNewLeadFormBtn();
 		leadListPage.clickSaveChangesBtn();
 		
-		String actualLeadNameErroMsg = driver.findElement(By.xpath("//p[contains(text(),'Lead name is required')]")).getText();
-		Assert.assertEquals(actualLeadNameErroMsg, "Lead name is required");
+		String actualLeadNameErroMsg = leadListPage.leadNameErrorMessage();
+		Assert.assertEquals(actualLeadNameErroMsg, leadListProp.getProperty("leadNameErrorMessage"));
 		
-		String actualLeadGroupErroMsg = driver.findElement(By.xpath("//p[contains(text(),'Lead group is required')]")).getText();
-		Assert.assertEquals(actualLeadGroupErroMsg, "Lead group is required");
+		String actualLeadGroupErroMsg = leadListPage.leadGroupErrorMessage();
+		Assert.assertEquals(actualLeadGroupErroMsg, leadListProp.getProperty("leadGroupErrorMessage"));
 		
-		String actualLeadRatingErroMsg = driver.findElement(By.xpath("//p[contains(text(),'Rating is required')]")).getText();
-		Assert.assertEquals(actualLeadRatingErroMsg, "Rating is required");
+		String actualLeadRatingErroMsg = leadListPage.ratingErrorMessage();
+		Assert.assertEquals(actualLeadRatingErroMsg, leadListProp.getProperty("ratingErrorMessage"));
 	}
 	
 	@Test(priority = 6)
 	public void cancellButtonNewLeadForm() {
 		
-		driver.findElement(By.xpath("//div[@class='flex gap-3 flex-row-reverse']/button")).click();
-		driver.findElement(By.xpath("//button[contains(text(),'Cancel')]")).click();
+		leadListPage.clickNewLeadFormBtn();
+		leadListPage.clickOnCancelBtn();
 	}
 	
 	@Test(priority = 7)
 	public void verifyTheCreatedLeadMemberDisplayOnLeadsTable() throws InterruptedException {
 		
-	    driver.findElement(By.xpath("//div[@class='flex gap-3 flex-row-reverse']/button")).click();
+		leadListPage.clickNewLeadFormBtn();	    
+	    String createdLeadName = Utils.nameGenerate();
+	    String createdCompanyName = Utils.companyNameGenerate();
+	    leadListPage.leadNameInputTextField(createdLeadName);
+		leadListPage.companyNameInputTextField(createdCompanyName);
+   
+	    System.out.println("Generated Lead Name: " + createdLeadName);
+	    System.out.println("Generated Company Name: " + createdCompanyName);
+		leadListPage.clickOnLeadGropDropdownField();
+		leadListPage.clickSearchField(leadListProp.getProperty("selectLeadGroupOption"));
+		leadListPage.selectDropdownOption();
+		leadListPage.clickOnRatingsDropdownField();
+		leadListPage.clickSearchField(leadListProp.getProperty("selectRatingsOption"));
+		leadListPage.selectDropdownOption();
+		leadListPage.clickSaveChangesBtn();
+
+	    String pageHeader = leadListPage.leadPageViewHeaderTitle();
+	    Assert.assertEquals(pageHeader, leadListProp.getProperty("verifyLeadViewPageHeader"));
+		Thread.sleep(3000);
+	    // page should be back
+	    leadListPage.clickPageBackBtn();
+	    String verifyCreatedName = leadListPage.verifyCreatedLeadNameInTableView();
 	    
-	    String generatedLeadName = Utils.nameGenerate();
-	    String generatedCompanyName = Utils.companyNameGenerate();
+	    Assert.assertEquals(createdLeadName, verifyCreatedName);
 	    
-	    driver.findElement(By.xpath("//input[@id='lead_name']")).sendKeys(generatedLeadName);
-	    driver.findElement(By.xpath("//input[@id='about_company']")).sendKeys(generatedCompanyName);
-	    
-	    System.out.println("Generated Lead Name: " + generatedLeadName);
-	    System.out.println("Generated Company Name: " + generatedCompanyName);
-	    
-	    driver.findElement(By.xpath("//button[@id='lead_group']")).click();
-	    driver.findElement(By.xpath("//div[@class='flex items-center border-b px-3']/input[@placeholder='Search']")).sendKeys("Cafe");
-	    Thread.sleep(1000);
-	    driver.findElement(By.xpath("//div[@class='relative overflow-hidden']/div/div/div/div/div[1]")).click();
-	    driver.findElement(By.xpath("//button[@id='rating']")).click();
-	    driver.findElement(By.xpath("//div[@class='flex items-center border-b px-3']/input[@placeholder='Search']")).sendKeys("Warm");
-	    driver.findElement(By.xpath("//div[@class='relative overflow-hidden']/div/div/div/div/div[1]")).click();
-	    driver.findElement(By.xpath("//button[contains(text(),'Save changes')]")).click();
-	   
-	    String pageHeader = driver.findElement(By.xpath("//div[@class='flex items-center gap-2']/h2[contains(text(),'Lead')]")).getText();
-	    Assert.assertEquals(pageHeader, "Lead");
-		
 	}
 	
 	@Test(priority = 8)

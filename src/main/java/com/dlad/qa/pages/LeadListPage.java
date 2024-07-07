@@ -59,6 +59,24 @@ public class LeadListPage {
 	@FindBy(xpath = "//button[contains(text(),'Save changes')]")
 	private WebElement ratingRequiredWarningMessage;
 	
+	@FindBy(xpath = "//button[contains(text(),'Cancel')]")
+	private WebElement clickOnCancelBtn;
+	
+	@FindBy(xpath = "//p[contains(text(),'Lead name is required')]")
+	private WebElement leadNameErrorMessage;
+	
+	@FindBy(xpath = "//p[contains(text(),'Lead group is required')]")
+	private WebElement leadGroupErrorMessage;
+	
+	@FindBy(xpath = "//p[contains(text(),'Rating is required')]")
+	private WebElement ratingErrorMessage;
+	
+	@FindBy(xpath = "//div[@class = 'border rounded-lg bg-white p-2  hover:bg-gray-100 transition-all cursor-pointer']")
+	private WebElement clickPageBackBtn;
+	
+	@FindBy(xpath = "//tr[@class = 'border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted'][1]/td[2]")
+	private WebElement verifyCreatedLeadNameInTableView;
+	
 	/**
 	 * Actions
 	 */
@@ -72,8 +90,32 @@ public class LeadListPage {
 		return leadPageName;
 	}
 	
+	public String verifyCreatedLeadNameInTableView() {
+		String leadNameInTableView = verifyCreatedLeadNameInTableView.getText();
+		return leadNameInTableView;
+	}
+	
 	public void clickNewLeadFormBtn() {
 		clickNewLeadFormBtn.click();
+	}
+	
+	public void clickOnCancelBtn() {
+		clickOnCancelBtn.click();
+	}
+	
+	public String leadNameErrorMessage() {
+		String leadNameError = leadNameErrorMessage.getText();
+		return leadNameError;
+	}
+	
+	public String leadGroupErrorMessage() {
+		String leadGroupError = leadGroupErrorMessage.getText();
+		return leadGroupError;
+	}
+	
+	public String ratingErrorMessage() {
+		String ratingError = ratingErrorMessage.getText();
+		return ratingError;
 	}
 	
 	public String verifyOpenNewLeadForm() {
@@ -88,6 +130,10 @@ public class LeadListPage {
 	
 	public void closeNewLeadForm() {
 		closeNewLeadFormIcon.click();
+	}
+	
+	public void clickPageBackBtn() {
+		clickPageBackBtn.click();
 	}
 	
 	public void leadNameInputTextField(String leadNameText) {
