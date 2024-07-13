@@ -18,44 +18,45 @@ public class SidebarCRM {
 	private WebElement HomeTab;
 	
 	/*
-	 *  Lead Activity List
+	 *  Business Partners List
 	 */
+
 	@FindBy(xpath = "//nav[@class='grid gap-1 px-2']/div[1]")
-	private WebElement LeadActivityGroup;
+	private WebElement BusinessPartnersGroup;
 	
-	@FindBy(xpath = "//a[@href='/app/activity/overview']")
-	private WebElement LeadActivityOverview;
+	@FindBy(xpath = "//a[@href='/app/business-partners/own-list']")
+	private WebElement MyBpsList;
 	
-	@FindBy(xpath = "//a[@href='/app/activity/lead/list']")
-	private WebElement LeadActivityList;
+	@FindBy(xpath = "//a[@href='/app/bp-activity/overview']")
+	private WebElement BusinessPartnersOverview;
 	
-	@FindBy(xpath = "//a[@href='/app/activity/bp/list']")
-	private WebElement BPActivityList;
+	@FindBy(xpath = "//a[@href='/app/bp-activity/list']")
+	private WebElement BPsActivityList;
+	
+	@FindBy(xpath = "//a[@href='/app/business-partners/list']")
+	private WebElement BusinessPartnerFullList;
 	
 	/*
-	 *  Lead List
+	 *  Lead Activity List
 	 */
 	@FindBy(xpath = "//nav[@class='grid gap-1 px-2']/div[2]")
 	private WebElement LeadListGroup;
 
-	@FindBy(xpath = "//a[@href='/app/lead/overview']")
-	private WebElement LeadOverview;
+	@FindBy(xpath = "//a[@href='/app/lead/own-list']")
+	private WebElement MyOwnLeadList;
+	
+	@FindBy(xpath = "//a[@href='/app/lead-activity/overview']")
+	private WebElement LeadActivityOverview;
+	
+	@FindBy(xpath = "//a[@href='/app/lead-activity/list']")
+	private WebElement LeadActivityList;
 
 	@FindBy(xpath = "//a[@href='/app/lead/list']")
 	private WebElement LeadList;
 	
 	/*
-	 *  Business Partners List
+	 * Common
 	 */
-
-	@FindBy(xpath = "//nav[@class='grid gap-1 px-2']/div[3]")
-	private WebElement BusinessPartnersGroup;
-	
-	@FindBy(xpath = "//a[@href='/business-partners/overview']")
-	private WebElement BusinessPartnersOverview;
-	
-	@FindBy(xpath = "//a[@href='/app/business-partners/list']")
-	private WebElement BusinessPartnerList;
 	
 	@FindBy(xpath = "//a[@href='/app/sales-quotations/list']")
 	private WebElement Quotations;
@@ -76,10 +77,39 @@ public class SidebarCRM {
 	}
 	
 	/*
+	 *  Business Partners List
+	 */
+	
+	public void BusinessPartnersGroup() {
+		BusinessPartnersGroup.click();
+	}
+	
+	public void MyBpsList() {
+		MyBpsList.click();
+	}
+
+	public void BusinessPartnersOverview() {
+		BusinessPartnersOverview.click();
+	}
+	
+	public void BPsActivityList() {
+		BPsActivityList.click();
+	}
+	
+	public void BusinessPartnerFullList() {
+		BusinessPartnerFullList.click();
+	}
+	
+	/*
 	 *  Lead Activity List
 	 */
-	public void LeadActivityGroup() {
-		LeadActivityGroup.click();
+	
+	public void LeadListGroup() {
+		LeadListGroup.click();
+	}
+	
+	public void MyOwnLeadList() {
+		MyOwnLeadList.click();
 	}
 	
 	public void LeadActivityOverview() {
@@ -90,39 +120,12 @@ public class SidebarCRM {
 		LeadActivityList.click();
 	}
 	
-	public void BPActivityList() {
-		BPActivityList.click();
-	}
-	
-	/*
-	 *  Lead List
-	 */
-	public void LeadListGroup() {
-		LeadListGroup.click();
-	}
-	
-	public void LeadOverview() {
-		LeadOverview.click();
-	}
-	
 	public void LeadList() {
 		LeadList.click();
 	}
-	
 	/*
-	 *  Business Partners List
+	 * Common
 	 */
-	public void BusinessPartnersGroup() {
-		LeadListGroup.click();
-	}
-	
-	public void BusinessPartnersOverview() {
-		BusinessPartnersOverview.click();
-	}
-	
-	public void BusinessPartnerList() {
-		BusinessPartnerList.click();
-	}
 	
 	public void Quotations() {
 		Quotations.click();

@@ -29,7 +29,7 @@ public class LeadActivitiesOverview extends BaseClass {
 		
 		// Sidebar
 		sidebarCRM = new SidebarCRM(driver);
-		sidebarCRM.LeadActivityGroup();
+		sidebarCRM.LeadListGroup();
 		sidebarCRM.LeadActivityOverview();
 	}
 

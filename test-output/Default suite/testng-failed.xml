@@ -6,7 +6,7 @@
       <class name="com.dlad.qa.testcases.LeadList">
         <methods>
           <include name="beforeMethod"/>
-          <include name="verifyTheCreatedLeadMemberDisplayOnLeadsTable"/>
+          <include name="verifyTheCreateNewLeadWithValidData"/>
           <include name="afterMethod"/>
         </methods>
       </class> <!-- com.dlad.qa.testcases.LeadList -->

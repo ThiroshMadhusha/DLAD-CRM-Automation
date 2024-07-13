@@ -1,6 +1,5 @@
 package com.dlad.qa.testcases;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
@@ -85,7 +84,7 @@ public class LeadList extends BaseClass {
 		leadListPage.clickSaveChangesBtn();
 		String pageHeader = leadListPage.leadPageViewHeaderTitle();
 		Assert.assertEquals(pageHeader, leadListProp.getProperty("verifyLeadViewPageHeader"));
-		
+		Thread.sleep(3000);
 	}
 
 	@Test(priority = 5)
@@ -105,10 +104,25 @@ public class LeadList extends BaseClass {
 	}
 	
 	@Test(priority = 6)
-	public void cancellButtonNewLeadForm() {
+	
+	public void verifyTheFillAllRequiredLeadMemberDetailsFields() {
 		
-		leadListPage.clickNewLeadFormBtn();
-		leadListPage.clickOnCancelBtn();
+		leadListPage.clickNewLeadFormBtn();	    
+	    String createdLeadName = Utils.nameGenerate();
+	    leadListPage.leadNameInputTextField(createdLeadName);
+   
+	    System.out.println("Created Lead Name: " + createdLeadName);
+		leadListPage.clickOnLeadGropDropdownField();
+		leadListPage.clickSearchField(leadListProp.getProperty("selectLeadGroupOption"));
+		leadListPage.selectDropdownOption();
+		leadListPage.clickOnRatingsDropdownField();
+		leadListPage.clickSearchField(leadListProp.getProperty("selectRatingsOption"));
+		leadListPage.selectDropdownOption();
+		leadListPage.clickSaveChangesBtn();
+
+	    String pageHeader = leadListPage.leadPageViewHeaderTitle();
+	    Assert.assertEquals(pageHeader, leadListProp.getProperty("verifyLeadViewPageHeader"));
+
 	}
 	
 	@Test(priority = 7)
@@ -120,8 +134,8 @@ public class LeadList extends BaseClass {
 	    leadListPage.leadNameInputTextField(createdLeadName);
 		leadListPage.companyNameInputTextField(createdCompanyName);
    
-	    System.out.println("Generated Lead Name: " + createdLeadName);
-	    System.out.println("Generated Company Name: " + createdCompanyName);
+	    System.out.println("Created Lead Name: " + createdLeadName);
+	    System.out.println("Created Company Name: " + createdCompanyName);
 		leadListPage.clickOnLeadGropDropdownField();
 		leadListPage.clickSearchField(leadListProp.getProperty("selectLeadGroupOption"));
 		leadListPage.selectDropdownOption();
@@ -132,24 +146,75 @@ public class LeadList extends BaseClass {
 
 	    String pageHeader = leadListPage.leadPageViewHeaderTitle();
 	    Assert.assertEquals(pageHeader, leadListProp.getProperty("verifyLeadViewPageHeader"));
-		Thread.sleep(3000);
-	    // page should be back
+	    
 	    leadListPage.clickPageBackBtn();
+	    
 	    String verifyCreatedName = leadListPage.verifyCreatedLeadNameInTableView();
-	    
 	    Assert.assertEquals(createdLeadName, verifyCreatedName);
-	    
+
 	}
 	
 	@Test(priority = 8)
-	public void verifyTheLeadMemberetailsView() {
+	
+	public void verifyTheNewlyCreatedLeadStatusAndRatingDisplayedOnTheLeadTableView() throws InterruptedException {
+		
+		leadListPage.clickNewLeadFormBtn();	    
+	    String createdLeadName = Utils.nameGenerate();
+	    String createdCompanyName = Utils.companyNameGenerate();
+	    leadListPage.leadNameInputTextField(createdLeadName);
+		leadListPage.companyNameInputTextField(createdCompanyName);
+   
+	    System.out.println("Created Lead Name: " + createdLeadName);
+	    System.out.println("Created Company Name: " + createdCompanyName);
+		leadListPage.clickOnLeadGropDropdownField();
+		leadListPage.clickSearchField(leadListProp.getProperty("selectLeadGroupOption"));
+		leadListPage.selectDropdownOption();
+		leadListPage.clickOnRatingsDropdownField();
+		leadListPage.clickSearchField(leadListProp.getProperty("selectRatingsOption"));
+		leadListPage.selectDropdownOption();
+		leadListPage.clickSaveChangesBtn();
+
+	    String pageHeader = leadListPage.leadPageViewHeaderTitle();
+	    Assert.assertEquals(pageHeader, leadListProp.getProperty("verifyLeadViewPageHeader"));
+	    
+	    leadListPage.clickPageBackBtn();
+	    String actualstatus = leadListProp.getProperty("leadStatus");	    		
+	    String verifyNewlyCreatedLeadStatus = leadListPage.verifyLeadStatusInTableView();
+	    Assert.assertEquals(verifyNewlyCreatedLeadStatus, actualstatus);
+	    Thread.sleep(3000);	
+	}
+
+	
+	@Test(priority = 9)
+	public void verifyTheFillAllLeadMemberDetailsInLeadViewFields() {
 		
 		
 	}
 	
-	@Test(priority = 9)
-	public void verifyTheAddingEmailAddressForLeadsTable() {
+	@Test(priority = 10)
+	public void verifyAddedEmailDisplayedOnThedTableView() {
 		
 		
 	}
+	
+	@Test(priority =11)
+	public void cancellButtonNewLeadForm() {
+		
+		leadListPage.clickNewLeadFormBtn();
+		leadListPage.clickOnCancelBtn();
+	}
+	
+	@Test(priority = 12)
+	public void verifyAllStatusMethodsDisplayOnLeadsViewTable() {
+		
+		
+	}
+	
+	@Test(priority = 13)
+	public void verifyAllRatingsMethodsDisplayOnLeadsViewTable() {
+		
+		
+	}
+	
+
 }

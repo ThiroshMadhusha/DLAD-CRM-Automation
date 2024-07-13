@@ -77,6 +77,9 @@ public class LeadListPage {
 	@FindBy(xpath = "//tr[@class = 'border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted'][1]/td[2]")
 	private WebElement verifyCreatedLeadNameInTableView;
 	
+	@FindBy(xpath = "//tr[@class = 'border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted'][1]/td[3]")
+	private WebElement verifyLeadStatusInTableView;
+	
 	/**
 	 * Actions
 	 */
@@ -89,12 +92,7 @@ public class LeadListPage {
 		String leadPageName = leadPageHeaderTitle.getText();
 		return leadPageName;
 	}
-	
-	public String verifyCreatedLeadNameInTableView() {
-		String leadNameInTableView = verifyCreatedLeadNameInTableView.getText();
-		return leadNameInTableView;
-	}
-	
+
 	public void clickNewLeadFormBtn() {
 		clickNewLeadFormBtn.click();
 	}
@@ -127,15 +125,7 @@ public class LeadListPage {
 		boolean closeBtnIcon = closeNewLeadFormIcon.isDisplayed();
 		return closeBtnIcon;
 	}
-	
-	public void closeNewLeadForm() {
-		closeNewLeadFormIcon.click();
-	}
-	
-	public void clickPageBackBtn() {
-		clickPageBackBtn.click();
-	}
-	
+
 	public void leadNameInputTextField(String leadNameText) {
 		leadNameInputTextField.sendKeys(leadNameText);
 	}
@@ -164,8 +154,27 @@ public class LeadListPage {
 		clickSaveChangesBtn.click();
 	}
 	
+	public void closeNewLeadForm() {
+		closeNewLeadFormIcon.click();
+	}
+	
+	public void clickPageBackBtn() {
+		clickPageBackBtn.click();
+	}
+	
 	public String leadPageViewHeaderTitle() {
 		String leadviewPage = leadPageViewHeaderTitle.getText();
 		return leadviewPage;
 	}
+	
+	public String verifyCreatedLeadNameInTableView() {
+		String leadNameInTableView = verifyCreatedLeadNameInTableView.getText();
+		return leadNameInTableView;
+	}
+	
+	public String verifyLeadStatusInTableView() {
+		String leadStatusInTableView = verifyLeadStatusInTableView.getText();
+		return leadStatusInTableView;
+	}
+	
 }
