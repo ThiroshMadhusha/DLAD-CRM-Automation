@@ -28,7 +28,7 @@ public class LeadActivityList extends BaseClass {
 		
 		// Sidebar
 		sidebarCRM = new SidebarCRM(driver);
-		sidebarCRM.LeadActivityGroup();
+		sidebarCRM.LeadListGroup();
 		sidebarCRM.LeadActivityList();
 	}
 
@@ -65,31 +65,6 @@ public class LeadActivityList extends BaseClass {
 		Assert.assertTrue(leadActivityCloseIcon);
 		driver.findElement(By.xpath("//button[@type='button']/*[@class='h-4 w-4']")).click();
 	}
-	
-//	@Test(priority = 4)
-//	public void verifyTheNewActivityLeadWithValidData() throws InterruptedException {
-//		
-//		driver.findElement(By.xpath("//div[@class='flex gap-3 flex-row-reverse']/button")).click();
-//		driver.findElement(By.xpath("//button[@id='lead']")).click();
-//		driver.findElement(By.xpath("//div[@class='flex items-center border-b px-3']/input[@placeholder='Search']")).sendKeys("Test123");
-//		Thread.sleep(500);
-//		driver.findElement(By.xpath("//div[@class='relative overflow-hidden']/div/div/div/div/div[1]")).click();
-//		driver.findElement(By.xpath("//button[@id='type']")).click();
-//		driver.findElement(By.xpath("//div[@class='flex items-center border-b px-3']/input[@placeholder='Search']")).sendKeys("Call cycle");
-//		Thread.sleep(500);
-//		driver.findElement(By.xpath("//div[@class='relative overflow-hidden']/div/div/div/div/div[1]")).click();
-//		driver.findElement(By.xpath("//button[@id='subject']")).click();
-//		driver.findElement(By.xpath("//div[@class='flex items-center border-b px-3']/input[@placeholder='Search']")).sendKeys("AR Subject 2");
-//		Thread.sleep(500);
-//		driver.findElement(By.xpath("//div[@class='relative overflow-hidden']/div/div/div/div/div[1]")).click();
-//		Thread.sleep(2500);
-//
-//	}
-	
-	
-	
-	
-	
 	
 	
 }
