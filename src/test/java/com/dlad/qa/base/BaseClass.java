@@ -21,7 +21,7 @@ public class BaseClass {
 //	Create Reusable Method
 	
 	WebDriver driver;
-	public Properties prop;
+	public Properties configProp;
 	public Properties loginProp;
 	public Properties homeProp;
 	public Properties leadListProp;
@@ -35,13 +35,13 @@ public class BaseClass {
 	public void loadPropertiesFile(){
 		
 		// Main Properties
-		prop = new Properties();
+		configProp = new Properties();
 		File propFile = new File(System.getProperty("user.dir")+"\\src\\main\\java\\com\\dlad\\qa\\config\\config.properties");
 		
 		FileInputStream fils;
 		try {
 			fils = new FileInputStream(propFile);
-			prop.load(fils);
+			configProp.load(fils);
 			
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
@@ -167,7 +167,7 @@ public class BaseClass {
 		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(Utils.PAGE_LOAD_TIME));
 		driver.manage().timeouts().setScriptTimeout(Duration.ofSeconds(Utils.SCRIPT_TIME_OUT));
 		
-		driver.navigate().to(prop.getProperty("url"));
+		driver.navigate().to(configProp.getProperty("url"));
 		
 		return driver;
 	}
@@ -177,8 +177,8 @@ public class BaseClass {
 	public WebDriver validLogin(String string) {
 		
 		BaseClassPage baseClassPage = new BaseClassPage(driver);
-		baseClassPage.EnterTheUserName(loginProp.getProperty("validCRMEmailAddress"));
-		baseClassPage.EnterThePassword(loginProp.getProperty("validCRMPassword"));
+		baseClassPage.EnterTheUserName(configProp.getProperty("validCRMEmailAddress"));
+		baseClassPage.EnterThePassword(configProp.getProperty("validCRMPassword"));
 		baseClassPage.ClickOnSubmit();
 		
 		return driver;

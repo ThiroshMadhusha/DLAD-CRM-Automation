@@ -18,7 +18,7 @@ public class BPActivity extends BaseClass {
 
 		//	load Property
 		loadPropertiesFile();
-		driver = initializeBrowser(prop.getProperty("browserName"));
+		driver = initializeBrowser(configProp.getProperty("browserName"));
 		// Validate Login
 		driver = validLogin(loginProp.getProperty("validCRMEmailAddress", "validCRMPassword"));
 		

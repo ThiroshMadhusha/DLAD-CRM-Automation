@@ -13,7 +13,7 @@ import com.dlad.qa.utils.Utils;
 
 public class LeadList extends BaseClass {
 	
-	WebDriver driver;
+	public WebDriver driver;
 	SidebarCRM sidebarCRM;
 	LeadListPage leadListPage;
 	
@@ -22,7 +22,7 @@ public class LeadList extends BaseClass {
 
 		//	load Property
 		loadPropertiesFile();
-		driver = initializeBrowser(prop.getProperty("browserName"));
+		driver = initializeBrowser(configProp.getProperty("browserName"));
 		// Validate Login
 		driver = validLogin(loginProp.getProperty("validCRMEmailAddress", "validCRMPassword"));
 		
@@ -191,17 +191,17 @@ public class LeadList extends BaseClass {
 	}
 
 	
-	@Test(priority = 9)
-	public void verifyTheFillAllLeadMemberDetailsInLeadViewFields() {
-		
-		
-	}
-	
-	@Test(priority = 10)
-	public void verifyAddedEmailDisplayedOnThedTableView() {
-		
-		
-	}
+//	@Test(priority = 9)
+//	public void verifyTheFillAllLeadMemberDetailsInLeadViewFields() {
+//		
+//		
+//	}
+//	
+//	@Test(priority = 10)
+//	public void verifyAddedEmailDisplayedOnThedTableView() {
+//		
+//		
+//	}
 	
 	@Test(priority =11)
 	public void cancellButtonNewLeadForm() {
@@ -209,18 +209,18 @@ public class LeadList extends BaseClass {
 		leadListPage.clickNewLeadFormBtn();
 		leadListPage.clickOnCancelBtn();
 	}
-	
-	@Test(priority = 12)
-	public void verifyAllStatusMethodsDisplayOnLeadsViewTable() {
-		
-		
-	}
-	
-	@Test(priority = 13)
-	public void verifyAllRatingsMethodsDisplayOnLeadsViewTable() {
-		
-		
-	}
+//	
+//	@Test(priority = 12)
+//	public void verifyAllStatusMethodsDisplayOnLeadsViewTable() {
+//		
+//		
+//	}
+//	
+//	@Test(priority = 13)
+//	public void verifyAllRatingsMethodsDisplayOnLeadsViewTable() {
+//		
+//		
+//	}
 	
 
 }
