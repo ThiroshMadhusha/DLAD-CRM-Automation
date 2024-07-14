@@ -13,7 +13,7 @@ import com.dlad.qa.utils.Utils;
 
 public class LeadList extends BaseClass {
 	
-	WebDriver driver;
+	public WebDriver driver;
 	SidebarCRM sidebarCRM;
 	LeadListPage leadListPage;
 	
@@ -22,7 +22,7 @@ public class LeadList extends BaseClass {
 
 		//	load Property
 		loadPropertiesFile();
-		driver = initializeBrowser(prop.getProperty("browserName"));
+		driver = initializeBrowser(configProp.getProperty("browserName"));
 		// Validate Login
 		driver = validLogin(loginProp.getProperty("validCRMEmailAddress", "validCRMPassword"));
 		
@@ -147,7 +147,7 @@ public class LeadList extends BaseClass {
 	    String pageHeader = leadListPage.leadPageViewHeaderTitle();
 	    Assert.assertEquals(pageHeader, leadListProp.getProperty("verifyLeadViewPageHeader"));
 	    
-	    leadListPage.clickPageBackBtn();
+	    leadListPage.clickOnPageBackBtn();
 	    
 	    String verifyCreatedName = leadListPage.verifyCreatedLeadNameInTableView();
 	    Assert.assertEquals(createdLeadName, verifyCreatedName);
@@ -177,25 +177,31 @@ public class LeadList extends BaseClass {
 	    String pageHeader = leadListPage.leadPageViewHeaderTitle();
 	    Assert.assertEquals(pageHeader, leadListProp.getProperty("verifyLeadViewPageHeader"));
 	    
-	    leadListPage.clickPageBackBtn();
-	    String actualstatus = leadListProp.getProperty("leadStatus");	    		
+	    leadListPage.clickOnPageBackBtn();
+	    
+	    String actualStatus = leadListProp.getProperty("leadStatus");	    		
 	    String verifyNewlyCreatedLeadStatus = leadListPage.verifyLeadStatusInTableView();
-	    Assert.assertEquals(verifyNewlyCreatedLeadStatus, actualstatus);
+	    Assert.assertEquals(verifyNewlyCreatedLeadStatus, actualStatus);
+	    
+	    String actualRating = leadListProp.getProperty("leadRating");	    		
+	    String verifyNewlyCreatedLeadRating = leadListPage.verifyLeadRatingInTableView();
+	    Assert.assertEquals(verifyNewlyCreatedLeadRating, actualRating);
+	    
 	    Thread.sleep(3000);	
 	}
 
 	
-	@Test(priority = 9)
-	public void verifyTheFillAllLeadMemberDetailsInLeadViewFields() {
-		
-		
-	}
-	
-	@Test(priority = 10)
-	public void verifyAddedEmailDisplayedOnThedTableView() {
-		
-		
-	}
+//	@Test(priority = 9)
+//	public void verifyTheFillAllLeadMemberDetailsInLeadViewFields() {
+//		
+//		
+//	}
+//	
+//	@Test(priority = 10)
+//	public void verifyAddedEmailDisplayedOnThedTableView() {
+//		
+//		
+//	}
 	
 	@Test(priority =11)
 	public void cancellButtonNewLeadForm() {
@@ -203,18 +209,18 @@ public class LeadList extends BaseClass {
 		leadListPage.clickNewLeadFormBtn();
 		leadListPage.clickOnCancelBtn();
 	}
-	
-	@Test(priority = 12)
-	public void verifyAllStatusMethodsDisplayOnLeadsViewTable() {
-		
-		
-	}
-	
-	@Test(priority = 13)
-	public void verifyAllRatingsMethodsDisplayOnLeadsViewTable() {
-		
-		
-	}
+//	
+//	@Test(priority = 12)
+//	public void verifyAllStatusMethodsDisplayOnLeadsViewTable() {
+//		
+//		
+//	}
+//	
+//	@Test(priority = 13)
+//	public void verifyAllRatingsMethodsDisplayOnLeadsViewTable() {
+//		
+//		
+//	}
 	
 
 }

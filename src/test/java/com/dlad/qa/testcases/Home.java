@@ -14,7 +14,7 @@ import com.dlad.qa.pages.SidebarCRM;
 public class Home extends BaseClass {
 
 	
-	WebDriver driver;
+	public WebDriver driver;
 	SidebarCRM sidebarCRM;
 	HomePage homePage;
 	
@@ -23,7 +23,7 @@ public class Home extends BaseClass {
 
 		//	load Property
 		loadPropertiesFile();
-		driver = initializeBrowser(prop.getProperty("browserName"));
+		driver = initializeBrowser(configProp.getProperty("browserName"));
 		// Validate Login
 		driver = validLogin(loginProp.getProperty("validCRMEmailAddress", "validCRMPassword"));
 		

@@ -15,7 +15,7 @@ import com.dlad.qa.pages.SidebarCRM;
 public class LeadActivitiesOverview extends BaseClass {
 
 	
-	WebDriver driver;
+	public WebDriver driver;
 	SidebarCRM sidebarCRM;
 	
 	@BeforeMethod
@@ -23,7 +23,7 @@ public class LeadActivitiesOverview extends BaseClass {
 
 		//	load Property
 		loadPropertiesFile();
-		driver = initializeBrowser(prop.getProperty("browserName"));
+		driver = initializeBrowser(configProp.getProperty("browserName"));
 		// Validate Login
 		driver = validLogin(loginProp.getProperty("validCRMEmailAddress", "validCRMPassword"));
 		

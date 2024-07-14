@@ -10,14 +10,14 @@ import com.dlad.qa.base.BaseClass;
 
 public class Login extends BaseClass {
 
-	WebDriver driver;
+	public WebDriver driver;
 
 	@BeforeMethod
 	public void beforeMethod() throws InterruptedException {
 
 	//	load Property
 		loadPropertiesFile();
-		driver = initializeBrowser(prop.getProperty("browserName"));
+		driver = initializeBrowser(configProp.getProperty("browserName"));
 	
 	}
 

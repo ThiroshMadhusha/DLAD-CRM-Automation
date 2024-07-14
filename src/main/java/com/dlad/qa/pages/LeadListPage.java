@@ -72,13 +72,16 @@ public class LeadListPage {
 	private WebElement ratingErrorMessage;
 	
 	@FindBy(xpath = "//div[@class = 'border rounded-lg bg-white p-2  hover:bg-gray-100 transition-all cursor-pointer']")
-	private WebElement clickPageBackBtn;
+	private WebElement clickOnPageBackBtn;
 	
 	@FindBy(xpath = "//tr[@class = 'border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted'][1]/td[2]")
 	private WebElement verifyCreatedLeadNameInTableView;
 	
 	@FindBy(xpath = "//tr[@class = 'border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted'][1]/td[3]")
 	private WebElement verifyLeadStatusInTableView;
+	
+	@FindBy(xpath = "//tr[@class = 'border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted'][1]/td[4]")
+	private WebElement verifyLeadRatingInTableView;
 	
 	/**
 	 * Actions
@@ -158,8 +161,8 @@ public class LeadListPage {
 		closeNewLeadFormIcon.click();
 	}
 	
-	public void clickPageBackBtn() {
-		clickPageBackBtn.click();
+	public void clickOnPageBackBtn() {
+		clickOnPageBackBtn.click();
 	}
 	
 	public String leadPageViewHeaderTitle() {
@@ -177,4 +180,8 @@ public class LeadListPage {
 		return leadStatusInTableView;
 	}
 	
+	public String verifyLeadRatingInTableView() {
+		String leadRatingInTableView = verifyLeadRatingInTableView.getText();
+		return leadRatingInTableView;
+	}
 }

@@ -10,14 +10,14 @@ import com.dlad.qa.base.BaseClass;
 public class SalesOrders extends BaseClass {
 
 	
-	WebDriver driver;
+	public WebDriver driver;
 	
 	@BeforeMethod
 	public void beforeMethod() throws InterruptedException{
 
 		//	load Property
 		loadPropertiesFile();
-		driver = initializeBrowser(prop.getProperty("browserName"));
+		driver = initializeBrowser(configProp.getProperty("browserName"));
 		// Validate Login
 		driver = validLogin(loginProp.getProperty("validCRMEmailAddress", "validCRMPassword"));
 		
