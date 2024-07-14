@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>TestSuit</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>17/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/3/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Jun 17 10:01:54 IST 2024</td>
+<td>Started on:</td><td>Sun Jul 14 15:35:45 IST 2024</td>
 </tr>
-<tr><td>Total time:</td><td>229 seconds (229319 ms)</td>
+<tr><td>Total time:</td><td>46 seconds (46070 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,56 +76,19 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.dlad.qa.testcases.LeadActivityList.verifyTheUserRedirectsToTheLeadActivityListPage()'><b>verifyTheUserRedirectsToTheLeadActivityListPage</b><br>Test class: com.dlad.qa.testcases.LeadActivityList</td>
-<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;flex gap-3 items-center&apos;]/h1[contains(text(),&apos;Lead Activities&apos;)]//div[@class=&apos;flex gap-3 items-center&apos;]/h1&quot;}
-  (Session info: chrome=126.0.6478.62)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: &apos;4.20.0&apos;, revision: &apos;866c76ca80&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.2&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [fa1d2da9fbd7466db5ba75906272beab, findElement {value=//div[@class=&apos;flex gap-3 items-center&apos;]/h1[contains(text(),&apos;Lead Activities&apos;)]//div[@class=&apos;flex gap-3 items-center&apos;]/h1, using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.62, chrome: {chromedriverVersion: 126.0.6478.61 (8dc092df54ce..., userDataDir: C:\Users\gggam\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:3834}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:3834/devtool..., se:cdpVersion: 126.0.6478.62, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: fa1d2da9fbd7466db5ba75906272beab
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
-	at com.dlad.qa.testcases.LeadActivityList.verifyTheUserRedirectsToTheLeadActivityListPage(LeadActivityList.java:48)
+<td title='com.dlad.qa.testcases.Home.verifyDisplayTheHomePageCardCounts()'><b>verifyDisplayTheHomePageCardCounts</b><br>Test class: com.dlad.qa.testcases.Home</td>
+<td><div><pre>java.lang.AssertionError: expected [Leads] but found [Owned Leads]
+	at com.dlad.qa.testcases.Home.verifyDisplayTheHomePageCardCounts(Home.java:83)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 32 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1712635211", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1712635211'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;flex gap-3 items-center&apos;]/h1[contains(text(),&apos;Lead Activities&apos;)]//div[@class=&apos;flex gap-3 items-center&apos;]/h1&quot;}
-  (Session info: chrome=126.0.6478.62)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: &apos;4.20.0&apos;, revision: &apos;866c76ca80&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.2&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [fa1d2da9fbd7466db5ba75906272beab, findElement {value=//div[@class=&apos;flex gap-3 items-center&apos;]/h1[contains(text(),&apos;Lead Activities&apos;)]//div[@class=&apos;flex gap-3 items-center&apos;]/h1, using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.62, chrome: {chromedriverVersion: 126.0.6478.61 (8dc092df54ce..., userDataDir: C:\Users\gggam\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:3834}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:3834/devtool..., se:cdpVersion: 126.0.6478.62, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: fa1d2da9fbd7466db5ba75906272beab
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
-	at com.dlad.qa.testcases.LeadActivityList.verifyTheUserRedirectsToTheLeadActivityListPage(LeadActivityList.java:48)
+... Removed 33 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1677590477", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1677590477'><pre>java.lang.AssertionError: expected [Leads] but found [Owned Leads]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at com.dlad.qa.testcases.Home.verifyDisplayTheHomePageCardCounts(Home.java:83)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -152,105 +115,101 @@ Session ID: fa1d2da9fbd7466db5ba75906272beab
 	at org.testng.TestNG.runSuites(TestNG.java:1134)
 	at org.testng.TestNG.run(TestNG.java:1101)
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 </pre></div></td>
-<td>10</td>
-<td>com.dlad.qa.testcases.LeadActivityList@535779e4</td></tr>
-</table><p>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td><b>Attribute(s)</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='com.dlad.qa.testcases.Home.verifyDisplayTheHomePageCardCounts()'><b>verifyDisplayTheHomePageCardCounts</b><br>Test class: com.dlad.qa.testcases.Home</td>
-<td></td>
 <td>0</td>
-<td>com.dlad.qa.testcases.Home@72437d8d</td></tr>
-<tr>
-<td title='com.dlad.qa.testcases.LeadActivityList.verifyCreateNewActivityLeadsCloseButton()'><b>verifyCreateNewActivityLeadsCloseButton</b><br>Test class: com.dlad.qa.testcases.LeadActivityList</td>
-<td></td>
-<td>0</td>
-<td>com.dlad.qa.testcases.LeadActivityList@535779e4</td></tr>
-<tr>
-<td title='com.dlad.qa.testcases.LeadList.cancellButtonNewLeadForm()'><b>cancellButtonNewLeadForm</b><br>Test class: com.dlad.qa.testcases.LeadList</td>
-<td></td>
-<td>0</td>
-<td>com.dlad.qa.testcases.LeadList@6c0d9d86</td></tr>
-<tr>
-<td title='com.dlad.qa.testcases.LeadOverview.verifyDisplayTheLeadOverviewPageCardNames()'><b>verifyDisplayTheLeadOverviewPageCardNames</b><br>Test class: com.dlad.qa.testcases.LeadOverview</td>
-<td></td>
-<td>0</td>
-<td>com.dlad.qa.testcases.LeadOverview@53fd0d10</td></tr>
-<tr>
-<td title='com.dlad.qa.testcases.LeadList.verifyTheClickOnCreateButtonWithWithoutFillingData()'><b>verifyTheClickOnCreateButtonWithWithoutFillingData</b><br>Test class: com.dlad.qa.testcases.LeadList</td>
-<td></td>
-<td>0</td>
-<td>com.dlad.qa.testcases.LeadList@6c0d9d86</td></tr>
+<td>com.dlad.qa.testcases.Home@5460cf3a</td></tr>
 <tr>
 <td title='com.dlad.qa.testcases.Home.verifyUserRedirectsToTheHomePage()'><b>verifyUserRedirectsToTheHomePage</b><br>Test class: com.dlad.qa.testcases.Home</td>
-<td></td>
+<td><div><pre>java.lang.AssertionError: expected [Leads] but found [Owned Leads]
+	at com.dlad.qa.testcases.Home.verifyUserRedirectsToTheHomePage(Home.java:53)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 33 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1241758568", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1241758568'><pre>java.lang.AssertionError: expected [Leads] but found [Owned Leads]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at com.dlad.qa.testcases.Home.verifyUserRedirectsToTheHomePage(Home.java:53)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:819)
+	at org.testng.TestRunner.run(TestRunner.java:619)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+	at org.testng.TestNG.runSuites(TestNG.java:1134)
+	at org.testng.TestNG.run(TestNG.java:1101)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
 <td>0</td>
-<td>com.dlad.qa.testcases.Home@72437d8d</td></tr>
-<tr>
-<td title='com.dlad.qa.testcases.LeadOverview.verifyDisplayTheLeadOverviewPageCardCount()'><b>verifyDisplayTheLeadOverviewPageCardCount</b><br>Test class: com.dlad.qa.testcases.LeadOverview</td>
-<td></td>
-<td>0</td>
-<td>com.dlad.qa.testcases.LeadOverview@53fd0d10</td></tr>
-<tr>
-<td title='com.dlad.qa.testcases.LeadList.verifyTheUserRedirectsToTheLeadListPage()'><b>verifyTheUserRedirectsToTheLeadListPage</b><br>Test class: com.dlad.qa.testcases.LeadList</td>
-<td></td>
-<td>0</td>
-<td>com.dlad.qa.testcases.LeadList@6c0d9d86</td></tr>
-<tr>
-<td title='com.dlad.qa.testcases.LeadActivitiesOverview.verifyTheUserRedirectsToTheActivityOverviewPage()'><b>verifyTheUserRedirectsToTheActivityOverviewPage</b><br>Test class: com.dlad.qa.testcases.LeadActivitiesOverview</td>
-<td></td>
-<td>0</td>
-<td>com.dlad.qa.testcases.LeadActivitiesOverview@53de625d</td></tr>
-<tr>
-<td title='com.dlad.qa.testcases.LeadOverview.verifyTheUserRedirectsToTheLeadOverviewPage()'><b>verifyTheUserRedirectsToTheLeadOverviewPage</b><br>Test class: com.dlad.qa.testcases.LeadOverview</td>
-<td></td>
-<td>0</td>
-<td>com.dlad.qa.testcases.LeadOverview@53fd0d10</td></tr>
-<tr>
-<td title='com.dlad.qa.testcases.LeadActivityList.verifyTheCreatenewLeadActivityListFormOpen()'><b>verifyTheCreatenewLeadActivityListFormOpen</b><br>Test class: com.dlad.qa.testcases.LeadActivityList</td>
-<td></td>
-<td>0</td>
-<td>com.dlad.qa.testcases.LeadActivityList@535779e4</td></tr>
-<tr>
-<td title='com.dlad.qa.testcases.LeadList.verifyTheCreateNewLeadFormOpen()'><b>verifyTheCreateNewLeadFormOpen</b><br>Test class: com.dlad.qa.testcases.LeadList</td>
-<td></td>
-<td>0</td>
-<td>com.dlad.qa.testcases.LeadList@6c0d9d86</td></tr>
-<tr>
-<td title='com.dlad.qa.testcases.LeadList.verifyTheCreateNewLeadWithValidData()'><b>verifyTheCreateNewLeadWithValidData</b><br>Test class: com.dlad.qa.testcases.LeadList</td>
-<td></td>
-<td>4</td>
-<td>com.dlad.qa.testcases.LeadList@6c0d9d86</td></tr>
+<td>com.dlad.qa.testcases.Home@5460cf3a</td></tr>
 <tr>
 <td title='com.dlad.qa.testcases.Home.verifyDisplayTheHomePageCardNames()'><b>verifyDisplayTheHomePageCardNames</b><br>Test class: com.dlad.qa.testcases.Home</td>
-<td></td>
+<td><div><pre>java.lang.AssertionError: expected [Leads] but found [Owned Leads]
+	at com.dlad.qa.testcases.Home.verifyDisplayTheHomePageCardNames(Home.java:61)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 33 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1165568071", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1165568071'><pre>java.lang.AssertionError: expected [Leads] but found [Owned Leads]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at com.dlad.qa.testcases.Home.verifyDisplayTheHomePageCardNames(Home.java:61)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:819)
+	at org.testng.TestRunner.run(TestRunner.java:619)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+	at org.testng.TestNG.runSuites(TestNG.java:1134)
+	at org.testng.TestNG.run(TestNG.java:1101)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
 <td>0</td>
-<td>com.dlad.qa.testcases.Home@72437d8d</td></tr>
-<tr>
-<td title='com.dlad.qa.testcases.LeadActivitiesOverview.verifyDisplayTheLeadAcivityOverviewPageCardNames()'><b>verifyDisplayTheLeadAcivityOverviewPageCardNames</b><br>Test class: com.dlad.qa.testcases.LeadActivitiesOverview</td>
-<td></td>
-<td>0</td>
-<td>com.dlad.qa.testcases.LeadActivitiesOverview@53de625d</td></tr>
-<tr>
-<td title='com.dlad.qa.testcases.LeadActivitiesOverview.verifyDisplayTheLeadActivityOverviewPageCardCount()'><b>verifyDisplayTheLeadActivityOverviewPageCardCount</b><br>Test class: com.dlad.qa.testcases.LeadActivitiesOverview</td>
-<td></td>
-<td>1</td>
-<td>com.dlad.qa.testcases.LeadActivitiesOverview@53de625d</td></tr>
-<tr>
-<td title='com.dlad.qa.testcases.LeadList.verifyTheCreateNewLeadFormCloseIcon()'><b>verifyTheCreateNewLeadFormCloseIcon</b><br>Test class: com.dlad.qa.testcases.LeadList</td>
-<td></td>
-<td>0</td>
-<td>com.dlad.qa.testcases.LeadList@6c0d9d86</td></tr>
+<td>com.dlad.qa.testcases.Home@5460cf3a</td></tr>
 </table><p>
 </body>
 </html>

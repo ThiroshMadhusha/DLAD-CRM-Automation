@@ -147,7 +147,7 @@ public class LeadList extends BaseClass {
 	    String pageHeader = leadListPage.leadPageViewHeaderTitle();
 	    Assert.assertEquals(pageHeader, leadListProp.getProperty("verifyLeadViewPageHeader"));
 	    
-	    leadListPage.clickPageBackBtn();
+	    leadListPage.clickOnPageBackBtn();
 	    
 	    String verifyCreatedName = leadListPage.verifyCreatedLeadNameInTableView();
 	    Assert.assertEquals(createdLeadName, verifyCreatedName);
@@ -177,10 +177,16 @@ public class LeadList extends BaseClass {
 	    String pageHeader = leadListPage.leadPageViewHeaderTitle();
 	    Assert.assertEquals(pageHeader, leadListProp.getProperty("verifyLeadViewPageHeader"));
 	    
-	    leadListPage.clickPageBackBtn();
-	    String actualstatus = leadListProp.getProperty("leadStatus");	    		
+	    leadListPage.clickOnPageBackBtn();
+	    
+	    String actualStatus = leadListProp.getProperty("leadStatus");	    		
 	    String verifyNewlyCreatedLeadStatus = leadListPage.verifyLeadStatusInTableView();
-	    Assert.assertEquals(verifyNewlyCreatedLeadStatus, actualstatus);
+	    Assert.assertEquals(verifyNewlyCreatedLeadStatus, actualStatus);
+	    
+	    String actualRating = leadListProp.getProperty("leadRating");	    		
+	    String verifyNewlyCreatedLeadRating = leadListPage.verifyLeadRatingInTableView();
+	    Assert.assertEquals(verifyNewlyCreatedLeadRating, actualRating);
+	    
 	    Thread.sleep(3000);	
 	}
 

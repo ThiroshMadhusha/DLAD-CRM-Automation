@@ -22,10 +22,10 @@ public class HomePage {
 	@FindBy(xpath = "//h3[@class='tracking-tight text-sm font-medium']")
 	private WebElement homePageHeaderTitle;
 	
-    @FindBy(xpath = "//h3[contains(text(), 'Leads')]")
+    @FindBy(xpath = "//h3[contains(text(), 'Owned Leads')]")
     private WebElement leadsLabel;
 
-    @FindBy(xpath = "//h3[contains(text(), 'Own BPs')]")
+    @FindBy(xpath = "//h3[contains(text(), 'Owned BP')]")
     private WebElement ownBpsLabel;
 
     @FindBy(xpath = "//h3[contains(text(), 'Lead Activities')]")
