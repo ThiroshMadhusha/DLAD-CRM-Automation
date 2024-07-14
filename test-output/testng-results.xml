@@ -1,153 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="13" passed="8" failed="5" skipped="0">
+<testng-results ignored="0" total="3" passed="1" failed="2" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-07-14T22:45:20 IST" name="DLAD CRM Automation Test Suite" finished-at="2024-07-14T22:48:09 IST" duration-ms="169637">
+  <suite started-at="2024-07-14T23:18:42 IST" name="DLAD CRM Automation Test Suite" finished-at="2024-07-14T23:19:33 IST" duration-ms="50583">
     <groups>
     </groups>
-    <test started-at="2024-07-14T22:45:20 IST" name="DLAD QA Testing" finished-at="2024-07-14T22:48:09 IST" duration-ms="169637">
-      <class name="com.dlad.qa.testcases.LeadList">
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.dlad.qa.testcases.LeadList@52066604]" started-at="2024-07-14T22:45:20 IST" name="beforeMethod" finished-at="2024-07-14T22:45:31 IST" duration-ms="11291" status="PASS">
+    <test started-at="2024-07-14T23:18:42 IST" name="DLAD QA Testing" finished-at="2024-07-14T23:19:33 IST" duration-ms="50583">
+      <class name="com.dlad.qa.testcases.Home">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.dlad.qa.testcases.Home@7f36662c]" started-at="2024-07-14T23:18:43 IST" name="beforeMethod" finished-at="2024-07-14T23:19:01 IST" duration-ms="17838" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="verifyTheUserRedirectsToTheLeadListPage()[pri:1, instance:com.dlad.qa.testcases.LeadList@52066604]" started-at="2024-07-14T22:45:31 IST" name="verifyTheUserRedirectsToTheLeadListPage" finished-at="2024-07-14T22:45:31 IST" duration-ms="50" status="PASS">
+        <test-method signature="verifyUserRedirectsToTheHomePage()[pri:1, instance:com.dlad.qa.testcases.Home@7f36662c]" started-at="2024-07-14T23:19:01 IST" name="verifyUserRedirectsToTheHomePage" finished-at="2024-07-14T23:19:01 IST" duration-ms="85" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyTheUserRedirectsToTheLeadListPage -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.dlad.qa.testcases.LeadList@52066604]" started-at="2024-07-14T22:45:31 IST" name="afterMethod" finished-at="2024-07-14T22:45:32 IST" duration-ms="316" status="PASS">
+        </test-method> <!-- verifyUserRedirectsToTheHomePage -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.dlad.qa.testcases.Home@7f36662c]" started-at="2024-07-14T23:19:01 IST" name="afterMethod" finished-at="2024-07-14T23:19:01 IST" duration-ms="384" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.dlad.qa.testcases.LeadList@52066604]" started-at="2024-07-14T22:45:32 IST" name="beforeMethod" finished-at="2024-07-14T22:45:43 IST" duration-ms="10919" status="PASS">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.dlad.qa.testcases.Home@7f36662c]" started-at="2024-07-14T23:19:01 IST" name="beforeMethod" finished-at="2024-07-14T23:19:17 IST" duration-ms="15846" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="verifyTheCreateNewLeadFormOpen()[pri:2, instance:com.dlad.qa.testcases.LeadList@52066604]" started-at="2024-07-14T22:45:43 IST" name="verifyTheCreateNewLeadFormOpen" finished-at="2024-07-14T22:45:43 IST" duration-ms="239" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyTheCreateNewLeadFormOpen -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.dlad.qa.testcases.LeadList@52066604]" started-at="2024-07-14T22:45:43 IST" name="afterMethod" finished-at="2024-07-14T22:45:43 IST" duration-ms="326" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.dlad.qa.testcases.LeadList@52066604]" started-at="2024-07-14T22:45:43 IST" name="beforeMethod" finished-at="2024-07-14T22:45:54 IST" duration-ms="10758" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method signature="verifyTheCreateNewLeadFormCloseIcon()[pri:3, instance:com.dlad.qa.testcases.LeadList@52066604]" started-at="2024-07-14T22:45:54 IST" name="verifyTheCreateNewLeadFormCloseIcon" finished-at="2024-07-14T22:45:54 IST" duration-ms="324" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyTheCreateNewLeadFormCloseIcon -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.dlad.qa.testcases.LeadList@52066604]" started-at="2024-07-14T22:45:54 IST" name="afterMethod" finished-at="2024-07-14T22:45:55 IST" duration-ms="315" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.dlad.qa.testcases.LeadList@52066604]" started-at="2024-07-14T22:45:55 IST" name="beforeMethod" finished-at="2024-07-14T22:46:06 IST" duration-ms="11294" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method signature="verifyTheCreateNewLeadWithValidData()[pri:4, instance:com.dlad.qa.testcases.LeadList@52066604]" started-at="2024-07-14T22:46:06 IST" name="verifyTheCreateNewLeadWithValidData" finished-at="2024-07-14T22:46:06 IST" duration-ms="339" status="FAIL">
-          <exception class="org.openqa.selenium.ElementNotInteractableException">
-            <message>
-              <![CDATA[element not interactable
-  (Session info: chrome=126.0.6478.127)
-Build info: version: '4.22.0', revision: 'c5f3146703*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [7bc2c0757477f3b52c0e24578e91d582, sendKeysToElement {id=f.EBC94131977D6743FBC7405375921547.d.A404294AD161E55415C39AB55B711474.e.25, value=[Ljava.lang.CharSequence;@54e02f6a}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.127, chrome: {chromedriverVersion: 126.0.6478.126 (d36ace6122e..., userDataDir: C:\Users\gggam\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:14965}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:14965/devtoo..., se:cdpVersion: 126.0.6478.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (7bc2c0757477f3b52c0e24578e91d582)] -> xpath: //input[@placeholder='Lead Name']]
-Session ID: 7bc2c0757477f3b52c0e24578e91d582]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.ElementNotInteractableException: element not interactable
-  (Session info: chrome=126.0.6478.127)
-Build info: version: '4.22.0', revision: 'c5f3146703*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [7bc2c0757477f3b52c0e24578e91d582, sendKeysToElement {id=f.EBC94131977D6743FBC7405375921547.d.A404294AD161E55415C39AB55B711474.e.25, value=[Ljava.lang.CharSequence;@54e02f6a}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.127, chrome: {chromedriverVersion: 126.0.6478.126 (d36ace6122e..., userDataDir: C:\Users\gggam\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:14965}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:14965/devtoo..., se:cdpVersion: 126.0.6478.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (7bc2c0757477f3b52c0e24578e91d582)] -> xpath: //input[@placeholder='Lead Name']]
-Session ID: 7bc2c0757477f3b52c0e24578e91d582
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:110)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-at jdk.proxy2/jdk.proxy2.$Proxy17.sendKeys(Unknown Source)
-at com.dlad.qa.pages.LeadListPage.leadNameInputTextField(LeadListPage.java:133)
-at com.dlad.qa.testcases.LeadList.verifyTheCreateNewLeadWithValidData(LeadList.java:76)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:819)
-at org.testng.TestRunner.run(TestRunner.java:619)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-at org.testng.TestNG.runSuites(TestNG.java:1134)
-at org.testng.TestNG.run(TestNG.java:1101)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.ElementNotInteractableException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyTheCreateNewLeadWithValidData -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.dlad.qa.testcases.LeadList@52066604]" started-at="2024-07-14T22:46:06 IST" name="afterMethod" finished-at="2024-07-14T22:46:07 IST" duration-ms="382" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.dlad.qa.testcases.LeadList@52066604]" started-at="2024-07-14T22:46:07 IST" name="beforeMethod" finished-at="2024-07-14T22:46:19 IST" duration-ms="12161" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method signature="verifyTheCreateNewLeadWithoutProvidingAnyFields()[pri:5, instance:com.dlad.qa.testcases.LeadList@52066604]" started-at="2024-07-14T22:46:19 IST" name="verifyTheCreateNewLeadWithoutProvidingAnyFields" finished-at="2024-07-14T22:46:20 IST" duration-ms="582" status="FAIL">
+        <test-method signature="verifyDisplayTheHomePageCardNames()[pri:2, instance:com.dlad.qa.testcases.Home@7f36662c]" started-at="2024-07-14T23:19:17 IST" name="verifyDisplayTheHomePageCardNames" finished-at="2024-07-14T23:19:17 IST" duration-ms="202" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[expected [Rating is require] but found [Rating is required]]]>
+              <![CDATA[expected [BP Activitie] but found [BP Activities]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [Rating is require] but found [Rating is required]
+              <![CDATA[java.lang.AssertionError: expected [BP Activitie] but found [BP Activities]
 at org.testng.Assert.fail(Assert.java:111)
 at org.testng.Assert.failNotEquals(Assert.java:1578)
 at org.testng.Assert.assertEqualsImpl(Assert.java:150)
 at org.testng.Assert.assertEquals(Assert.java:132)
 at org.testng.Assert.assertEquals(Assert.java:656)
 at org.testng.Assert.assertEquals(Assert.java:666)
-at com.dlad.qa.testcases.LeadList.verifyTheCreateNewLeadWithoutProvidingAnyFields(LeadList.java:103)
+at com.dlad.qa.testcases.Home.verifyDisplayTheHomePageCardNames(Home.java:73)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -181,60 +70,29 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyTheCreateNewLeadWithoutProvidingAnyFields -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.dlad.qa.testcases.LeadList@52066604]" started-at="2024-07-14T22:46:20 IST" name="afterMethod" finished-at="2024-07-14T22:46:20 IST" duration-ms="366" status="PASS">
+        </test-method> <!-- verifyDisplayTheHomePageCardNames -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.dlad.qa.testcases.Home@7f36662c]" started-at="2024-07-14T23:19:18 IST" name="afterMethod" finished-at="2024-07-14T23:19:18 IST" duration-ms="399" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.dlad.qa.testcases.LeadList@52066604]" started-at="2024-07-14T22:46:20 IST" name="beforeMethod" finished-at="2024-07-14T22:46:33 IST" duration-ms="12664" status="PASS">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.dlad.qa.testcases.Home@7f36662c]" started-at="2024-07-14T23:19:18 IST" name="beforeMethod" finished-at="2024-07-14T23:19:32 IST" duration-ms="13916" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="verifyTheFillAllRequiredLeadMemberDetailsFields()[pri:6, instance:com.dlad.qa.testcases.LeadList@52066604]" started-at="2024-07-14T22:46:33 IST" name="verifyTheFillAllRequiredLeadMemberDetailsFields" finished-at="2024-07-14T22:46:33 IST" duration-ms="376" status="FAIL">
-          <exception class="org.openqa.selenium.ElementNotInteractableException">
+        <test-method signature="verifyDisplayTheHomePageCardCounts()[pri:3, instance:com.dlad.qa.testcases.Home@7f36662c]" started-at="2024-07-14T23:19:32 IST" name="verifyDisplayTheHomePageCardCounts" finished-at="2024-07-14T23:19:32 IST" duration-ms="432" status="FAIL">
+          <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[element not interactable
-  (Session info: chrome=126.0.6478.127)
-Build info: version: '4.22.0', revision: 'c5f3146703*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [3eb81a6cb870d51dd06724d30476ceb7, sendKeysToElement {id=f.18DF65B98A287CAB46DCF10DC835C397.d.2C4F942C32D79F8D0FC32A970FEAD01F.e.26, value=[Ljava.lang.CharSequence;@717d7587}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.127, chrome: {chromedriverVersion: 126.0.6478.126 (d36ace6122e..., userDataDir: C:\Users\gggam\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:1078}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:1078/devtool..., se:cdpVersion: 126.0.6478.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (3eb81a6cb870d51dd06724d30476ceb7)] -> xpath: //input[@placeholder='Lead Name']]
-Session ID: 3eb81a6cb870d51dd06724d30476ceb7]]>
+              <![CDATA[expected [BP Activitie] but found [BP Activities]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.ElementNotInteractableException: element not interactable
-  (Session info: chrome=126.0.6478.127)
-Build info: version: '4.22.0', revision: 'c5f3146703*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [3eb81a6cb870d51dd06724d30476ceb7, sendKeysToElement {id=f.18DF65B98A287CAB46DCF10DC835C397.d.2C4F942C32D79F8D0FC32A970FEAD01F.e.26, value=[Ljava.lang.CharSequence;@717d7587}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.127, chrome: {chromedriverVersion: 126.0.6478.126 (d36ace6122e..., userDataDir: C:\Users\gggam\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:1078}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:1078/devtool..., se:cdpVersion: 126.0.6478.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (3eb81a6cb870d51dd06724d30476ceb7)] -> xpath: //input[@placeholder='Lead Name']]
-Session ID: 3eb81a6cb870d51dd06724d30476ceb7
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:110)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-at jdk.proxy2/jdk.proxy2.$Proxy17.sendKeys(Unknown Source)
-at com.dlad.qa.pages.LeadListPage.leadNameInputTextField(LeadListPage.java:133)
-at com.dlad.qa.testcases.LeadList.verifyTheFillAllRequiredLeadMemberDetailsFields(LeadList.java:112)
+              <![CDATA[java.lang.AssertionError: expected [BP Activitie] but found [BP Activities]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:656)
+at org.testng.Assert.assertEquals(Assert.java:666)
+at com.dlad.qa.testcases.Home.verifyDisplayTheHomePageCardCounts(Home.java:101)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -265,247 +123,15 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.ElementNotInteractableException -->
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyTheFillAllRequiredLeadMemberDetailsFields -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.dlad.qa.testcases.LeadList@52066604]" started-at="2024-07-14T22:46:33 IST" name="afterMethod" finished-at="2024-07-14T22:46:34 IST" duration-ms="358" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.dlad.qa.testcases.LeadList@52066604]" started-at="2024-07-14T22:46:34 IST" name="beforeMethod" finished-at="2024-07-14T22:46:47 IST" duration-ms="13069" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method signature="verifyTheCreatedLeadMemberDisplayOnLeadsTable()[pri:7, instance:com.dlad.qa.testcases.LeadList@52066604]" started-at="2024-07-14T22:46:47 IST" name="verifyTheCreatedLeadMemberDisplayOnLeadsTable" finished-at="2024-07-14T22:46:47 IST" duration-ms="483" status="FAIL">
-          <exception class="org.openqa.selenium.ElementNotInteractableException">
-            <message>
-              <![CDATA[element not interactable
-  (Session info: chrome=126.0.6478.127)
-Build info: version: '4.22.0', revision: 'c5f3146703*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [e5d94fea1a86dc94ca3ca4f3f233d430, sendKeysToElement {id=f.61A44DBA6890360D2F4EBB29D2E28555.d.C7F433A726BC339C03340C7509DB9BF0.e.27, value=[Ljava.lang.CharSequence;@430b2699}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.127, chrome: {chromedriverVersion: 126.0.6478.126 (d36ace6122e..., userDataDir: C:\Users\gggam\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:1120}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:1120/devtool..., se:cdpVersion: 126.0.6478.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (e5d94fea1a86dc94ca3ca4f3f233d430)] -> xpath: //input[@placeholder='Lead Name']]
-Session ID: e5d94fea1a86dc94ca3ca4f3f233d430]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.ElementNotInteractableException: element not interactable
-  (Session info: chrome=126.0.6478.127)
-Build info: version: '4.22.0', revision: 'c5f3146703*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [e5d94fea1a86dc94ca3ca4f3f233d430, sendKeysToElement {id=f.61A44DBA6890360D2F4EBB29D2E28555.d.C7F433A726BC339C03340C7509DB9BF0.e.27, value=[Ljava.lang.CharSequence;@430b2699}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.127, chrome: {chromedriverVersion: 126.0.6478.126 (d36ace6122e..., userDataDir: C:\Users\gggam\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:1120}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:1120/devtool..., se:cdpVersion: 126.0.6478.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (e5d94fea1a86dc94ca3ca4f3f233d430)] -> xpath: //input[@placeholder='Lead Name']]
-Session ID: e5d94fea1a86dc94ca3ca4f3f233d430
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:110)
-at jdk.internal.reflect.GeneratedMethodAccessor2.invoke(Unknown Source)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-at jdk.proxy2/jdk.proxy2.$Proxy17.sendKeys(Unknown Source)
-at com.dlad.qa.pages.LeadListPage.leadNameInputTextField(LeadListPage.java:133)
-at com.dlad.qa.testcases.LeadList.verifyTheCreatedLeadMemberDisplayOnLeadsTable(LeadList.java:134)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:819)
-at org.testng.TestRunner.run(TestRunner.java:619)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-at org.testng.TestNG.runSuites(TestNG.java:1134)
-at org.testng.TestNG.run(TestNG.java:1101)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.ElementNotInteractableException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyTheCreatedLeadMemberDisplayOnLeadsTable -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.dlad.qa.testcases.LeadList@52066604]" started-at="2024-07-14T22:46:48 IST" name="afterMethod" finished-at="2024-07-14T22:46:48 IST" duration-ms="412" status="PASS">
+        </test-method> <!-- verifyDisplayTheHomePageCardCounts -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.dlad.qa.testcases.Home@7f36662c]" started-at="2024-07-14T23:19:32 IST" name="afterMethod" finished-at="2024-07-14T23:19:33 IST" duration-ms="362" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.dlad.qa.testcases.LeadList@52066604]" started-at="2024-07-14T22:46:48 IST" name="beforeMethod" finished-at="2024-07-14T22:47:01 IST" duration-ms="12916" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method signature="verifyTheNewlyCreatedLeadStatusAndRatingDisplayedOnTheLeadTableView()[pri:8, instance:com.dlad.qa.testcases.LeadList@52066604]" started-at="2024-07-14T22:47:01 IST" name="verifyTheNewlyCreatedLeadStatusAndRatingDisplayedOnTheLeadTableView" finished-at="2024-07-14T22:47:01 IST" duration-ms="378" status="FAIL">
-          <exception class="org.openqa.selenium.ElementNotInteractableException">
-            <message>
-              <![CDATA[element not interactable
-  (Session info: chrome=126.0.6478.127)
-Build info: version: '4.22.0', revision: 'c5f3146703*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [f401b89df1e1bfcb83036e475c77e457, sendKeysToElement {id=f.B74D5FE081AF06C7F36FD471C5496B2E.d.9C574B52EB19BC6699288EFAA572EEE6.e.27, value=[Ljava.lang.CharSequence;@2fbe26da}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.127, chrome: {chromedriverVersion: 126.0.6478.126 (d36ace6122e..., userDataDir: C:\Users\gggam\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:1162}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:1162/devtool..., se:cdpVersion: 126.0.6478.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (f401b89df1e1bfcb83036e475c77e457)] -> xpath: //input[@placeholder='Lead Name']]
-Session ID: f401b89df1e1bfcb83036e475c77e457]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.ElementNotInteractableException: element not interactable
-  (Session info: chrome=126.0.6478.127)
-Build info: version: '4.22.0', revision: 'c5f3146703*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [f401b89df1e1bfcb83036e475c77e457, sendKeysToElement {id=f.B74D5FE081AF06C7F36FD471C5496B2E.d.9C574B52EB19BC6699288EFAA572EEE6.e.27, value=[Ljava.lang.CharSequence;@2fbe26da}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.127, chrome: {chromedriverVersion: 126.0.6478.126 (d36ace6122e..., userDataDir: C:\Users\gggam\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:1162}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:1162/devtool..., se:cdpVersion: 126.0.6478.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (f401b89df1e1bfcb83036e475c77e457)] -> xpath: //input[@placeholder='Lead Name']]
-Session ID: f401b89df1e1bfcb83036e475c77e457
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:110)
-at jdk.internal.reflect.GeneratedMethodAccessor2.invoke(Unknown Source)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-at jdk.proxy2/jdk.proxy2.$Proxy17.sendKeys(Unknown Source)
-at com.dlad.qa.pages.LeadListPage.leadNameInputTextField(LeadListPage.java:133)
-at com.dlad.qa.testcases.LeadList.verifyTheNewlyCreatedLeadStatusAndRatingDisplayedOnTheLeadTableView(LeadList.java:164)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:819)
-at org.testng.TestRunner.run(TestRunner.java:619)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-at org.testng.TestNG.runSuites(TestNG.java:1134)
-at org.testng.TestNG.run(TestNG.java:1101)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.ElementNotInteractableException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyTheNewlyCreatedLeadStatusAndRatingDisplayedOnTheLeadTableView -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.dlad.qa.testcases.LeadList@52066604]" started-at="2024-07-14T22:47:02 IST" name="afterMethod" finished-at="2024-07-14T22:47:02 IST" duration-ms="369" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.dlad.qa.testcases.LeadList@52066604]" started-at="2024-07-14T22:47:02 IST" name="beforeMethod" finished-at="2024-07-14T22:47:15 IST" duration-ms="13033" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method signature="verifyTheFillAllLeadMemberDetailsInLeadViewFields()[pri:9, instance:com.dlad.qa.testcases.LeadList@52066604]" started-at="2024-07-14T22:47:15 IST" name="verifyTheFillAllLeadMemberDetailsInLeadViewFields" finished-at="2024-07-14T22:47:15 IST" duration-ms="2" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyTheFillAllLeadMemberDetailsInLeadViewFields -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.dlad.qa.testcases.LeadList@52066604]" started-at="2024-07-14T22:47:15 IST" name="afterMethod" finished-at="2024-07-14T22:47:15 IST" duration-ms="367" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.dlad.qa.testcases.LeadList@52066604]" started-at="2024-07-14T22:47:15 IST" name="beforeMethod" finished-at="2024-07-14T22:47:28 IST" duration-ms="13060" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method signature="verifyAddedEmailDisplayedOnThedTableView()[pri:10, instance:com.dlad.qa.testcases.LeadList@52066604]" started-at="2024-07-14T22:47:28 IST" name="verifyAddedEmailDisplayedOnThedTableView" finished-at="2024-07-14T22:47:28 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyAddedEmailDisplayedOnThedTableView -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.dlad.qa.testcases.LeadList@52066604]" started-at="2024-07-14T22:47:28 IST" name="afterMethod" finished-at="2024-07-14T22:47:29 IST" duration-ms="411" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.dlad.qa.testcases.LeadList@52066604]" started-at="2024-07-14T22:47:29 IST" name="beforeMethod" finished-at="2024-07-14T22:47:42 IST" duration-ms="12786" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method signature="cancellButtonNewLeadForm()[pri:11, instance:com.dlad.qa.testcases.LeadList@52066604]" started-at="2024-07-14T22:47:42 IST" name="cancellButtonNewLeadForm" finished-at="2024-07-14T22:47:42 IST" duration-ms="407" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- cancellButtonNewLeadForm -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.dlad.qa.testcases.LeadList@52066604]" started-at="2024-07-14T22:47:42 IST" name="afterMethod" finished-at="2024-07-14T22:47:43 IST" duration-ms="425" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.dlad.qa.testcases.LeadList@52066604]" started-at="2024-07-14T22:47:43 IST" name="beforeMethod" finished-at="2024-07-14T22:47:56 IST" duration-ms="13206" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method signature="verifyAllStatusMethodsDisplayOnLeadsViewTable()[pri:12, instance:com.dlad.qa.testcases.LeadList@52066604]" started-at="2024-07-14T22:47:56 IST" name="verifyAllStatusMethodsDisplayOnLeadsViewTable" finished-at="2024-07-14T22:47:56 IST" duration-ms="2" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyAllStatusMethodsDisplayOnLeadsViewTable -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.dlad.qa.testcases.LeadList@52066604]" started-at="2024-07-14T22:47:56 IST" name="afterMethod" finished-at="2024-07-14T22:47:56 IST" duration-ms="365" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.dlad.qa.testcases.LeadList@52066604]" started-at="2024-07-14T22:47:56 IST" name="beforeMethod" finished-at="2024-07-14T22:48:09 IST" duration-ms="12769" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method signature="verifyAllRatingsMethodsDisplayOnLeadsViewTable()[pri:13, instance:com.dlad.qa.testcases.LeadList@52066604]" started-at="2024-07-14T22:48:09 IST" name="verifyAllRatingsMethodsDisplayOnLeadsViewTable" finished-at="2024-07-14T22:48:09 IST" duration-ms="2" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyAllRatingsMethodsDisplayOnLeadsViewTable -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.dlad.qa.testcases.LeadList@52066604]" started-at="2024-07-14T22:48:09 IST" name="afterMethod" finished-at="2024-07-14T22:48:09 IST" duration-ms="363" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-      </class> <!-- com.dlad.qa.testcases.LeadList -->
+      </class> <!-- com.dlad.qa.testcases.Home -->
     </test> <!-- DLAD QA Testing -->
   </suite> <!-- DLAD CRM Automation Test Suite -->
 </testng-results>

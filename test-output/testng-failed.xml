@@ -6,17 +6,14 @@
   </listeners>
   <test thread-count="5" name="DLAD QA Testing(failed)">
     <classes>
-      <class name="com.dlad.qa.testcases.LeadList">
+      <class name="com.dlad.qa.testcases.Home">
         <methods>
-          <include name="verifyTheNewlyCreatedLeadStatusAndRatingDisplayedOnTheLeadTableView"/>
           <include name="beforeMethod"/>
-          <include name="verifyTheCreateNewLeadWithoutProvidingAnyFields"/>
-          <include name="verifyTheFillAllRequiredLeadMemberDetailsFields"/>
-          <include name="verifyTheCreatedLeadMemberDisplayOnLeadsTable"/>
-          <include name="verifyTheCreateNewLeadWithValidData"/>
+          <include name="verifyDisplayTheHomePageCardCounts"/>
+          <include name="verifyDisplayTheHomePageCardNames"/>
           <include name="afterMethod"/>
         </methods>
-      </class> <!-- com.dlad.qa.testcases.LeadList -->
+      </class> <!-- com.dlad.qa.testcases.Home -->
     </classes>
   </test> <!-- DLAD QA Testing(failed) -->
 </suite> <!-- Failed suite [DLAD CRM Automation Test Suite] -->

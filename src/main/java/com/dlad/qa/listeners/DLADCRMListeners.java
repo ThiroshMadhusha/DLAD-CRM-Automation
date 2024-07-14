@@ -15,6 +15,7 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 import com.dlad.qa.utils.ExtentReporter;
+import com.dlad.qa.utils.Utils;
 
 public class DLADCRMListeners implements ITestListener{
 
@@ -57,6 +58,8 @@ public class DLADCRMListeners implements ITestListener{
 			e.printStackTrace();
 		}
 		
+		// Screenshot when the Test Case Failure
+		String destinationScreenshotPath = Utils.captureScreenShots(driver, testName);
 		
 		// Attached Screenshot into ExtentReports
 		extentTest.addScreenCaptureFromPath(destinationScreenshotPath);

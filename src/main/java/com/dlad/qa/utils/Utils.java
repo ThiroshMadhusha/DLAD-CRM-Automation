@@ -93,6 +93,18 @@ public class Utils {
 		return data;
 	}
 	
-	
-	
+	// Take Screenhot When the Test Execution Failure
+	public static String captureScreenShots(WebDriver driver, String testName) {
+		
+		File srcScreenshot = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+		
+		String destinationScreenshotPath = System.getProperty("user.dir")+"\\Screenshots\\" + testName +".png";
+		try {
+			FileHandler.copy(srcScreenshot, new File(destinationScreenshotPath));
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+		return destinationScreenshotPath;
+	}
 }
