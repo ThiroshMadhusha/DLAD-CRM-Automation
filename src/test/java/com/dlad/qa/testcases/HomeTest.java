@@ -11,7 +11,7 @@ import com.dlad.qa.pages.HomePage;
 import com.dlad.qa.pages.SidebarCRM;
 
 
-public class HomePageTest extends BaseClass {
+public class HomeTest extends BaseClass {
 
 	
 	public WebDriver driver;

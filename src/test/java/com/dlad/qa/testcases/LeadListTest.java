@@ -11,7 +11,7 @@ import com.dlad.qa.pages.LeadListPage;
 import com.dlad.qa.pages.SidebarCRM;
 import com.dlad.qa.utils.Utils;
 
-public class LeadList extends BaseClass {
+public class LeadListTest extends BaseClass {
 	
 	public WebDriver driver;
 	SidebarCRM sidebarCRM;
