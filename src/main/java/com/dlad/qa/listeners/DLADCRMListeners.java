@@ -1,5 +1,6 @@
 package com.dlad.qa.listeners;
 
+import java.awt.Desktop;
 import java.io.File;
 import java.io.IOException;
 
@@ -81,6 +82,15 @@ public class DLADCRMListeners implements ITestListener{
 	public void onFinish(ITestContext context) {
 		System.out.println("Finished Executing Project Test...!");
 		extentReport.flush();
+		
+		// Open Extent Report Automatically
+		String pathOfExtentReport = System.getProperty("user.dir")+"\\test-output\\ExtentReports\\extentReport.html";
+		File extentReport = new File(pathOfExtentReport);
+		try {
+			Desktop.getDesktop().browse(extentReport.toURI());
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
 
 	

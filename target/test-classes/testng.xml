@@ -8,7 +8,7 @@
 
   <test thread-count="5" name="DLAD QA Testing">
     <classes>
-      <class name="com.dlad.qa.testcases.Home"/>
+      <class name="com.dlad.qa.testcases.HomePageTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
