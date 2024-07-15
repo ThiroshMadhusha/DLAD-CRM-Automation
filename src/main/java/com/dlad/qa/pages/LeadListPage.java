@@ -26,10 +26,10 @@ public class LeadListPage {
 	@FindBy(xpath = "//button[@type='button']/*[@class='h-4 w-4']")
 	private WebElement closeNewLeadFormIcon;
 	
-	@FindBy(xpath = "//input[@placeholder='Lead Name']")
+	@FindBy(xpath = "//input[@type='text' and @placeholder='Lead Name']")
 	private WebElement leadNameInputTextField;
 	
-	@FindBy(xpath = "//input[@id='about_company']")
+	@FindBy(xpath = "//input[@id='about_company' and @placeholder='Company']")
 	private WebElement companyNameInputTextField;
 	
 	@FindBy(xpath = "//button[@id='lead_group']")

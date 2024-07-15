@@ -36,14 +36,16 @@ public class Utils {
 		Date date = new Date();
 		String nameGenerate = date.toString().replace(":", "").replace(" ", "");
 //		return nameGenerate + "Name";
-		return nameGenerate.substring(11) + " Name";
+		return nameGenerate.substring(10, nameGenerate.length() - 4) + " Name";
 	}
 	
 	public static String companyNameGenerate() {
 
 		Date date = new Date();
 		String nameGenerate = date.toString().replace(":", "").replace(" ", "");
-		return nameGenerate.substring(11) + " CompanyName";
+//		return nameGenerate.substring(11) + " CompanyName";
+		return nameGenerate.substring(10, nameGenerate.length() - 4) + " CompanyName";
+
 	}
 
 	public static final int IMPLICIT_WAIT_TIME = 30;
