@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-07-16T00:21:45 IST" name="Default suite" finished-at="2024-07-16T00:22:08 IST" duration-ms="22853">
+  <suite started-at="2024-07-16T10:41:00 IST" name="Default suite" finished-at="2024-07-16T10:41:30 IST" duration-ms="29729">
     <groups>
     </groups>
-    <test started-at="2024-07-16T00:21:45 IST" name="Default test" finished-at="2024-07-16T00:22:08 IST" duration-ms="22853">
+    <test started-at="2024-07-16T10:41:00 IST" name="Default test" finished-at="2024-07-16T10:41:30 IST" duration-ms="29729">
       <class name="com.dlad.qa.testcases.LeadListTest">
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.dlad.qa.testcases.LeadListTest@19b93fa8]" started-at="2024-07-16T00:21:45 IST" name="beforeMethod" finished-at="2024-07-16T00:22:01 IST" duration-ms="16058" status="PASS">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.dlad.qa.testcases.LeadListTest@19b93fa8]" started-at="2024-07-16T10:41:00 IST" name="beforeMethod" finished-at="2024-07-16T10:41:20 IST" duration-ms="19942" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="verifyTheCreateNewLeadWithValidData()[pri:4, instance:com.dlad.qa.testcases.LeadListTest@19b93fa8]" started-at="2024-07-16T00:22:01 IST" name="verifyTheCreateNewLeadWithValidData" finished-at="2024-07-16T00:22:07 IST" duration-ms="5964" status="PASS">
+        <test-method signature="verifyTheCreateNewLeadWithValidData()[pri:4, instance:com.dlad.qa.testcases.LeadListTest@19b93fa8]" started-at="2024-07-16T10:41:20 IST" name="verifyTheCreateNewLeadWithValidData" finished-at="2024-07-16T10:41:28 IST" duration-ms="7955" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyTheCreateNewLeadWithValidData -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.dlad.qa.testcases.LeadListTest@19b93fa8]" started-at="2024-07-16T00:22:07 IST" name="afterMethod" finished-at="2024-07-16T00:22:08 IST" duration-ms="698" status="PASS">
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.dlad.qa.testcases.LeadListTest@19b93fa8]" started-at="2024-07-16T10:41:28 IST" name="afterMethod" finished-at="2024-07-16T10:41:30 IST" duration-ms="1635" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->

@@ -37,6 +37,8 @@ public class DLADCRMListeners implements ITestListener{
 	public void onTestStart(ITestResult result) {
 		testName = result.getName();
 		extentTest = extentReport.createTest(testName);
+		System.out.println("The " + testName + " Test Case Started Executing...!");
+		
 		extentTest.log(Status.INFO, "The " + testName + " Test Case Started Executing...!");
 	}
 	
@@ -44,6 +46,8 @@ public class DLADCRMListeners implements ITestListener{
 	@Override
 	public void onTestSuccess(ITestResult result) {
 		testName = result.getName();
+		System.out.println("The " + testName + " Test Case got Successfully Executed...!");
+		
 		extentTest.log(Status.PASS, "The " + testName + " Test Case got Successfully Executed...!");
 	}
 
@@ -51,6 +55,9 @@ public class DLADCRMListeners implements ITestListener{
 	@Override
 	public void onTestFailure(ITestResult result) {
 		testName = result.getName();
+		System.out.println("The " + testName + " Test Case Execution Failed...!");
+		System.out.println(result.getThrowable());
+		
 		WebDriver driver = null;
 		try {
 			driver = (WebDriver)result.getTestClass().getRealClass().getDeclaredField("driver").get(result.getInstance());
@@ -72,6 +79,9 @@ public class DLADCRMListeners implements ITestListener{
 	@Override
 	public void onTestSkipped(ITestResult result) {
 		testName = result.getName();
+		System.out.println("The " + testName + " Test Case Execution Skipped...!");
+		System.out.println(result.getThrowable());
+		
 		extentTest.log(Status.INFO, result.getThrowable());
 		extentTest.log(Status.SKIP, "The " + testName + " Test Case Execution Skipped...!");
 	}
