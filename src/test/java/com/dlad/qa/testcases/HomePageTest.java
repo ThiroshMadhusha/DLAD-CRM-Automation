@@ -103,5 +103,62 @@ public class HomePageTest extends BaseClass {
         System.out.println(bpActivitiesText + ": " + bpActivitiesCount);
 
 	}
+	
+	@Test(priority = 4)
+	public void verifyHomePageNavigationLinks() {
+		
+		homePage.navigateToLeadActivity();
+		String actualLeadActivityURl = homeProp.getProperty("LeadActivityURl");
+		String expectedLeadActivityURL = driver.getCurrentUrl();
+		Assert.assertEquals(actualLeadActivityURl, expectedLeadActivityURL);
+		homePage.clickOnHomeBtn();
+		
+		homePage.navigateToBpActivity();
+		String actualBpActivityURl = homeProp.getProperty("BPActivityURl");
+		String expectedBpURL = driver.getCurrentUrl();
+		Assert.assertEquals(actualBpActivityURl, expectedBpURL);
+		homePage.clickOnHomeBtn();
+		
+		homePage.navigateToBusinessPartner();
+		String actualBusinessPartnerURl = homeProp.getProperty("BusinessPartnerURl");
+		String expectedBusinessPartnerURL = driver.getCurrentUrl();
+		Assert.assertEquals(actualBusinessPartnerURl, expectedBusinessPartnerURL);
+		homePage.clickOnHomeBtn();
+		
+		homePage.navigateToNewOrder();
+		String actualSalesNewOrderURl = homeProp.getProperty("SalesNewOrderURl");
+		String expectedSalesNewOrderURL = driver.getCurrentUrl();
+		Assert.assertEquals(actualSalesNewOrderURl, expectedSalesNewOrderURL);
+		homePage.clickOnHomeBtn();
+	}
 
+	
+	@Test(priority = 5)
+	public void verifyHomePageNavigationToupleCardIconsAndLabelDisplayed() {
+		
+		boolean leadActivityIcon = homePage.leadActivityIconSVG();
+		Assert.assertTrue(leadActivityIcon);
+		String expectedleadActivityLabel = homeProp.getProperty("navigatioNToupleCardLeadActivityLabelName");
+		String actualLeadActivityLabel = homePage.navigatioNToupleCardLeadActivityLabel();
+		Assert.assertEquals(expectedleadActivityLabel, actualLeadActivityLabel);
+		
+		boolean bpActivityIcon = homePage.bpActivityIconSVG();
+		Assert.assertTrue(bpActivityIcon);
+		String expectedBpActivityLabel = homeProp.getProperty("navigatioNToupleCardBpActivityLabelName");
+		String actualBpActivityLabel = homePage.navigatioNToupleCardBpActivityLabel();
+		Assert.assertEquals(expectedBpActivityLabel, actualBpActivityLabel);
+		
+		boolean businessPartnerIcon = homePage.businessPartnerIconSVG();
+		Assert.assertTrue(businessPartnerIcon);
+		String expectedBusinessPartnerLabel = homeProp.getProperty("navigatioNToupleCardBusinessPartnerLabelName");
+		String actualBusinessPartnerLabel = homePage.navigatioNToupleCardBusinessPartnerLabel();
+		Assert.assertEquals(expectedBusinessPartnerLabel, actualBusinessPartnerLabel);
+		
+		boolean salesNewOrderIcon = homePage.salesNewOrderIconSVG();
+		Assert.assertTrue(salesNewOrderIcon);
+		String expectedSalesNewOrderLabel = homeProp.getProperty("navigatioNToupleCardNewOrderLabelName");
+		String actualSalesNewOrderLabel = homePage.navigatioNToupleCardNewOrderLabel();
+		Assert.assertEquals(expectedSalesNewOrderLabel, actualSalesNewOrderLabel);
+		
+	}
 }

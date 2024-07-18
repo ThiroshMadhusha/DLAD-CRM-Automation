@@ -37,12 +37,70 @@ public class HomePage {
     @FindBy(xpath = ".//div[@class='text-2xl font-bold']")
     private WebElement countElement;
 
+    @FindBy(xpath = "//a[@href='/app/lead-activity/list']/div/div[1]")
+    private WebElement navigateToLeadActivity;
+
+    @FindBy(xpath = "//a[@href='/app/bp-activity/list']/div/div[1]")
+    private WebElement navigateToBpActivity;
+
+    @FindBy(xpath = "//a[@href='/app/business-partners/list']/div/div[1]")
+    private WebElement navigateToBusinessPartner;
+
+    @FindBy(xpath = "//a[@href='/app/sales-orders/new']/div/div[1]")
+    private WebElement navigateToNewOrder;
+    
+    @FindBy(xpath = "//a[@href='/app']")
+    private WebElement clickOnHomeBtn;
+    
+    @FindBy(xpath = "//a[@href='/app/lead-activity/list']/div/div/h3[contains(text(), 'Lead Activity')]")
+    private WebElement navigatioNToupleCardLeadActivityLabel;
+    
+    @FindBy(xpath = "//a[@href='/app/bp-activity/list']/div/div/h3[contains(text(), 'BP Activity')]")
+    private WebElement navigatioNToupleCardBpActivityLabel;
+    
+    @FindBy(xpath = "//a[@href='/app/business-partners/list']/div/div/h3[contains(text(), 'BP')]")
+    private WebElement navigatioNToupleCardBusinessPartnerLabel;
+    
+    @FindBy(xpath = "//a[@href='/app/sales-orders/new']/div/div/h3[contains(text(), 'New Order')]")
+    private WebElement navigatioNToupleCardNewOrderLabel;
+    
+    @FindBy(xpath = "//a[@href='/app/lead-activity/list']/div//div[@id='LeadActivity-ICON']")
+    private WebElement leadActivityIconSVG;
+    
+    @FindBy(xpath = "//div[@id='BPActivity-ICON']")
+    private WebElement bpActivityIconSVG;
+    
+    @FindBy(xpath = "//div[@id='BP-ICON']")
+    private WebElement businessPartnerIconSVG;
+    
+    @FindBy(xpath = "//div[@id='NewOrder-ICON']")
+    private WebElement salesNewOrderIconSVG;
     /**
      * Actions
      * @param labelElement
      * @return
      */
-    
+	
+	public boolean leadActivityIconSVG() {
+		boolean leadActivityIcon = leadActivityIconSVG.isDisplayed();
+		return leadActivityIcon;
+	}
+	
+	public boolean bpActivityIconSVG() {
+		boolean bpActivityIcon = bpActivityIconSVG.isDisplayed();
+		return bpActivityIcon;
+	}
+	
+	public boolean businessPartnerIconSVG() {
+		boolean businessPartnerIcon = businessPartnerIconSVG.isDisplayed();
+		return businessPartnerIcon;
+	}
+	
+	public boolean salesNewOrderIconSVG() {
+		boolean salesNewOrderIcon = salesNewOrderIconSVG.isDisplayed();
+		return salesNewOrderIcon;
+	}
+	
     public String getLabelText(WebElement labelElement) {
         return labelElement.getText();
     }
@@ -93,5 +151,46 @@ public class HomePage {
     public String getBpActivitiesCount() {
         return getCount(bpActivitiesLabel);
     }
+    
+    public void navigateToLeadActivity() {
+		navigateToLeadActivity.click();
+	}
+	
+	public void navigateToBpActivity() {
+		navigateToBpActivity.click();
+	}
+
+	public void navigateToBusinessPartner() {
+		navigateToBusinessPartner.click();
+	}
+
+	public void navigateToNewOrder() {
+		navigateToNewOrder.click();
+	}
+	
+	public void clickOnHomeBtn() {
+		clickOnHomeBtn.click();
+	}
+	
+	public String navigatioNToupleCardLeadActivityLabel() {
+		String navigatioNToupleCardLeadActivityLabelName = navigatioNToupleCardLeadActivityLabel.getText();
+		return navigatioNToupleCardLeadActivityLabelName;
+	}
+	
+	public String navigatioNToupleCardBpActivityLabel() {
+		String navigatioNToupleCardBpActivityLabelName = navigatioNToupleCardBpActivityLabel.getText();
+		return navigatioNToupleCardBpActivityLabelName;
+	}
+	
+	public String navigatioNToupleCardBusinessPartnerLabel() {
+		String navigatioNToupleCardBusinessPartnerLabelName = navigatioNToupleCardBusinessPartnerLabel.getText();
+		return navigatioNToupleCardBusinessPartnerLabelName;
+	}
+	
+	public String navigatioNToupleCardNewOrderLabel() {
+		String navigatioNToupleCardNewOrderLabelName = navigatioNToupleCardNewOrderLabel.getText();
+		return navigatioNToupleCardNewOrderLabelName;
+	}
+    
 }
 
