@@ -1,24 +1,26 @@
 package com.dlad.qa.testcases;
-import org.openqa.selenium.By;
-
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import com.dlad.qa.base.BaseClass;
+import com.dlad.qa.pages.LoginPage;
 
 public class Login extends BaseClass {
 
 	public WebDriver driver;
-
+	LoginPage loginPage;
+	
 	@BeforeMethod
 	public void beforeMethod() throws InterruptedException {
 
 	//	load Property
 		loadPropertiesFile();
 		driver = initializeBrowser(configProp.getProperty("browserName"));
-	
+		
+		loginPage = new LoginPage(driver);
 	}
 
 	@AfterMethod
@@ -35,16 +37,41 @@ public class Login extends BaseClass {
 	 * @throws InterruptedException
 	 */
 	
-	@Test
+	@Test(priority = 1)
 	public void verifyLoginWithValidCredentials() throws InterruptedException {
 		
-		driver.findElement(By.xpath("//input[@id='username']")).sendKeys(loginProp.getProperty("validCRMEmailAddress"));
-		
-		driver.findElement(By.xpath("//input[@id='password']")).sendKeys(loginProp.getProperty("validCRMPassword"));
-		
-		Thread.sleep(2000);
-		driver.findElement(By.xpath("//button[@type='submit']")).click();
-		
+		loginPage.loginUserName(loginProp.getProperty("validCRMEmailAddress"));
+		loginPage.loginPassword(loginProp.getProperty("validCRMPassword"));
+		loginPage.clickOnLoginButton();
+		String actualLoginSuccessfulMessage= loginProp.getProperty("successfulLoginMessage");
+		String expectedLoginSuccessMessage = loginPage.loginSuccessfulMessage();
+		Assert.assertEquals(actualLoginSuccessfulMessage, expectedLoginSuccessMessage);
+		System.out.println(expectedLoginSuccessMessage);
+		Thread.sleep(3000);
 	}
 
+	
+	@Test(priority = 2)
+	public void verifyloginWithInvalidCredentials() {
+		
+		
+	}
+	
+	@Test(priority = 3)
+	public void verifyloginWithInvalidEmailAndValidPassword() {
+		
+		
+	}
+	
+	@Test(priority = 4)
+	public void verifyloginWithValidEmailAndInValidPassword() {
+		
+		
+	}
+	
+	@Test(priority = 5)
+	public void verifyloginWithoutProvidingCredencials() {
+		
+		
+	}
 }
