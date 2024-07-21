@@ -51,7 +51,7 @@ public class LeadActivityList extends BaseClass {
 	
 	@Test(priority = 2)
 	public void verifyTheCreatenewLeadActivityListFormOpen() {
-		
+
 		driver.findElement(By.xpath("//div[@class='flex gap-3 flex-row-reverse']/button")).click();
 		String actualLeadActivityForm = driver.findElement(By.xpath("//div[@class='flex flex-col space-y-1.5 text-center sm:text-left']/h2")).getText();
 		Assert.assertEquals(actualLeadActivityForm, "Create New Lead Activity", "Error Activity Form Opening...!");
