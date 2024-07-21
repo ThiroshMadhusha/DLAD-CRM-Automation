@@ -28,7 +28,7 @@ public class LoginPage {
 	private WebElement loginSuccessfulMessage;
 	
 	@FindBy(xpath = "//ol/li/div[@data-content]/div[text()='Invalid login credentials']")
-	private WebElement invalidErrorMessage;
+	private WebElement loginInvalidErrorMessage;
 	
 	/*
 	 * Actions
@@ -51,8 +51,8 @@ public class LoginPage {
 		return loginSuccessfulMsg;
 	}
 	
-	public String invalidErrorMessage() {
-		String loginErrMsg = invalidErrorMessage.getText();
+	public String loginInvalidErrorMessage() {
+		String loginErrMsg = loginInvalidErrorMessage.getText();
 		return loginErrMsg;
 	}
 
