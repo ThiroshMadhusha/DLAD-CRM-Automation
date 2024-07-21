@@ -8,6 +8,8 @@
 
   <test thread-count="5" name="DLAD QA Testing">
     <classes>
+   	  <class name="com.dlad.qa.testcases.CRMBrokenLinksTest"/>
+   	  <class name="com.dlad.qa.testcases.LoginTest"/>
       <class name="com.dlad.qa.testcases.HomeTest"/>
       <class name="com.dlad.qa.testcases.LeadListTest"/>
     </classes>

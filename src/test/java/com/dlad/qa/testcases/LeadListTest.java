@@ -160,9 +160,7 @@ public class LeadListTest extends BaseClass {
 	    String createdCompanyName = Utils.companyNameGenerate();
 	    leadListPage.leadNameInputTextField(createdLeadName);
 		leadListPage.companyNameInputTextField(createdCompanyName);
-   
-	    System.out.println("Created Lead Name: " + createdLeadName);
-	    System.out.println("Created Company Name: " + createdCompanyName);
+
 		leadListPage.clickOnLeadGropDropdownField();
 		leadListPage.clickSearchField(leadListProp.getProperty("selectLeadGroupOption"));
 		leadListPage.selectDropdownOption();
