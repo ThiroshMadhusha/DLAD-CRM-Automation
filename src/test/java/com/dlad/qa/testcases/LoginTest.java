@@ -52,7 +52,7 @@ public class LoginTest extends BaseClass {
 		Assert.assertEquals(actualLoginSuccessfulMessage, loginProp.getProperty("successfulLoginMessage"));
 	}
 
-	@Test(priority = 3, dataProvider = "invalidusernameAndPasswordDataSet")
+	@Test(priority = 3, dataProvider = "invalidUsernameAndPasswordDataSet")
 	public void verifyloginWithInvalidCredentials(String invalidUserNames, String invalidPasswords) {
 
 		loginPage.loginUserName(invalidUserNames);
@@ -61,28 +61,8 @@ public class LoginTest extends BaseClass {
 		String actualLoginFailMessage = loginPage.loginInvalidErrorMessage();
 		Assert.assertEquals(actualLoginFailMessage, loginProp.getProperty("invalidLoginMessage"));
 	}
-//	
-//	@Test(priority = 4)
-//	public void verifyTheUserCanViewFieldsRequiredMessages() {
-//		
-//		loginPage.loginUserName(loginProp.getProperty("invalidUsername"));
-//		loginPage.loginPassword(loginProp.getProperty("invalidPassword"));
-//		loginPage.clickOnLoginButton();
-//		String actualLoginFailMessage = loginPage.loginInvalidErrorMessage();
-//		Assert.assertEquals(actualLoginFailMessage, loginProp.getProperty("invalidLoginMessage"));
-//		
-//		loginPage.clearLoginUserName();
-//		String actualUsernameRequiredMsg = loginPage.loginUsernameRequiredMessage();
-//		Assert.assertEquals(actualUsernameRequiredMsg, loginProp.getProperty("usernameRequiredMessage"));
-//		
-//		loginPage.loginUserName(loginProp.getProperty("invalidUsername"));
-//		loginPage.clearLoginPassword();
-//		String actualPasswordRequiredMsg = loginPage.loginPasswordRequiredMessage();
-//		Assert.assertEquals(actualPasswordRequiredMsg, loginProp.getProperty("passwordRequiredMessage"));
-//		
-//	}
-
-	@Test(priority = 4, dataProvider = "invalidusernameAndPasswordDataSet")
+	
+	@Test(priority = 4, dataProvider = "invalidUsernameDataSet")
 	public void verifyloginWithInvalidEmailAndValidPassword(String invalidUserNames) {
 
 		loginPage.loginUserName(invalidUserNames);
@@ -92,8 +72,9 @@ public class LoginTest extends BaseClass {
 		Assert.assertEquals(actualLoginFailMessage, loginProp.getProperty("invalidLoginMessage"));
 	}
 
-	@Test(priority = 5, dataProvider = "invalidusernameAndPasswordDataSet")
-	public void verifyloginWithValidEmailAndInValidPassword(String invalidPasswords) {
+	
+	@Test(priority = 5, dataProvider = "invalidPasswordsDataSet")
+	public void verifyloginWithValidEmailAddressAndInValidPassword(String invalidPasswords) {
 
 		loginPage.loginUserName(loginProp.getProperty("validCRMEmailAddress"));
 		loginPage.loginPassword(invalidPasswords);
@@ -112,15 +93,6 @@ public class LoginTest extends BaseClass {
 		Assert.assertEquals(actualLoginFailMessage, loginProp.getProperty("invalidLoginMessage"));
 	}
 
-//	@Test(priority = 6)
-//	public void verifyLoginPagePasswordFieldHideAndViewIcon() {
-//		
-//		loginPage.loginUserName(loginProp.getProperty("validCRMEmailAddress"));
-//		loginPage.loginPassword(loginProp.getProperty("validCRMPassword"));
-//		String viewHideAndViewIcon = loginProp.getProperty("invalidLoginMessage");
-//		String expectedLoginFailMessage = loginPage.loginInvalidErrorMessage();
-//		Assert.assertEquals(actualLoginFailMessage, expectedLoginFailMessage);
-//	}
 
 	@Test(priority = 7)
 	public void verifyTheForgotPasswordLink() {
@@ -141,12 +113,43 @@ public class LoginTest extends BaseClass {
 	}
 
 
+//	@Test(priority = 6)
+//	public void verifyLoginPagePasswordFieldHideAndViewIcon() {
+//		
+//		loginPage.loginUserName(loginProp.getProperty("validCRMEmailAddress"));
+//		loginPage.loginPassword(loginProp.getProperty("validCRMPassword"));
+//		String viewHideAndViewIcon = loginProp.getProperty("invalidLoginMessage");
+//		String expectedLoginFailMessage = loginPage.loginInvalidErrorMessage();
+//		Assert.assertEquals(actualLoginFailMessage, expectedLoginFailMessage);
+//	}
+	
+//	@Test(priority = 4)
+//	public void verifyTheUserCanViewFieldsRequiredMessages() {
+//		
+//		loginPage.loginUserName(loginProp.getProperty("invalidUsername"));
+//		loginPage.loginPassword(loginProp.getProperty("invalidPassword"));
+//		loginPage.clickOnLoginButton();
+//		String actualLoginFailMessage = loginPage.loginInvalidErrorMessage();
+//		Assert.assertEquals(actualLoginFailMessage, loginProp.getProperty("invalidLoginMessage"));
+//		
+//		loginPage.clearLoginUserName();
+//		String actualUsernameRequiredMsg = loginPage.loginUsernameRequiredMessage();
+//		Assert.assertEquals(actualUsernameRequiredMsg, loginProp.getProperty("usernameRequiredMessage"));
+//		
+//		loginPage.loginUserName(loginProp.getProperty("invalidUsername"));
+//		loginPage.clearLoginPassword();
+//		String actualPasswordRequiredMsg = loginPage.loginPasswordRequiredMessage();
+//		Assert.assertEquals(actualPasswordRequiredMsg, loginProp.getProperty("passwordRequiredMessage"));
+//		
+//	}
+
+
 	// Create Dataset for Parallel Testing
-		@DataProvider(name = "invalidusernameAndPasswordDataSet")
-		public Object[][] invalidusernameAndPasswordDataSet(){
+		@DataProvider(name = "invalidUsernameAndPasswordDataSet")
+		public Object[][] invalidUsernameAndPasswordDataSet(){
 			
-			String[] invalidUserNames = {"malaka123@dlad.io", "dinesh123@dlad.io", "hesha123@dlad.io", "0520abcd@dlad.io"};
-			String[] invalidPasswords = {"DQDE@#ED", "NCIJ@NC*@HC*@", "NX@&Qwq23e2", "32eWQQWUDUq&E"};
+			String[] invalidUserNames = {"malaka123@dlad.io", "dinesh123@dlad.io"};
+			String[] invalidPasswords = {"NX@&Qwq23e2", "32eWQQWUDUq&E"};
 			
 			Object[][] data = new Object[invalidUserNames.length][2];
 			
@@ -157,4 +160,23 @@ public class LoginTest extends BaseClass {
 			}
 			return data;
 		}
+		
+		
+		@DataProvider(name = "invalidUsernameDataSet")
+		public Object[][] invalidUsernameDataSet(){
+		    return new Object[][] {
+		        {"malaka123@dlad.io"},
+		        {"dinesh123@dlad.io"}
+		    };
+		}
+		
+		@DataProvider(name = "invalidPasswordsDataSet")
+		public Object[][] invalidPasswordsDataSet(){
+		    return new Object[][] {
+		        {"NX@&Qwq23e2"},
+		        {"32eWQQWUDUq&E"}
+		    };
+		}
+	
+
 	}
