@@ -25,6 +25,7 @@ public class BaseClass {
 	public Properties homeProp;
 	public Properties leadListProp;
 	public Properties leadActivityProp;
+	public Properties leadActivityOverviewProp;
 	public Properties bpActivityProp;
 	public Properties bpProp;
 	public Properties salesOrderProp;
@@ -56,7 +57,6 @@ public class BaseClass {
 			loginProp.load(loginFils);
 
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		
@@ -69,7 +69,6 @@ public class BaseClass {
 			homeProp.load(homeFils);
 
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		
@@ -82,7 +81,6 @@ public class BaseClass {
 			leadListProp.load(leadListFils);
 
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		
@@ -95,7 +93,18 @@ public class BaseClass {
 			leadActivityProp.load(leadActivityFils);
 
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		// Lead Activity Overview Page Properties
+		leadActivityOverviewProp = new Properties();
+		File leadActivityOverviewPropFile = new File(System.getProperty("user.dir") + "\\src\\main\\java\\com\\dlad\\qa\\testdataconfig\\lead_activity_overview_config.properties");
+		FileInputStream leadActivityOverviewFils;
+		try {
+			leadActivityOverviewFils = new FileInputStream(leadActivityOverviewPropFile);
+			leadActivityOverviewProp.load(leadActivityOverviewFils);
+
+		} catch (IOException e) {
 			e.printStackTrace();
 		}
 		
@@ -108,7 +117,6 @@ public class BaseClass {
 			bpActivityProp.load(bpActivityFils);
 
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		
@@ -121,7 +129,6 @@ public class BaseClass {
 			bpProp.load(bpFils);
 
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		
@@ -134,7 +141,6 @@ public class BaseClass {
 			salesOrderProp.load(salesOrderFils);
 
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
