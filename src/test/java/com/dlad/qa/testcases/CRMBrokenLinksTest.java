@@ -1,9 +1,8 @@
 package com.dlad.qa.testcases;
 
-import java.io.IOException;
 import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
 import java.net.URL;
+import java.net.URLConnection;
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -43,38 +42,37 @@ public class CRMBrokenLinksTest extends BaseClass {
     @Test(priority = 1)
 	public void verifyTheBrokenLinks() {
 		
-		List<WebElement> links = driver.findElements(By.tagName("a"));
-		
-		for(WebElement link : links) {
-			//get the url of the link using "href"
-			String url = link.getAttribute("href");
-			
-			System.out.println("----------------------------------------");
-			System.out.println(" ");
-			
-			//check this url is blank or not
-			if(url == null || url.isEmpty()) {
-				System.out.println("URL is Empty.");
-				continue;
-				//continue mean stop and go to next url. because empty urls cannot get responce
-			}
-			//retrive the response code
-			try {
-				HttpURLConnection huc = (HttpURLConnection)(new URL(url).openConnection());
-				
-				huc.connect();
-				if(huc.getResponseCode() >= 400) {
-					System.out.println(url + " is broken!");
-				}else {
-					System.out.println(url + " is valid!");
-				}
-				
-			} catch (MalformedURLException e) {
-				e.printStackTrace();
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
-		}
+    	List<WebElement> links = driver.findElements(By.tagName("a"));
+        System.out.println("Identified Total URL Links : " + links.size());
+
+        for (WebElement link : links) {
+            String linkURL = link.getAttribute("href");
+            if (linkURL != null && !linkURL.isEmpty()) { // Check if href is not null or empty
+                try {
+                    URL url = new URL(linkURL);
+                    URLConnection urlConnection = url.openConnection();
+                    
+                    if (urlConnection instanceof HttpURLConnection) {
+                        HttpURLConnection httpURLConnection = (HttpURLConnection) urlConnection;
+                        httpURLConnection.setConnectTimeout(5000); // Increase timeout to 5 seconds
+                        httpURLConnection.connect();
+                        int responseCode = httpURLConnection.getResponseCode();
+                        if (responseCode == 200) {
+                            System.out.println(linkURL + " - " + httpURLConnection.getResponseMessage());
+                        } else {
+                            System.err.println(linkURL + " - " + responseCode + " - " + httpURLConnection.getResponseMessage());
+                        }
+                        httpURLConnection.disconnect();
+                    } else {
+                        System.out.println(linkURL + " - Skipping non-http link");
+                    }
+                } catch (java.net.SocketTimeoutException e) {
+                    System.err.println(linkURL + " - Connection timed out");
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        }
     }
 
 }

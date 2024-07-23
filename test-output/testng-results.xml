@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-07-21T15:08:49 IST" name="Default suite" finished-at="2024-07-21T15:08:57 IST" duration-ms="7275">
+  <suite started-at="2024-07-23T22:45:16 IST" name="Default suite" finished-at="2024-07-23T22:45:29 IST" duration-ms="13833">
     <groups>
     </groups>
-    <test started-at="2024-07-21T15:08:49 IST" name="Default test" finished-at="2024-07-21T15:08:57 IST" duration-ms="7275">
-      <class name="com.dlad.qa.testcases.LoginTest">
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.dlad.qa.testcases.LoginTest@57abad67]" started-at="2024-07-21T15:08:49 IST" name="beforeMethod" finished-at="2024-07-21T15:08:55 IST" duration-ms="5491" status="PASS">
+    <test started-at="2024-07-23T22:45:16 IST" name="Default test" finished-at="2024-07-23T22:45:29 IST" duration-ms="13833">
+      <class name="com.dlad.qa.testcases.CRMBrokenLinksTest">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.dlad.qa.testcases.CRMBrokenLinksTest@5cde6747]" started-at="2024-07-23T22:45:16 IST" name="beforeMethod" finished-at="2024-07-23T22:45:26 IST" duration-ms="10590" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="verifyloginWithoutProvidingCredencials()[pri:5, instance:com.dlad.qa.testcases.LoginTest@57abad67]" started-at="2024-07-21T15:08:55 IST" name="verifyloginWithoutProvidingCredencials" finished-at="2024-07-21T15:08:56 IST" duration-ms="1291" status="PASS">
+        <test-method signature="verifyTheBrokenLinks()[pri:1, instance:com.dlad.qa.testcases.CRMBrokenLinksTest@5cde6747]" started-at="2024-07-23T22:45:26 IST" name="verifyTheBrokenLinks" finished-at="2024-07-23T22:45:29 IST" duration-ms="2344" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyloginWithoutProvidingCredencials -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.dlad.qa.testcases.LoginTest@57abad67]" started-at="2024-07-21T15:08:56 IST" name="afterMethod" finished-at="2024-07-21T15:08:57 IST" duration-ms="395" status="PASS">
+        </test-method> <!-- verifyTheBrokenLinks -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.dlad.qa.testcases.CRMBrokenLinksTest@5cde6747]" started-at="2024-07-23T22:45:29 IST" name="afterMethod" finished-at="2024-07-23T22:45:29 IST" duration-ms="714" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-      </class> <!-- com.dlad.qa.testcases.LoginTest -->
+      </class> <!-- com.dlad.qa.testcases.CRMBrokenLinksTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
