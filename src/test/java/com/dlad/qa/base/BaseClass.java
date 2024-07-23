@@ -25,6 +25,7 @@ public class BaseClass {
 	public Properties homeProp;
 	public Properties leadListProp;
 	public Properties leadActivityProp;
+	public Properties leadActivityOverviewProp;
 	public Properties bpActivityProp;
 	public Properties bpProp;
 	public Properties salesOrderProp;
@@ -85,6 +86,18 @@ public class BaseClass {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		
+		// Lead Activity Overview Page Properties
+				leadActivityOverviewProp = new Properties();
+				File leadActivityOverviewPropFile = new File(System.getProperty("user.dir") + "\\src\\main\\java\\com\\dlad\\qa\\testdataconfig\\lead_activity_overview_config.properties");
+				FileInputStream leadActivityOverviewFils;
+				try {
+					leadActivityOverviewFils = new FileInputStream(leadActivityOverviewPropFile);
+					leadActivityOverviewProp.load(leadActivityOverviewFils);
+
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
 		
 		// Lead Activity Page Properties
 		leadActivityProp = new Properties();
