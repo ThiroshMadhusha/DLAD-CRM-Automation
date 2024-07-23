@@ -9,6 +9,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import com.dlad.qa.base.BaseClass;
+import com.dlad.qa.pages.LeadActivityOverviewPage;
 import com.dlad.qa.pages.SidebarCRM;
 
 
@@ -17,7 +18,8 @@ public class LeadActivitiesOverview extends BaseClass {
 	
 	public WebDriver driver;
 	SidebarCRM sidebarCRM;
-	
+	LeadActivityOverviewPage leadActivityOverviewPage;
+	 
 	@BeforeMethod
 	public void beforeMethod() throws InterruptedException{
 
@@ -31,6 +33,9 @@ public class LeadActivitiesOverview extends BaseClass {
 		sidebarCRM = new SidebarCRM(driver);
 		sidebarCRM.LeadListGroup();
 		sidebarCRM.LeadActivityOverview();
+		
+		// Assign Lead Overview Page
+		leadActivityOverviewPage = new LeadActivityOverviewPage(driver);
 	}
 
 	@AfterMethod
@@ -44,52 +49,50 @@ public class LeadActivitiesOverview extends BaseClass {
 	 */
 	
 	@Test(priority = 1)
-	public void verifyTheUserRedirectsToTheActivityOverviewPage() {
+	public void verifTheUserRedirectsToTheLeadsActivityOverviewPage() {
 		
-		String activityOverview = driver.findElement(By.xpath("//div[@class='flex gap-3 items-center']/h1")).getText();
-		Assert.assertEquals(activityOverview, "Leads");
+		String activityOverview = leadActivityOverviewPage.LeadActivityPageTitle();
+		Assert.assertEquals(activityOverview, leadActivityOverviewProp.getProperty("leadActivityHeaderTitle"));
 	}
 	
 	@Test(priority = 2)
 	public void verifyDisplayTheLeadAcivityOverviewPageCardNames() {
 		
-		String totalOwnLeads = driver.findElement(By.xpath("//h3[contains(text(), 'Total Own Leads')]")).getText();
-		Assert.assertEquals(totalOwnLeads, "Total Own Leads");
-		System.out.println(totalOwnLeads);
+		String DeadLeads = leadActivityOverviewPage.DeadLabel();
+		Assert.assertEquals(DeadLeads, leadActivityOverviewProp.getProperty("deadStatusLabel"));
 		
-		String totalActiveLeads = driver.findElement(By.xpath("//h3[contains(text(), 'Total Active Leads')]")).getText();
-		Assert.assertEquals(totalActiveLeads, "Total Active Leads");
-		System.out.println(totalActiveLeads);
+		String ConvertedLeads = leadActivityOverviewPage.ConvertedLabel();
+		Assert.assertEquals(ConvertedLeads, leadActivityOverviewProp.getProperty("convertedStatusLabel"));
 
-		String totalInactiveLeads = driver.findElement(By.xpath("//h3[contains(text(), 'Total Inactive Leads')]")).getText();
-		Assert.assertEquals(totalInactiveLeads, "Total Inactive Leads");
-		System.out.println(totalInactiveLeads);
+		String AccountApplicationReceiveLeads = leadActivityOverviewPage.AccountApplicationReceiveLabel();
+		Assert.assertEquals(AccountApplicationReceiveLeads, leadActivityOverviewProp.getProperty("accountApplicationReceiveStatusLabel"));
 
-		String totalDeadLeads = driver.findElement(By.xpath("//h3[contains(text(), 'Total Dead Leads')]")).getText();
-		Assert.assertEquals(totalDeadLeads, "Total Dead Leads");
-		System.out.println(totalDeadLeads);
+		String PricingLeads = leadActivityOverviewPage.PricingLabel();
+		Assert.assertEquals(PricingLeads, leadActivityOverviewProp.getProperty("pricingStatusLabel"));
 
-		String forCurrentQuarter = driver.findElement(By.xpath("//h3[contains(text(), 'For Current Quarter')]")).getText();
-		Assert.assertEquals(forCurrentQuarter, "For Current Quarter");
-		System.out.println(forCurrentQuarter);
+		String AccountApplicationSentLabelLeads = leadActivityOverviewPage.AccountApplicationSentLabel();
+		Assert.assertEquals(AccountApplicationSentLabelLeads, leadActivityOverviewProp.getProperty("acountApplicationSentStatusLabel"));
 
-		String forCurrentMonth = driver.findElement(By.xpath("//h3[contains(text(), 'For Current Month')]")).getText();
-		Assert.assertEquals(forCurrentMonth, "For Current Month");
-		System.out.println(forCurrentMonth);
+		String SamplingLabelLeads = leadActivityOverviewPage.SamplingLabel();
+		Assert.assertEquals(SamplingLabelLeads, leadActivityOverviewProp.getProperty("samplingStatusLabel"));
 		
-		String forCurrentWeek = driver.findElement(By.xpath("//h3[contains(text(), 'For Current Week')]")).getText();
-		Assert.assertEquals(forCurrentWeek, "For Current Week");
-		System.out.println(forCurrentWeek);
+		String ContactMadeLabelLeads = leadActivityOverviewPage.ContactMadeLabel();
+		Assert.assertEquals(ContactMadeLabelLeads, leadActivityOverviewProp.getProperty("contactMadeStatusLabel"));
 
-		String forToday = driver.findElement(By.xpath("//h3[contains(text(), 'For Today')]")).getText();
-		Assert.assertEquals(forToday, "For Today");
-		System.out.println(forToday);
+		String NewLabelLeads = leadActivityOverviewPage.NewLabel();
+		Assert.assertEquals(NewLabelLeads, leadActivityOverviewProp.getProperty("newStatusLabel"));
 	}
 	
 	
 	@Test(priority = 3)
 	public void verifyDisplayTheLeadActivityOverviewPageCardCount() {
 
+		// Verify "Leads" label and count
+//        String ownLeadsText = homePage.leadLabel();
+//        Assert.assertEquals(ownLeadsText, homeProp.getProperty("leadLabel"));
+//        String ownLeadsCount = homePage.getOwnLeadsCount();
+//        System.out.println(ownLeadsText + ": " + ownLeadsCount);
+        
 		String totalOwnLeads = driver.findElement(By.xpath("//h3[contains(text(), 'Total Own Leads')]")).getText();
 		Assert.assertEquals(totalOwnLeads, "Total Own Leads");
         WebElement totalOwnLeadsLabel = driver.findElement(By.xpath("//h3[contains(text(), 'Total Own Leads')]"));
