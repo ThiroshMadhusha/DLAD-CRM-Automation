@@ -88,16 +88,16 @@ public class BaseClass {
 		}
 		
 		// Lead Activity Overview Page Properties
-				leadActivityOverviewProp = new Properties();
-				File leadActivityOverviewPropFile = new File(System.getProperty("user.dir") + "\\src\\main\\java\\com\\dlad\\qa\\testdataconfig\\lead_activity_overview_config.properties");
-				FileInputStream leadActivityOverviewFils;
-				try {
-					leadActivityOverviewFils = new FileInputStream(leadActivityOverviewPropFile);
-					leadActivityOverviewProp.load(leadActivityOverviewFils);
+		leadActivityOverviewProp = new Properties();
+		File leadActivityOverviewPropFile = new File(System.getProperty("user.dir") + "\\src\\main\\java\\com\\dlad\\qa\\testdataconfig\\lead_activity_overview_config.properties");
+		FileInputStream leadActivityOverviewFils;
+		try {
+			leadActivityOverviewFils = new FileInputStream(leadActivityOverviewPropFile);
+			leadActivityOverviewProp.load(leadActivityOverviewFils);
 
-				} catch (IOException e) {
-					e.printStackTrace();
-				}
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 		
 		// Lead Activity Page Properties
 		leadActivityProp = new Properties();
