@@ -10,6 +10,13 @@
           <include name="verifyTheBrokenLinks"/>
         </methods>
       </class> <!-- com.dlad.qa.testcases.CRMBrokenLinksTest -->
+      <class name="com.dlad.qa.testcases.LoginTest">
+        <methods>
+          <include name="verifyLoginWithValidCredentials"/>
+          <include name="afterMethod"/>
+          <include name="beforeMethod"/>
+        </methods>
+      </class> <!-- com.dlad.qa.testcases.LoginTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

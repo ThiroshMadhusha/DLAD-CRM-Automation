@@ -20,6 +20,24 @@
           </reporter-output>
         </test-method> <!-- afterMethod -->
       </class> <!-- com.dlad.qa.testcases.CRMBrokenLinksTest -->
+  <suite started-at="2024-07-21T15:08:49 IST" name="Default suite" finished-at="2024-07-21T15:08:57 IST" duration-ms="7275">
+    <groups>
+    </groups>
+    <test started-at="2024-07-21T15:08:49 IST" name="Default test" finished-at="2024-07-21T15:08:57 IST" duration-ms="7275">
+      <class name="com.dlad.qa.testcases.LoginTest">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.dlad.qa.testcases.LoginTest@57abad67]" started-at="2024-07-21T15:08:49 IST" name="beforeMethod" finished-at="2024-07-21T15:08:55 IST" duration-ms="5491" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="verifyloginWithoutProvidingCredencials()[pri:5, instance:com.dlad.qa.testcases.LoginTest@57abad67]" started-at="2024-07-21T15:08:55 IST" name="verifyloginWithoutProvidingCredencials" finished-at="2024-07-21T15:08:56 IST" duration-ms="1291" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyloginWithoutProvidingCredencials -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.dlad.qa.testcases.LoginTest@57abad67]" started-at="2024-07-21T15:08:56 IST" name="afterMethod" finished-at="2024-07-21T15:08:57 IST" duration-ms="395" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- com.dlad.qa.testcases.LoginTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
