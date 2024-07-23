@@ -7,7 +7,7 @@ import org.testng.annotations.BeforeMethod;
 import com.dlad.qa.base.BaseClass;
 import com.dlad.qa.pages.SidebarCRM;
 
-public class BPActivity extends BaseClass {
+public class BusinessPartnerFullList extends BaseClass {
 
 	
 	WebDriver driver;
@@ -37,7 +37,5 @@ public class BPActivity extends BaseClass {
 	/*
 	 * Test Cases
 	 */
-	
-	
 	
 }

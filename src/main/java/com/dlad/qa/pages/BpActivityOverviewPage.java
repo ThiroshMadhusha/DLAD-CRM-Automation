@@ -6,19 +6,15 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class LeadActivityOverviewPage {
+public class BpActivityOverviewPage {
 	
-    WebDriver driver;
-
-    public LeadActivityOverviewPage(WebDriver driver) {
-        this.driver = driver;
-        PageFactory.initElements(driver, this);
-    }
-    
-    /**
-     * Locators
-     */
-    
+	WebDriver driver;
+	
+	public BpActivityOverviewPage(WebDriver driver) {
+		this.driver = driver;
+		PageFactory.initElements(driver, this);
+}
+	
 	@FindBy(xpath = "//div[@class='flex gap-3 items-center']/h1")
 	private WebElement LeadActivityPageTitle;
 	
@@ -45,20 +41,17 @@ public class LeadActivityOverviewPage {
 	
 	@FindBy(xpath = "//h3[contains(text(), 'New')]")
 	private WebElement NewLabel;
-
-   
 	
-    public String getCount1(WebElement labelElement) {
+    public String getLabelText(WebElement labelElement) {
+        return labelElement.getText();
+    }
+	
+    public String getCount(WebElement labelElement) {
         WebElement parentDiv = labelElement.findElement(By.xpath("./ancestor::div[@class='rounded-xl border bg-card text-card-foreground shadow']"));
         WebElement countElement = parentDiv.findElement(By.xpath(".//div[@class='text-2xl font-bold']"));
         return countElement.getText();
     }
     
-	public String LeadActivityPageTitle() {
-		String leadHeaderTitleName = LeadActivityPageTitle.getText();
-		return leadHeaderTitleName;
-	}
-	
 	public String DeadLabel() {
 		String DeadLabelName = DeadLabel.getText();
 		return DeadLabelName;
@@ -99,5 +92,5 @@ public class LeadActivityOverviewPage {
 		return NewLabelName;
 	}
 	
-
+	
 }

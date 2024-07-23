@@ -2,6 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
+  <suite started-at="2024-07-23T19:05:10 IST" name="Default suite" finished-at="2024-07-23T19:05:24 IST" duration-ms="13441">
+    <groups>
+    </groups>
+    <test started-at="2024-07-23T19:05:10 IST" name="Default test" finished-at="2024-07-23T19:05:24 IST" duration-ms="13441">
+      <class name="com.dlad.qa.testcases.CRMBrokenLinksTest">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.dlad.qa.testcases.CRMBrokenLinksTest@335b5620]" started-at="2024-07-23T19:05:11 IST" name="beforeMethod" finished-at="2024-07-23T19:05:20 IST" duration-ms="9891" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="verifyTheBrokenLinks()[pri:1, instance:com.dlad.qa.testcases.CRMBrokenLinksTest@335b5620]" started-at="2024-07-23T19:05:20 IST" name="verifyTheBrokenLinks" finished-at="2024-07-23T19:05:23 IST" duration-ms="2798" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyTheBrokenLinks -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.dlad.qa.testcases.CRMBrokenLinksTest@335b5620]" started-at="2024-07-23T19:05:23 IST" name="afterMethod" finished-at="2024-07-23T19:05:24 IST" duration-ms="573" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- com.dlad.qa.testcases.CRMBrokenLinksTest -->
   <suite started-at="2024-07-21T15:08:49 IST" name="Default suite" finished-at="2024-07-21T15:08:57 IST" duration-ms="7275">
     <groups>
     </groups>

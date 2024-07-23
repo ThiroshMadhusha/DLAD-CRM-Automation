@@ -3,6 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
+      <class name="com.dlad.qa.testcases.CRMBrokenLinksTest">
+        <methods>
+          <include name="afterMethod"/>
+          <include name="beforeMethod"/>
+          <include name="verifyTheBrokenLinks"/>
+        </methods>
+      </class> <!-- com.dlad.qa.testcases.CRMBrokenLinksTest -->
       <class name="com.dlad.qa.testcases.LoginTest">
         <methods>
           <include name="verifyLoginWithValidCredentials"/>
