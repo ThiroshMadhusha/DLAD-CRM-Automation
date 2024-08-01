@@ -18,9 +18,6 @@ public class Calander extends BaseClass {
 
 		//	load Property
 		loadPropertiesFile();
-		driver = initializeBrowser(configProp.getProperty("browserName"));
-		// Validate Login
-		driver = validLogin(loginProp.getProperty("validCRMEmailAddress", "validCRMPassword"));
 		
 		// Sidebar
 		

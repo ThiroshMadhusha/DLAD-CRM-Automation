@@ -26,16 +26,16 @@ import com.dlad.qa.pages.SidebarCRM;
 import com.dlad.qa.utils.Utils;
 
 public class CRMBrokenLinksTest extends BaseClass {
-
+	
     public WebDriver driver;
     SidebarCRM sidebarCRM;
     HomePage homePage;
-
-
-    @BeforeMethod
+    
+    @SuppressWarnings("deprecation")
+	@BeforeMethod
     @Parameters("browser")
     public void beforeMethod(@Optional("chrome") String browserName) throws InterruptedException {
-
+    	
         // Load Property
         loadPropertiesFile();
         
@@ -44,7 +44,7 @@ public class CRMBrokenLinksTest extends BaseClass {
 			driver = new ChromeDriver();
 			System.out.println(" ");
 			System.out.println("Chrome Browser is Launched");
-
+			
 		}if(browserName.equalsIgnoreCase("edge")) {
 			driver = new EdgeDriver();
 			System.out.println(" ");
@@ -59,7 +59,6 @@ public class CRMBrokenLinksTest extends BaseClass {
 			driver = new SafariDriver();
 			System.out.println("Safari Browser is Launched");
 			System.out.println(" ");
-
 		}
 				
 		driver.manage().window().maximize();
@@ -72,14 +71,11 @@ public class CRMBrokenLinksTest extends BaseClass {
 		// Login Properly
 		BaseClassPage baseClassPage = new BaseClassPage(driver);
 		baseClassPage.EnterTheUserName(configProp.getProperty("validCRMEmailAddress"));
-		Thread.sleep(1000);
 		baseClassPage.EnterThePassword(configProp.getProperty("validCRMPassword"));
-		Thread.sleep(1000);
 		baseClassPage.ClickOnSubmit();
 		
-		Thread.sleep(4000);
+		Thread.sleep(3000);
 	}
-    
     
     @AfterMethod
     public void afterMethod() {
