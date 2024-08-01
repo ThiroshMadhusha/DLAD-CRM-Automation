@@ -32,7 +32,6 @@ public class ExtentReporter {
 			FileInputStream filsConfigPro = new FileInputStream(configPropFile);
 			configProp.load(filsConfigPro);
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		extentReport.setSystemInfo("Application URL : ", configProp.getProperty("url"));
