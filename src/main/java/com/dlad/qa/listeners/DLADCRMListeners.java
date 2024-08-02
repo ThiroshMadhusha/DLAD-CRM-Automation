@@ -26,7 +26,8 @@ public class DLADCRMListeners implements ITestListener{
 	public void onStart(ITestContext context) {
 		System.out.println("Execution of Project Test Started in Parallel Cross Browser Testing...!");
 		
-		extentReport = ExtentReporter.generateExtendReport();
+        // Generate Extent Report
+        extentReport = ExtentReporter.generateExtendReport();
 	}
 	
 	// Start Test Cases Execution
@@ -59,7 +60,6 @@ public class DLADCRMListeners implements ITestListener{
 		try {
 			driver = (WebDriver)result.getTestClass().getRealClass().getDeclaredField("driver").get(result.getInstance());
 		} catch (IllegalArgumentException | IllegalAccessException | NoSuchFieldException | SecurityException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		
@@ -87,7 +87,7 @@ public class DLADCRMListeners implements ITestListener{
 	// Test Case Successfully Passed
 	@Override
 	public void onFinish(ITestContext context) {
-		System.out.println("Finished Executing Project Test...!");
+		System.out.println("\n" + "Finished Executing Project Test...!");
 		extentReport.flush();
 		
 		// Open Extent Report Automatically

@@ -7,11 +7,13 @@ import java.time.Duration;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.safari.SafariDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -42,23 +44,24 @@ public class CRMBrokenLinksTest extends BaseClass {
         // Parallel Browser Testing
         if(browserName.equalsIgnoreCase("chrome")) {
 			driver = new ChromeDriver();
-			System.out.println(" ");
-			System.out.println("Chrome Browser is Launched");
-			
+			Capabilities cap = ((RemoteWebDriver)driver).getCapabilities();
+			System.out.println("\n" + cap.getBrowserName() + " Browser Version " + cap.getBrowserVersion() + " is Launched!");
+
 		}if(browserName.equalsIgnoreCase("edge")) {
 			driver = new EdgeDriver();
-			System.out.println(" ");
-			System.out.println("Edge Browser is Launched");
-			
+			Capabilities cap = ((RemoteWebDriver)driver).getCapabilities();
+			System.out.println("\n" + cap.getBrowserName() + " Browser Version " + cap.getBrowserVersion() + " is Launched!");
+
 		}if(browserName.equalsIgnoreCase("firefox")) {
 			driver = new FirefoxDriver();
-			System.out.println(" ");
-			System.out.println("Firefox Browser is Launched");
-			
+			Capabilities cap = ((RemoteWebDriver)driver).getCapabilities();
+			System.out.println("\n" + cap.getBrowserName() + " Browser Version " + cap.getBrowserVersion() + " is Launched!");
+
 		}if(browserName.equalsIgnoreCase("safari")){
 			driver = new SafariDriver();
-			System.out.println("Safari Browser is Launched");
-			System.out.println(" ");
+			Capabilities cap = ((RemoteWebDriver)driver).getCapabilities();
+			System.out.println("\n" + cap.getBrowserName() + " Browser Version " + cap.getBrowserVersion() + " is Launched!");
+			Thread.sleep(2000);
 		}
 				
 		driver.manage().window().maximize();
@@ -74,7 +77,7 @@ public class CRMBrokenLinksTest extends BaseClass {
 		baseClassPage.EnterThePassword(configProp.getProperty("validCRMPassword"));
 		baseClassPage.ClickOnSubmit();
 		
-		Thread.sleep(3000);
+		Thread.sleep(4000);
 	}
     
     @AfterMethod

@@ -9,21 +9,30 @@
     <test thread-count="5" name="ChromeTest">
         <parameter name="browser" value="chrome" />
         <classes>
+       		<class name="com.dlad.qa.testcases.LoginTest" />
             <class name="com.dlad.qa.testcases.CRMBrokenLinksTest" />
+            <class name="com.dlad.qa.testcases.HomeTest" />
+            <class name="com.dlad.qa.testcases.LeadListTest" />
         </classes>
     </test> <!-- Test -->
 
     <test thread-count="5" name="EdgeTest">
         <parameter name="browser" value="edge" />
         <classes>
+            <class name="com.dlad.qa.testcases.LoginTest" />
             <class name="com.dlad.qa.testcases.CRMBrokenLinksTest" />
+            <class name="com.dlad.qa.testcases.HomeTest" />
+            <class name="com.dlad.qa.testcases.LeadListTest" />
         </classes>
     </test> <!-- Test -->
 
     <test thread-count="5" name="FirefoxTest">
         <parameter name="browser" value="firefox" />
         <classes>
+            <class name="com.dlad.qa.testcases.LoginTest" />
             <class name="com.dlad.qa.testcases.CRMBrokenLinksTest" />
+            <class name="com.dlad.qa.testcases.HomeTest" />
+            <class name="com.dlad.qa.testcases.LeadListTest" />
         </classes>
     </test> <!-- Test -->
 
