@@ -23,15 +23,11 @@ import org.testng.annotations.Test;
 
 import com.dlad.qa.base.BaseClass;
 import com.dlad.qa.pages.BaseClassPage;
-import com.dlad.qa.pages.HomePage;
-import com.dlad.qa.pages.SidebarCRM;
 import com.dlad.qa.utils.Utils;
 
 public class CRMBrokenLinksTest extends BaseClass {
 	
     public WebDriver driver;
-    SidebarCRM sidebarCRM;
-    HomePage homePage;
     
     @SuppressWarnings("deprecation")
 	@BeforeMethod
