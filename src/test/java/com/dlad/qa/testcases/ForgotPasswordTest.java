@@ -2,25 +2,34 @@ package com.dlad.qa.testcases;
 
 import java.time.Duration;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.safari.SafariDriver;
+import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
+import org.testng.annotations.Test;
 
 import com.dlad.qa.base.BaseClass;
-import com.dlad.qa.pages.LoginPage;
+import com.dlad.qa.pages.ForgotPasswordPage;
+import com.dlad.qa.pages.HomePage;
+import com.dlad.qa.pages.SidebarCRM;
 import com.dlad.qa.utils.Utils;
 
 public class ForgotPasswordTest extends BaseClass {
 
 	public WebDriver driver;
-	LoginPage loginPage;
-	
+	SidebarCRM sidebarCRM;
+	HomePage homePage;
+	ForgotPasswordPage forgotPasswordPage;
+    
     @SuppressWarnings("deprecation")
 	@BeforeMethod
     @Parameters("browser")
@@ -32,23 +41,23 @@ public class ForgotPasswordTest extends BaseClass {
         // Parallel Browser Testing
         if(browserName.equalsIgnoreCase("chrome")) {
 			driver = new ChromeDriver();
-			System.out.println(" ");
-			System.out.println("Chrome Browser is Launched");
-			
+			Capabilities cap = ((RemoteWebDriver)driver).getCapabilities();
+			System.out.println("\n" + cap.getBrowserName() + " Browser Version " + cap.getBrowserVersion() + " is Launched!");
+
 		}if(browserName.equalsIgnoreCase("edge")) {
 			driver = new EdgeDriver();
-			System.out.println(" ");
-			System.out.println("Edge Browser is Launched");
-			
+			Capabilities cap = ((RemoteWebDriver)driver).getCapabilities();
+			System.out.println("\n" + cap.getBrowserName() + " Browser Version " + cap.getBrowserVersion() + " is Launched!");
+
 		}if(browserName.equalsIgnoreCase("firefox")) {
 			driver = new FirefoxDriver();
-			System.out.println(" ");
-			System.out.println("Firefox Browser is Launched");
-			
+			Capabilities cap = ((RemoteWebDriver)driver).getCapabilities();
+			System.out.println("\n" + cap.getBrowserName() + " Browser Version " + cap.getBrowserVersion() + " is Launched!");
+
 		}if(browserName.equalsIgnoreCase("safari")){
 			driver = new SafariDriver();
-			System.out.println("Safari Browser is Launched");
-			System.out.println(" ");
+			Capabilities cap = ((RemoteWebDriver)driver).getCapabilities();
+			System.out.println("\n" + cap.getBrowserName() + " Browser Version " + cap.getBrowserVersion() + " is Launched!");
 		}
 				
 		driver.manage().window().maximize();
@@ -57,8 +66,8 @@ public class ForgotPasswordTest extends BaseClass {
 		driver.manage().timeouts().setScriptTimeout(Duration.ofSeconds(Utils.SCRIPT_TIME_OUT));
 		
 		driver.navigate().to(configProp.getProperty("url"));
-				
-		loginPage = new LoginPage(driver);
+		
+		forgotPasswordPage = new ForgotPasswordPage(driver);
 	}
 
 	@AfterMethod
@@ -67,9 +76,44 @@ public class ForgotPasswordTest extends BaseClass {
 		driver.quit();
 	}
 
-
 	/*
 	 * Test Cases
 	 */
+	
+	@Test
+	public void verifyForgotPasswordLinkIsDisplayed() throws InterruptedException {
+		
+		forgotPasswordPage.forgotPasswordLink();
+		String forgotPasswordLinkName = forgotPasswordPage.forgotPasswordLinkText();
+		Assert.assertEquals(forgotPasswordLinkName, forgotPasswordProp.getProperty("forgotPasswordLinkText"));
+	}
+	
+	@Test
+	public void verifyForgotPasswordLinkIsClickable() {
+		
+		forgotPasswordPage.forgotPasswordLinkClick();
+		String forgotPasswordPageName = forgotPasswordPage.forgotPasswordPageHeader();
+		Assert.assertEquals(forgotPasswordPageName, forgotPasswordProp.getProperty("forgotPasswordPageHeader"));
+	}
+	
+	@Test
+	public void verifyForgotPasswordEmailSendSuccessfuly() throws InterruptedException {
+		
+		forgotPasswordPage.forgotPasswordLinkClick();
+		forgotPasswordPage.forgotPasswordEmailTextField(forgotPasswordProp.getProperty("forgotPasswordEmail"));
+		forgotPasswordPage.clickOnSubmitButton();
+		String actualSuccessfulMessage = forgotPasswordPage.passwordResetLinkSuccessfulMessage();
+		Assert.assertEquals(actualSuccessfulMessage, forgotPasswordProp.getProperty("resetPasswordLinkSuccessMessage"));
+	}
+	
+	@Test
+	public void verifyForgotPasswordEmailSendErrorMessage() throws InterruptedException {
+		
+		forgotPasswordPage.forgotPasswordLinkClick();
+		forgotPasswordPage.forgotPasswordEmailTextField(forgotPasswordProp.getProperty("forgotPasswordEmail"));
+		forgotPasswordPage.clickOnSubmitButton();
+		String actualSuccessfulMessage = forgotPasswordPage.passwordResetLinkSuccessfulMessage();
+		Assert.assertEquals(actualSuccessfulMessage, forgotPasswordProp.getProperty("resetPasswordLinkSuccessMessage"));
+	}
 	
 }

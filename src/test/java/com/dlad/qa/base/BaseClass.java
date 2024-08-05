@@ -21,6 +21,7 @@ public class BaseClass {
 	public Properties bpActivityProp;
 	public Properties bpProp;
 	public Properties salesOrderProp;
+	public Properties forgotPasswordProp;
 	
 	
 //	Create Load Properties File for Config Main before Browser Initialize
@@ -46,6 +47,18 @@ public class BaseClass {
 		try {
 			loginFils = new FileInputStream(loginPropFile);
 			loginProp.load(loginFils);
+
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+		// Forgot Password Page Properties
+		forgotPasswordProp = new Properties();
+		File forgotPasswordPropFile = new File(System.getProperty("user.dir") + "\\src\\main\\java\\com\\dlad\\qa\\testdataconfig\\forgotpassword_config.properties");
+		FileInputStream forgotPasswordPropFils;
+		try {
+			forgotPasswordPropFils = new FileInputStream(forgotPasswordPropFile);
+			forgotPasswordProp.load(forgotPasswordPropFils);
 
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -134,5 +147,6 @@ public class BaseClass {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+
 	}
 }

@@ -173,7 +173,7 @@ public class LeadListTest extends BaseClass {
 	}
 	
 	@Test(priority = 7)
-	public void verifyTheCreatedLeadMemberDisplayOnLeadsTable() throws InterruptedException {
+	public void verifyTheCreatedLeadMemberDisplayOnLeadsTable() {
 		
 		leadListPage.clickNewLeadFormBtn();	    
 	    String createdLeadName = Utils.nameGenerate();
