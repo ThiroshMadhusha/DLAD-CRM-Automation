@@ -13,6 +13,7 @@ import org.openqa.selenium.safari.SafariDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
@@ -97,23 +98,34 @@ public class ForgotPasswordTest extends BaseClass {
 	}
 	
 	@Test
-	public void verifyForgotPasswordEmailSendSuccessfuly() throws InterruptedException {
+	public void verifyForgotPasswordEmailSendSuccessfuly() {
 		
 		forgotPasswordPage.forgotPasswordLinkClick();
 		forgotPasswordPage.forgotPasswordEmailTextField(forgotPasswordProp.getProperty("forgotPasswordEmail"));
 		forgotPasswordPage.clickOnSubmitButton();
-		String actualSuccessfulMessage = forgotPasswordPage.passwordResetLinkSuccessfulMessage();
-		Assert.assertEquals(actualSuccessfulMessage, forgotPasswordProp.getProperty("resetPasswordLinkSuccessMessage"));
+		String actualSuccessfulMessage = forgotPasswordPage.passwordResetSuccessfulMessage();
+		Assert.assertEquals(actualSuccessfulMessage, forgotPasswordProp.getProperty("resetPasswordSuccessMessage"));
 	}
 	
-	@Test
-	public void verifyForgotPasswordEmailSendErrorMessage() throws InterruptedException {
+	@Test(dataProvider = "invalidUsernameDataSet")
+	public void verifyForgotPasswordInvalidEmailSendErrorMessage(String invalidEmailAddress) {
 		
 		forgotPasswordPage.forgotPasswordLinkClick();
-		forgotPasswordPage.forgotPasswordEmailTextField(forgotPasswordProp.getProperty("forgotPasswordEmail"));
+		forgotPasswordPage.forgotPasswordEmailTextField(invalidEmailAddress);
 		forgotPasswordPage.clickOnSubmitButton();
-		String actualSuccessfulMessage = forgotPasswordPage.passwordResetLinkSuccessfulMessage();
-		Assert.assertEquals(actualSuccessfulMessage, forgotPasswordProp.getProperty("resetPasswordLinkSuccessMessage"));
+		String actualSuccessfulMessage = forgotPasswordPage.passwordResetErrorMessage();
+		Assert.assertEquals(actualSuccessfulMessage, forgotPasswordProp.getProperty("resetPasswordErrorMessage"));
+	}
+	
+
+	// Create Dataset for Parallel Testing	
+		
+	@DataProvider(name = "invalidUsernameDataSet")
+	public Object[][] invalidUsernameDataSet(){
+		return new Object[][] {
+			{"malaka123@dlad.io"},
+		    {"dinesh123@dlad.io"}
+		};
 	}
 	
 }

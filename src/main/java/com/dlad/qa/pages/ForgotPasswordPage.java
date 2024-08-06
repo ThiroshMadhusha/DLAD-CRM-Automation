@@ -28,12 +28,14 @@ public class ForgotPasswordPage {
     private WebElement forgotPasswordEmailTextField;
 	
 	@FindBy(xpath = "//ol/li/div[@data-content]/div[text()='Password reset link sent']")
-	private WebElement passwordResetLinkSuccessfulMessage;
+	private WebElement passwordResetSuccessfulMessage;
 
 	@FindBy(xpath = "//button[@type='submit' and contains(text(),'Submit')]")
 	private WebElement clickOnSubmitButton;
 
-
+	@FindBy(xpath = "//ol/li/div[@data-content]/div[text()='There was an error.']")
+	private WebElement passwordResetErrorMessage;
+	
     /**
      * Actions
      * @param labelElement
@@ -63,11 +65,15 @@ public class ForgotPasswordPage {
 		forgotPasswordEmailTextField.sendKeys(emailText);
 	}
 	
-	public String passwordResetLinkSuccessfulMessage() {
-		String resetPasswordLinkSuccessMsg = passwordResetLinkSuccessfulMessage.getText();
-		return resetPasswordLinkSuccessMsg;
+	public String passwordResetSuccessfulMessage() {
+		String resetPasswordSuccessMsg = passwordResetSuccessfulMessage.getText();
+		return resetPasswordSuccessMsg;
 	}
 	
+	public String passwordResetErrorMessage() {
+		String resetPasswordErrMsg = passwordResetErrorMessage.getText();
+		return resetPasswordErrMsg;
+	}
 	public void clickOnSubmitButton() {
 		clickOnSubmitButton.click();
 	}
