@@ -1,6 +1,7 @@
 package com.dlad.qa.testcases;
 import java.time.Duration;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -137,7 +138,7 @@ public class LoginTest extends BaseClass {
 
 
 	@Test(priority = 7)
-	public void verifyTheForgotPasswordLink() {
+	public void verifyTheLoginPageForgotPasswordLinkIsWorking() {
 
 		loginPage.clickOnForgotPasswordLink();
 		String actualForgotPasswordPage = loginPage.forgotPasswordPageTitle();
@@ -155,15 +156,19 @@ public class LoginTest extends BaseClass {
 	}
 
 
-//	@Test(priority = 6)
-//	public void verifyLoginPagePasswordFieldHideAndViewIcon() {
-//		
-//		loginPage.loginUserName(loginProp.getProperty("validCRMEmailAddress"));
-//		loginPage.loginPassword(loginProp.getProperty("validCRMPassword"));
-//		String viewHideAndViewIcon = loginProp.getProperty("invalidLoginMessage");
-//		String expectedLoginFailMessage = loginPage.loginInvalidErrorMessage();
-//		Assert.assertEquals(actualLoginFailMessage, expectedLoginFailMessage);
-//	}
+	@Test(priority = 6)
+	public void verifyLoginPagePasswordFieldHideAndViewIcon() {
+		
+		loginPage.clickHideAndViewIcon();
+		boolean hideAndViewIcon = loginPage.hideAndViewIconIsDisplayed();
+		Assert.assertTrue(hideAndViewIcon);
+		
+	}
+	
+	
+//	passord view --> Text should be shown 
+//	password hide --> Password text should be dot
+	
 	
 //	@Test(priority = 4)
 //	public void verifyTheUserCanViewFieldsRequiredMessages() {
