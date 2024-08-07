@@ -75,6 +75,11 @@ public class LoginPage {
 	public void clickHideAndViewIcon() {
 		clickHideAndViewIcon.click();
 	}
+	
+	public boolean hideAndViewIconIsDisplayed() {
+		boolean hideAndViewIcon = clickHideAndViewIcon.isDisplayed();
+		return hideAndViewIcon;
+	}
 
 //	public void clearLoginUserName() {
 //		enterUserName.clear();
