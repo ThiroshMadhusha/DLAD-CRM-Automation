@@ -58,6 +58,8 @@ public class LoginPage {
 	@FindBy(xpath = "//input[@name='password' and @placeholder='*****']")
 	private WebElement displayPasswordPlaceholder;
 
+	@FindBy(xpath = "//div[@id='show-eye-icon']")
+	private WebElement clickHideAndViewIcon;
 	
 	/*
 	 * Actions
@@ -70,6 +72,9 @@ public class LoginPage {
 		loginPassword.sendKeys(password);
 	}
 
+	public void clickHideAndViewIcon() {
+		clickHideAndViewIcon.click();
+	}
 
 //	public void clearLoginUserName() {
 //		enterUserName.clear();
