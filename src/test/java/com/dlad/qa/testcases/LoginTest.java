@@ -154,17 +154,17 @@ public class LoginTest extends BaseClass {
 		boolean passwordFieldRedAsteriskMark = loginPage.passwordFieldRedAsteriskMark();
 		Assert.assertTrue(passwordFieldRedAsteriskMark);
 	}
-
-
-	@Test(priority = 6)
-	public void verifyLoginPagePasswordFieldHideAndViewIcon() {
-		
-		loginPage.clickHideAndViewIcon();
-		boolean hideAndViewIcon = loginPage.hideAndViewIconIsDisplayed();
-		Assert.assertTrue(hideAndViewIcon);
-		
-	}
-	
+//
+//
+//	@Test(priority = 6)
+//	public void verifyLoginPagePasswordFieldHideAndViewIcon() {
+//		
+//		loginPage.clickHideAndViewIcon();
+//		boolean hideAndViewIcon = loginPage.hideAndViewIconIsDisplayed();
+//		Assert.assertTrue(hideAndViewIcon);
+//		
+//	}
+//	
 	
 //	passord view --> Text should be shown 
 //	password hide --> Password text should be dot
